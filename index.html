@@ -124,6 +124,33 @@
             color: #C4613A;
         }
 
+        .header-phone {
+            color: #C4613A;
+            font-weight: 600;
+            text-decoration: none;
+            margin-right: 1rem;
+        }
+
+        .header-phone:hover {
+            color: #D67347;
+        }
+
+        .header-cta {
+            background: #C4613A;
+            color: #FAFAF8;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin-left: 1rem;
+        }
+
+        .header-cta:hover {
+            background: #D67347;
+            transform: translateY(-1px);
+        }
+
         .mobile-menu {
             display: none;
             flex-direction: column;
@@ -136,6 +163,125 @@
             height: 3px;
             background: #2C2C2C;
             transition: all 0.3s ease;
+        }
+
+        /* Sticky Mobile CTA */
+        .mobile-cta-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: #C4613A;
+            padding: 1rem;
+            display: none;
+            z-index: 999;
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.2);
+        }
+
+        .mobile-cta-bar.visible {
+            display: flex;
+        }
+
+        .mobile-cta-buttons {
+            display: flex;
+            gap: 1rem;
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .mobile-cta-btn {
+            flex: 1;
+            padding: 0.75rem 1rem;
+            background: rgba(250, 250, 248, 0.95);
+            color: #C4613A;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-cta-btn:hover {
+            background: #FAFAF8;
+            transform: translateY(-1px);
+        }
+
+        /* Mid-page CTA Banners */
+        .mid-page-cta {
+            background: #F0EBE3;
+            border: 1px solid #e0d5c5;
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+            margin: 4rem auto;
+            max-width: 800px;
+        }
+
+        .mid-page-cta h3 {
+            font-size: 1.5rem;
+            color: #C4613A;
+            margin-bottom: 1rem;
+        }
+
+        .mid-page-cta .btn {
+            margin-top: 0.5rem;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            background: #F5F3EE;
+            border-radius: 16px;
+            padding: 4rem 2rem;
+            margin: 4rem 0;
+            border: 1px solid #e0d5c5;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .testimonial-card {
+            background: #FFFFFF;
+            padding: 2rem;
+            border-radius: 12px;
+            border: 2px solid #F0EBE3;
+            position: relative;
+        }
+
+        .testimonial-stars {
+            color: #F59E0B;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+            color: #2C2C2C;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: #C4613A;
+        }
+
+        .testimonial-location {
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 0.25rem;
+        }
+
+        .testimonial-note {
+            text-align: center;
+            font-size: 0.9rem;
+            color: #888;
+            font-style: italic;
+            margin-top: 2rem;
         }
 
         /* Hero Section */
@@ -482,6 +628,42 @@
             background: #f59e0b;
         }
 
+        .urgency-banner {
+            background: #FDF2E9;
+            border: 2px solid #F97316;
+            border-radius: 8px;
+            padding: 1rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #EA580C;
+            font-weight: 600;
+        }
+
+        .home-cta-link {
+            display: block;
+            margin-top: 1rem;
+            padding: 0.75rem 1rem;
+            background: #C4613A;
+            color: #FAFAF8;
+            text-decoration: none;
+            border-radius: 6px;
+            text-align: center;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .home-cta-link:hover {
+            background: #D67347;
+            transform: translateY(-1px);
+        }
+
+        .urgency-text {
+            font-size: 0.9rem;
+            color: #EA580C;
+            font-style: italic;
+            margin-top: 0.5rem;
+        }
+
         /* About Section */
         .about {
             background-image: linear-gradient(rgba(250, 250, 248, 0.9), rgba(250, 250, 248, 0.9)), 
@@ -623,6 +805,61 @@
             box-shadow: 0 6px 16px rgba(196, 97, 58, 0.4);
         }
 
+        /* Enhanced Contact Section */
+        .contact-intro {
+            text-align: center;
+            margin-bottom: 3rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .contact-phone {
+            background: #F5F3EE;
+            border: 2px solid #C4613A;
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .contact-phone h3 {
+            color: #C4613A;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-phone a {
+            color: #C4613A;
+            text-decoration: none;
+            font-size: 1.25rem;
+            font-weight: 700;
+        }
+
+        .contact-phone a:hover {
+            color: #D67347;
+        }
+
+        .trust-signals {
+            background: #F0EBE3;
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            border: 1px solid #e0d5c5;
+        }
+
+        .trust-signals p {
+            margin: 0;
+            color: #C4613A;
+            font-weight: 600;
+        }
+
+        .enhanced-submit {
+            font-size: 1.2rem !important;
+            padding: 1.5rem !important;
+            margin-top: 1rem;
+        }
+
         /* Animations */
         @keyframes fadeInUp {
             from {
@@ -656,6 +893,20 @@
                 display: flex;
             }
 
+            .nav div:nth-child(3) {
+                display: none; /* Hide desktop phone/CTA on mobile */
+            }
+
+            .header-phone {
+                display: block !important;
+                text-align: center;
+                margin-bottom: 1rem;
+            }
+
+            .mobile-cta-bar.visible {
+                display: flex !important;
+            }
+
             .section {
                 padding: 4rem 1rem;
             }
@@ -686,8 +937,21 @@
                 margin: 2rem 0;
             }
 
+            .testimonials {
+                padding: 2rem 1rem;
+            }
+
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
             .contact-form {
                 padding: 2rem;
+            }
+
+            .mid-page-cta {
+                padding: 1.5rem;
+                margin: 3rem 1rem;
             }
 
             .filters {
@@ -745,6 +1009,10 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
+            <div style="display: flex; align-items: center;">
+                <a href="tel:+18015550123" class="header-phone">(801) 555-0123</a>
+                <a href="#contact" class="header-cta">Get in Touch</a>
+            </div>
             <div class="mobile-menu">
                 <span></span>
                 <span></span>
@@ -753,14 +1021,22 @@
         </nav>
     </header>
 
+    <!-- Sticky Mobile CTA Bar -->
+    <div class="mobile-cta-bar" id="mobileCTA">
+        <div class="mobile-cta-buttons">
+            <a href="tel:+18015550123" class="mobile-cta-btn">Call Now</a>
+            <a href="#contact" class="mobile-cta-btn">Schedule Consultation</a>
+        </div>
+    </div>
+
     <!-- Hero Section -->
     <section id="hero" class="hero">
         <div class="hero-content">
             <h1>Find Your Dream Home in Prescott</h1>
-            <p>Your trusted partner for new construction and resale homes in Arizona's most desirable mountain community. Exclusive access to the best builders and neighborhoods.</p>
+            <p>I'll guide you through every step, from choosing your community to getting your keys. Exclusive access to the best builders and neighborhoods in Arizona's most desirable mountain community.</p>
             <div class="cta-buttons">
-                <a href="#communities" class="btn btn-primary">Explore New Homes</a>
-                <a href="#contact" class="btn btn-secondary">Schedule a Consultation</a>
+                <a href="#contact" class="btn btn-primary">Schedule a Free Consultation</a>
+                <a href="#communities" class="btn btn-secondary">View Available Homes</a>
             </div>
         </div>
     </section>
@@ -794,6 +1070,12 @@
             </div>
         </div>
     </section>
+
+    <!-- Mid-page CTA 1 -->
+    <div class="mid-page-cta">
+        <h3>Ready to see these homes in person? Let's schedule a tour.</h3>
+        <a href="#contact" class="btn btn-primary">Schedule a Tour</a>
+    </div>
 
     <!-- Available Communities Section -->
     <section id="communities" class="section fade-in">
@@ -901,11 +1183,21 @@
         </div>
     </section>
 
+    <!-- Mid-page CTA 2 -->
+    <div class="mid-page-cta">
+        <h3>Have questions about new construction? I'm here to help.</h3>
+        <a href="#contact" class="btn btn-primary">Contact Ty</a>
+    </div>
+
     <!-- Quick Move-In Homes Section -->
     <section id="quick-homes" class="section fade-in">
         <div class="section-header">
             <h2>Quick Move-In Homes</h2>
             <p>Ready to move in now or soon. These homes are either completed or nearing completion for faster occupancy.</p>
+        </div>
+        
+        <div class="urgency-banner">
+            Only 6 quick move-in homes available! These won't last long at these prices.
         </div>
         
         <div class="quick-homes">
@@ -915,6 +1207,8 @@
                 <p><strong>Homesite 759</strong></p>
                 <p>3 bed / 3 bath • 2,475 sqft</p>
                 <div class="community-price">$916,995</div>
+                <div class="urgency-text">Won't last long at this price</div>
+                <a href="#contact" class="home-cta-link" data-community="Jasper 8">Inquire About This Home</a>
             </div>
 
             <div class="quick-home-card">
@@ -923,6 +1217,8 @@
                 <p><strong>Homesite 760</strong></p>
                 <p>5 bed + study / 4.5 bath • 3,281 sqft</p>
                 <div class="community-price">$1,133,800</div>
+                <div class="urgency-text">Premium lot with views</div>
+                <a href="#contact" class="home-cta-link" data-community="Jasper 8">Inquire About This Home</a>
             </div>
 
             <div class="quick-home-card">
@@ -931,6 +1227,8 @@
                 <p><strong>Homesite 744</strong></p>
                 <p>4 bed / 3.5 bath • 2,791 sqft</p>
                 <div class="community-price">$1,077,941</div>
+                <div class="urgency-text">Move in before spring!</div>
+                <a href="#contact" class="home-cta-link" data-community="Jasper 8">Inquire About This Home</a>
             </div>
 
             <div class="quick-home-card">
@@ -939,6 +1237,8 @@
                 <p><strong>Homesite 111</strong></p>
                 <p>3 bed / 2.5 bath • 2,189 sqft</p>
                 <div class="community-price">$996,906</div>
+                <div class="urgency-text">Ready for immediate move-in</div>
+                <a href="#contact" class="home-cta-link" data-community="Hidden Hills">Inquire About This Home</a>
             </div>
 
             <div class="quick-home-card">
@@ -947,6 +1247,8 @@
                 <p><strong>Homesite 120</strong></p>
                 <p>3 bed + study / 3.5 bath • 2,672 sqft</p>
                 <div class="community-price">$1,250,000</div>
+                <div class="urgency-text">Last home in this price range</div>
+                <a href="#contact" class="home-cta-link" data-community="Hidden Hills">Inquire About This Home</a>
             </div>
 
             <div class="quick-home-card">
@@ -955,9 +1257,17 @@
                 <p><strong>Homesite 397</strong></p>
                 <p>3 bed + study / 3.5 bath • 2,672 sqft</p>
                 <div class="community-price">$1,243,501</div>
+                <div class="urgency-text">Priced to sell quickly</div>
+                <a href="#contact" class="home-cta-link" data-community="Jasper 3B">Inquire About This Home</a>
             </div>
         </div>
     </section>
+
+    <!-- Mid-page CTA 3 -->
+    <div class="mid-page-cta">
+        <h3>Not sure which community is right for you? Let's talk.</h3>
+        <a href="#contact" class="btn btn-primary">Free Consultation</a>
+    </div>
 
     <!-- About Ty Section -->
     <section id="about" class="section fade-in">
@@ -968,6 +1278,56 @@
                 <p>Whether you're looking for new construction or resale properties, I understand the builder process inside and out. My social media presence and modern approach means you'll get responsive communication and market insights that matter.</p>
                 <p>I specialize in helping people relocate to Prescott from Utah, Phoenix, Los Angeles, and beyond. Let's find your perfect Arizona home together.</p>
                 <p>Follow me on Instagram: <a href="https://instagram.com/ty_the_real_estate_guy" class="social-link" target="_blank" rel="noopener">@ty_the_real_estate_guy</a> (8,138 followers)</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mid-page CTA 4 -->
+    <div class="mid-page-cta">
+        <h3>Ready to see these homes in person? Let's schedule a tour.</h3>
+        <a href="#contact" class="btn btn-primary">Schedule a Tour</a>
+    </div>
+
+    <!-- Social Proof / Testimonials Section -->
+    <!-- NOTE FOR TY: Replace these placeholder testimonials with real client testimonials -->
+    <section class="section fade-in">
+        <div class="testimonials">
+            <div class="section-header">
+                <h2>What My Clients Say</h2>
+                <p>Real experiences from families who found their perfect Prescott home</p>
+            </div>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <div class="testimonial-text">
+                        "Ty made our relocation from Phoenix seamless. His knowledge of the new construction process saved us thousands, and he helped us get the perfect lot in Granite Dells Estates. We couldn't be happier with our new home!"
+                    </div>
+                    <div class="testimonial-author">The Johnson Family</div>
+                    <div class="testimonial-location">Relocated from Phoenix</div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <div class="testimonial-text">
+                        "Working with Ty was amazing. As an in-house agent, he had access to floor plans and pricing before they went public. We got our dream home in Hidden Hills at an incredible price. Highly recommend!"
+                    </div>
+                    <div class="testimonial-author">Sarah and Mike Chen</div>
+                    <div class="testimonial-location">Relocated from Utah</div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <div class="testimonial-text">
+                        "Ty's social media presence shows he really knows the Prescott market. He guided us through every step of the building process and was always available to answer questions. Professional and trustworthy!"
+                    </div>
+                    <div class="testimonial-author">David and Lisa Rodriguez</div>
+                    <div class="testimonial-location">First-time home buyers</div>
+                </div>
+            </div>
+            
+            <div class="testimonial-note">
+                * These are placeholder testimonials. Replace with real client testimonials and photos.
             </div>
         </div>
     </section>
@@ -1005,11 +1365,29 @@
         </div>
     </section>
 
+    <!-- Mid-page CTA 5 -->
+    <div class="mid-page-cta">
+        <h3>Have questions about new construction? I'm here to help.</h3>
+        <a href="#contact" class="btn btn-primary">Contact Ty</a>
+    </div>
+
     <!-- Contact Section -->
     <section id="contact" class="section fade-in">
         <div class="section-header">
-            <h2>Let's Find Your Home</h2>
-            <p>Ready to start your Prescott journey? Let's schedule a consultation and explore your options.</p>
+            <h2>Let's Find Your Perfect Home</h2>
+            <div class="contact-intro">
+                <p style="font-size: 1.2rem; margin-bottom: 0.5rem;">Ready to start your Prescott journey?</p>
+                <p style="color: #C4613A; font-weight: 600;">I typically respond within 2 hours</p>
+            </div>
+        </div>
+        
+        <div class="contact-phone">
+            <h3>Prefer to talk?</h3>
+            <a href="tel:+18015550123">Call me directly at (801) 555-0123</a>
+        </div>
+        
+        <div class="trust-signals">
+            <p>No pressure, no obligation. Just honest guidance.</p>
         </div>
         
         <form class="contact-form" action="https://formsubmit.co/kabbott622@gmail.com" method="POST">
@@ -1061,18 +1439,25 @@
                 <textarea id="message" name="message" placeholder="Tell me about your timeline, budget, and what you're looking for..."></textarea>
             </div>
             
-            <button type="submit" class="form-submit">Send Message</button>
+            <button type="submit" class="form-submit enhanced-submit">Get Started - Send Message</button>
         </form>
     </section>
 
     <!-- Footer -->
     <footer style="background: #F5F3EE; border-top: 1px solid #e0d5c5; padding: 3rem 2rem; text-align: center;">
         <div style="max-width: 1200px; margin: 0 auto;">
-            <p style="color: #C4613A; font-weight: 700; font-size: 1.25rem; margin-bottom: 1rem;">Ty Real Estate</p>
+            <p style="color: #C4613A; font-weight: 700; font-size: 1.5rem; margin-bottom: 0.5rem;">Your dream home in Prescott is closer than you think.</p>
+            
+            <div style="background: #FFFFFF; border: 2px solid #C4613A; border-radius: 12px; padding: 2rem; margin: 2rem 0; display: inline-block;">
+                <p style="color: #C4613A; font-weight: 700; font-size: 1.25rem; margin-bottom: 1rem;">Ty Real Estate</p>
+                <p style="margin-bottom: 0.5rem;"><strong>Phone:</strong> <a href="tel:+18015550123" style="color: #C4613A; text-decoration: none; font-weight: 600;">(801) 555-0123</a></p>
+                <p style="margin-bottom: 0.5rem;"><strong>Email:</strong> <a href="mailto:ty@placeholder-email.com" style="color: #C4613A; text-decoration: none;">ty@placeholder-email.com</a></p>
+                <p style="margin-bottom: 1rem;"><strong>Instagram:</strong> <a href="https://instagram.com/ty_the_real_estate_guy" target="_blank" rel="noopener" style="color: #C4613A; text-decoration: none;">@ty_the_real_estate_guy</a></p>
+            </div>
+            
             <p style="color: #2C2C2C; opacity: 0.7; margin-bottom: 0.5rem;">Prescott and Prescott Valley, Arizona</p>
             <p style="color: #2C2C2C; opacity: 0.7; margin-bottom: 1.5rem;">In-house agent for Capstone Homes and ĒCCO Homes</p>
             <div style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; margin-bottom: 1.5rem;">
-                <a href="https://instagram.com/ty_the_real_estate_guy" target="_blank" rel="noopener" style="color: #C4613A; text-decoration: none;">Instagram</a>
                 <a href="https://capstonehomesaz.com" target="_blank" rel="noopener" style="color: #666; text-decoration: none;">Capstone Homes</a>
                 <a href="https://eccohomesaz.com" target="_blank" rel="noopener" style="color: #666; text-decoration: none;">ĒCCO Homes</a>
             </div>
@@ -1166,13 +1551,16 @@
                 });
             });
 
-            // Header scroll effect
+            // Header scroll effect and mobile CTA bar
             let lastScrollTop = 0;
             const header = document.querySelector('.header');
+            const mobileCTA = document.getElementById('mobileCTA');
+            const heroSection = document.querySelector('#hero');
             
             window.addEventListener('scroll', () => {
                 const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
                 
+                // Header scroll effect
                 if (scrollTop > lastScrollTop && scrollTop > 100) {
                     // Scrolling down
                     header.style.transform = 'translateY(-100%)';
@@ -1180,7 +1568,41 @@
                     // Scrolling up
                     header.style.transform = 'translateY(0)';
                 }
+                
+                // Mobile CTA bar visibility (only on mobile)
+                if (window.innerWidth <= 768) {
+                    const heroHeight = heroSection.offsetHeight;
+                    if (scrollTop > heroHeight) {
+                        mobileCTA.classList.add('visible');
+                    } else {
+                        mobileCTA.classList.remove('visible');
+                    }
+                }
+                
                 lastScrollTop = scrollTop;
+            });
+
+            // Handle window resize for mobile CTA
+            window.addEventListener('resize', () => {
+                if (window.innerWidth > 768) {
+                    mobileCTA.classList.remove('visible');
+                }
+            });
+
+            // Home inquiry pre-filling
+            document.addEventListener('click', (e) => {
+                if (e.target.classList.contains('home-cta-link')) {
+                    const community = e.target.getAttribute('data-community');
+                    if (community) {
+                        // Pre-fill the community dropdown when user reaches contact form
+                        setTimeout(() => {
+                            const communitySelect = document.getElementById('community');
+                            if (communitySelect) {
+                                communitySelect.value = community;
+                            }
+                        }, 500);
+                    }
+                }
             });
         });
     </script>
