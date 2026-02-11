@@ -1,74 +1,88 @@
-# Ty The Real Estate Guy - Website Project
+# Ty Real Estate - Prescott, AZ
 
-Real estate website project for Ty (@ty_the_real_estate_guy), a Utah realtor transitioning to Prescott, Arizona as an in-house agent for Capstone Homes and Ecco Homes.
+A modern, dark-themed real estate website for Ty, showcasing new construction and resale homes in Prescott, Arizona.
 
-## 📍 Project Overview
+## About
 
-**Client:** Ty (@ty_the_real_estate_guy)  
-**Location:** Prescott, Arizona  
-**Instagram:** 8,138 followers  
-**Specialization:** New construction (Capstone Homes & Ecco Homes) + Full service real estate
+Ty is a real estate agent specializing in:
+- New construction homes through Capstone Homes and ĒCCO Homes partnerships
+- Resale properties in the Prescott area
+- Relocation assistance for buyers moving from Utah, Phoenix, LA, and beyond
+- Social media marketing and modern real estate approach
 
-## 📁 Repository Contents
+## Website Features
 
-- **`index.html`** - Placeholder website (launching soon page)
-- **`ty-realestate-research.md`** - Comprehensive market research document
-- **`README.md`** - This file
+- **Responsive Design**: Mobile-first approach with smooth animations
+- **Dark Theme**: Modern cinematic aesthetic with warm gold accents (#D4A853)
+- **Community Showcase**: Detailed information about 6 active communities
+- **Filterable Communities**: Sort by builder (Capstone/ĒCCO/All)
+- **Quick Move-In Homes**: Ready-to-move homes with real availability data
+- **Contact Form**: Integrated with FormSubmit.co for lead capture
+- **SEO Optimized**: Meta tags for Prescott AZ real estate searches
 
-## 🔍 Research Highlights
+## Communities Featured
 
-The research document includes detailed analysis of:
+### Capstone Homes
+- **Granite Dells Estates** - Gated luxury in Prescott ($949,900+)
+- **Hidden Hills** - National Forest views ($949,900+)
+- **Jasper 3B** - Estate lots in Prescott Valley ($934,900+)
+- **Jasper 8** - Near regional park ($794,900+)
 
-1. **Prescott Real Estate Market** - Median prices, trends, demographics
-2. **Competition Analysis** - Top local agents and their strategies  
-3. **Builder Partnerships** - Capstone Homes & Ecco Homes market positioning
-4. **Website Best Practices** - IDX integration, lead capture, design patterns
-5. **Marketing Strategies** - Social media, paid ads, SEO, content marketing
-6. **Implementation Roadmap** - 12-week launch plan
+### ĒCCO Homes
+- **Jasper 7** - Energy-efficient modern homes ($459,900+)
+- **Skyview** - Flexible living with RV garage options ($508,900+)
 
-## 🎯 Key Findings
+## Technical Details
 
-- **Median Home Price:** $581K-$626K (36% above national average)
-- **Primary Buyers:** Retirees, remote workers, young professionals
-- **Migration:** Strong inbound from Phoenix, LA, Chicago  
-- **Competition:** Established teams but opportunity for social media native approach
-- **Digital Gap:** Opportunity for modern, mobile-first real estate website
+- Single-file HTML with inline CSS/JS
+- No dependencies except Google Fonts (Inter)
+- Static site ready for GitHub Pages
+- FormSubmit.co integration for contact form
+- Intersection Observer for scroll animations
+- CSS Grid and Flexbox for responsive layouts
 
-## 🚀 Next Steps
+## Deployment
 
-1. **Website Development** - Modern, mobile-responsive site with IDX integration
-2. **Branding & Design** - Professional brand identity with social media integration  
-3. **Content Strategy** - Neighborhood guides, market reports, video tours
-4. **Marketing Launch** - Facebook/Google ads, SEO optimization, social media
-5. **Lead Generation** - Home valuation tools, buyer/seller capture forms
+This is a static website ready for deployment to:
+- GitHub Pages
+- Netlify
+- Vercel
+- Any static hosting provider
 
-## 💡 Competitive Advantages
+## Contact Form
 
-- **Social Media Native:** 8,138 Instagram followers
-- **Builder Partnerships:** Exclusive Capstone/Ecco relationship
-- **Fresh Perspective:** Utah-to-Arizona relocation experience
-- **Content Creation:** Video tours, market updates, lifestyle content
-- **Modern Approach:** Digital-first vs. traditional competitors
+Currently configured to send submissions to `kabbott622@gmail.com` via FormSubmit.co. Ty should:
+1. Update the email address in the form action
+2. Consider upgrading to FormSubmit Pro for additional features
 
-## 🛠 Technology Stack (Planned)
+## TODO for Ty
 
-- **CMS:** WordPress with real estate theme
-- **IDX:** MLS integration for property search
-- **Forms:** Lead capture and CRM integration  
-- **Analytics:** Google Analytics, Tag Manager
-- **Marketing:** Facebook Pixel, Google Ads integration
-- **Email:** Automated drip campaigns and newsletters
+1. **Replace placeholder email** in contact form (line with FormSubmit.co)
+2. **Add photos** - Replace CSS gradient placeholders with community photos:
+   - Granite Dells Estates
+   - Hidden Hills  
+   - Jasper 3B
+   - Jasper 7
+   - Jasper 8
+   - Skyview
+3. **Update social links** - Verify Instagram handle and add other social platforms
+4. **Domain setup** - Point custom domain to hosting provider
+5. **Analytics** - Add Google Analytics or similar tracking
+6. **SEO** - Submit sitemap to Google Search Console
 
-## 📊 Success Metrics
+## Color Palette
 
-- Lead generation rate and quality
-- Website traffic and engagement
-- Social media growth and engagement
-- Conversion rate optimization
-- Market share in Prescott area
+- **Background**: #0a0a0a (Dark black)
+- **Secondary Background**: #1a1a1a, #2a2a2a (Gradient grays)
+- **Accent**: #D4A853 (Warm gold/amber)
+- **Text**: #ffffff (White)
+- **Borders**: #333333 (Dark gray)
+
+## Typography
+
+- **Font Family**: Inter (Google Fonts)
+- **Weights Used**: 300, 400, 500, 600, 700
 
 ---
 
-**Status:** Research Complete | Website Development Ready  
-**Timeline:** 12-week implementation roadmap  
-**Investment:** Strategic digital marketing foundation for long-term success
+Built with modern web standards and optimized for performance and user experience.
