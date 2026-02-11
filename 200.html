@@ -3,8 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Real Estate Marketing Strategy for Ty - C41 Cinema</title>
+    <title>Ty Real Estate | New Construction & Resale Homes in Prescott, AZ</title>
+    <meta name="description" content="Find your dream home in Prescott, AZ with Ty. Exclusive access to Capstone Homes and ĒCCO Homes new construction communities. Expert relocation assistance from Utah to Arizona.">
+    <meta name="keywords" content="Prescott AZ real estate, new construction homes, Capstone Homes, ĒCCO Homes, Arizona real estate agent, Prescott Valley homes, Jasper community, Granite Dells Estates, homes for sale Prescott, Prescott Valley new homes, retirement homes Arizona">
+    <link rel="canonical" href="https://kabbs622.github.io/ty-realestate/">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kabbs622.github.io/ty-realestate/">
+    <meta property="og:title" content="Ty Real Estate | New Construction & Resale Homes in Prescott, AZ">
+    <meta property="og:description" content="Your trusted partner for new construction and resale homes in Prescott, Arizona. Exclusive access to Capstone Homes and ĒCCO Homes communities.">
+    <meta property="og:image" content="https://capstonehomesaz.com/wp-content/uploads/2025/03/32-Pool-3.jpg">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ty Real Estate | Prescott, AZ Homes">
+    <meta name="twitter:description" content="New construction and resale homes in Prescott, Arizona. Exclusive Capstone Homes and ĒCCO Homes partnerships.">
+    <meta name="twitter:image" content="https://capstonehomesaz.com/wp-content/uploads/2025/03/32-Pool-3.jpg">
+    
+    <!-- Additional SEO -->
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Ty Real Estate">
+    <meta name="geo.region" content="US-AZ">
+    <meta name="geo.placename" content="Prescott">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "RealEstateAgent",
+        "name": "Ty Real Estate",
+        "description": "Real estate agent specializing in new construction and resale homes in Prescott and Prescott Valley, Arizona. In-house agent for Capstone Homes and ĒCCO Homes.",
+        "url": "https://kabbs622.github.io/ty-realestate/",
+        "areaServed": [
+            {
+                "@type": "City",
+                "name": "Prescott",
+                "containedInPlace": { "@type": "State", "name": "Arizona" }
+            },
+            {
+                "@type": "City",
+                "name": "Prescott Valley",
+                "containedInPlace": { "@type": "State", "name": "Arizona" }
+            }
+        ],
+        "sameAs": [
+            "https://instagram.com/ty_the_real_estate_guy"
+        ],
+        "knowsAbout": ["New Construction Homes", "Capstone Homes", "ĒCCO Homes", "Prescott Real Estate", "Arizona Relocation"]
+    }
+    </script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
     <style>
         * {
             margin: 0;
@@ -12,652 +67,1543 @@
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: 'Inter', sans-serif;
-            background: #ffffff;
-            color: #333;
-            overflow: hidden;
-            cursor: pointer;
-        }
-
-        .slideshow-container {
-            position: relative;
-            width: 100%;
-            height: 100vh;
-        }
-
-        .slide {
-            display: none;
-            width: 100%;
-            height: 100vh;
-            padding: 60px;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            transition: opacity 0.5s ease-in-out;
-        }
-
-        .slide.active {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .slide h1 {
-            font-size: 3.5rem;
-            font-weight: 700;
-            color: #C4613A;
-            margin-bottom: 20px;
-            line-height: 1.2;
-        }
-
-        .slide h2 {
-            font-size: 2.5rem;
-            font-weight: 600;
-            color: #C4613A;
-            margin-bottom: 40px;
-            line-height: 1.3;
-        }
-
-        .slide h3 {
-            font-size: 1.8rem;
-            font-weight: 500;
-            color: #555;
-            margin-bottom: 30px;
-        }
-
-        .slide p {
-            font-size: 1.2rem;
+            background-color: #FAFAF8;
+            color: #2C2C2C;
             line-height: 1.6;
-            margin-bottom: 20px;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
+            overflow-x: hidden;
         }
 
-        .slide ul {
-            text-align: left;
-            max-width: 600px;
-            margin: 0 auto;
-            font-size: 1.1rem;
-            line-height: 1.8;
-        }
-
-        .slide li {
-            margin-bottom: 15px;
-            position: relative;
-            padding-left: 20px;
-        }
-
-        .slide li::before {
-            content: "•";
-            color: #C4613A;
-            font-weight: bold;
-            position: absolute;
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
             left: 0;
+            right: 0;
+            background: rgba(250, 250, 248, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 2rem;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid #e0d5c5;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
         .logo {
-            font-size: 2rem;
+            font-size: 1.5rem;
             font-weight: 700;
             color: #C4613A;
-            margin-bottom: 10px;
         }
 
-        .subtitle {
-            font-size: 1.5rem;
-            color: #666;
-            margin-bottom: 40px;
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
         }
 
-        .date {
-            font-size: 1.1rem;
-            color: #888;
-            position: absolute;
-            bottom: 60px;
-            right: 60px;
+        .nav-links a {
+            color: #2C2C2C;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
         }
 
-        .pricing-table {
-            background: #f8f9fa;
-            border-radius: 12px;
-            padding: 30px;
-            margin: 30px auto;
-            max-width: 700px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        .nav-links a:hover {
+            color: #C4613A;
         }
 
-        .pricing-table table {
-            width: 100%;
-            border-collapse: collapse;
+        .header-phone {
+            color: #C4613A;
+            font-weight: 600;
+            text-decoration: none;
+            margin-right: 1rem;
         }
 
-        .pricing-table th,
-        .pricing-table td {
-            text-align: left;
-            padding: 15px 20px;
-            border-bottom: 1px solid #eee;
+        .header-phone:hover {
+            color: #D67347;
         }
 
-        .pricing-table th {
+        .header-cta {
             background: #C4613A;
-            color: white;
+            color: #FAFAF8;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin-left: 1rem;
+        }
+
+        .header-cta:hover {
+            background: #D67347;
+            transform: translateY(-1px);
+        }
+
+        .mobile-menu {
+            display: none;
+            flex-direction: column;
+            gap: 4px;
+            cursor: pointer;
+        }
+
+        .mobile-menu span {
+            width: 25px;
+            height: 3px;
+            background: #2C2C2C;
+            transition: all 0.3s ease;
+        }
+
+        /* Sticky Mobile CTA */
+        .mobile-cta-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: #C4613A;
+            padding: 1rem;
+            display: none;
+            z-index: 999;
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.2);
+        }
+
+        .mobile-cta-bar.visible {
+            display: flex;
+        }
+
+        .mobile-cta-buttons {
+            display: flex;
+            gap: 1rem;
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .mobile-cta-btn {
+            flex: 1;
+            padding: 0.75rem 1rem;
+            background: rgba(250, 250, 248, 0.95);
+            color: #C4613A;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-cta-btn:hover {
+            background: #FAFAF8;
+            transform: translateY(-1px);
+        }
+
+        /* Mid-page CTA Banners */
+        .mid-page-cta {
+            background: #F0EBE3;
+            border: 1px solid #e0d5c5;
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+            margin: 4rem auto;
+            max-width: 800px;
+        }
+
+        .mid-page-cta h3 {
+            font-size: 1.5rem;
+            color: #C4613A;
+            margin-bottom: 1rem;
+        }
+
+        .mid-page-cta .btn {
+            margin-top: 0.5rem;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            background: #F5F3EE;
+            border-radius: 16px;
+            padding: 4rem 2rem;
+            margin: 4rem 0;
+            border: 1px solid #e0d5c5;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .testimonial-card {
+            background: #FFFFFF;
+            padding: 2rem;
+            border-radius: 12px;
+            border: 2px solid #F0EBE3;
+            position: relative;
+        }
+
+        .testimonial-stars {
+            color: #F59E0B;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+            color: #2C2C2C;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: #C4613A;
+        }
+
+        .testimonial-location {
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 0.25rem;
+        }
+
+        .testimonial-note {
+            text-align: center;
+            font-size: 0.9rem;
+            color: #888;
+            font-style: italic;
+            margin-top: 2rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-image: url('https://capstonehomesaz.com/wp-content/uploads/2025/03/32-Pool-3.jpg');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(44, 44, 44, 0.4);
+        }
+
+        .hero-content {
+            text-align: center;
+            max-width: 800px;
+            padding: 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: clamp(3rem, 8vw, 6rem);
+            font-weight: 700;
+            margin-bottom: 2rem;
+            color: #FAFAF8;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 3rem;
+            color: #FAFAF8;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+            animation: fadeInUp 1s ease 0.3s both;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 1s ease 0.6s both;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: 2px solid transparent;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .btn-primary {
+            background: #C4613A;
+            color: #FAFAF8;
+        }
+
+        .btn-primary:hover {
+            background: #D67347;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(196, 97, 58, 0.3);
+        }
+
+        .btn-secondary {
+            background: rgba(250, 250, 248, 0.9);
+            color: #2C2C2C;
+            border: 2px solid #FAFAF8;
+        }
+
+        .btn-secondary:hover {
+            background: #FAFAF8;
+            transform: translateY(-2px);
+        }
+
+        /* Section Styling */
+        .section {
+            padding: 6rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-header h2 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #C4613A;
+        }
+
+        .section-header p {
+            font-size: 1.1rem;
+            opacity: 0.8;
+            max-width: 600px;
+            margin: 0 auto;
+            color: #2C2C2C;
+        }
+
+        /* Builder Partners */
+        .builders {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .builder-card {
+            background: #FFFFFF;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid #e0d5c5;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+        }
+
+        .builder-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+        }
+
+        .builder-image {
+            height: 250px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .builder-card:first-child .builder-image {
+            background-image: url('https://capstonehomesaz.com/wp-content/uploads/2024/10/GDE-Kitchen.jpg');
+        }
+
+        .builder-card:last-child .builder-image {
+            background-image: url('https://eccohomesaz.com/wp-content/uploads/2024/12/great-room-1-plan-2254-skyview-prescott-valley-arizona-ecco-homes.jpg');
+        }
+
+        .builder-logo {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            background: rgba(250, 250, 248, 0.95);
+            color: #C4613A;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 700;
+        }
+
+        .builder-content {
+            padding: 2rem;
+        }
+
+        .builder-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #C4613A;
+        }
+
+        .builder-card p {
+            margin-bottom: 1.5rem;
+            opacity: 0.8;
+        }
+
+        .builder-link {
+            display: inline-block;
+            color: #C4613A;
+            text-decoration: none;
+            font-weight: 600;
+            border-bottom: 2px solid transparent;
+            transition: border-color 0.3s ease;
+        }
+
+        .builder-link:hover {
+            border-bottom-color: #C4613A;
+        }
+
+        /* Community Filters */
+        .filters {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 0.75rem 1.5rem;
+            background: #FFFFFF;
+            color: #2C2C2C;
+            border: 1px solid #e0d5c5;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+            font-weight: 500;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: #C4613A;
+            color: #FAFAF8;
+            border-color: #C4613A;
+            transform: translateY(-2px);
+        }
+
+        /* Communities Grid */
+        .communities {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .community-card {
+            background: #FFFFFF;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid #e0d5c5;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+        }
+
+        .community-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+        }
+
+        .community-image {
+            height: 220px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .community-card:nth-child(1) .community-image { 
+            background-image: url('https://capstonehomesaz.com/wp-content/uploads/2024/10/GDE-Model.jpg');
+        }
+        .community-card:nth-child(2) .community-image { 
+            background-image: url('https://capstonehomesaz.com/wp-content/uploads/2024/10/elevation-1-hidden-hills-prescott-arizona-capstone-homes.jpg');
+        }
+        .community-card:nth-child(3) .community-image { 
+            background-image: url('https://capstonehomesaz.com/wp-content/uploads/2024/10/model-2-jasper-3b-prescott-arizona-capstone-homes.jpg');
+        }
+        .community-card:nth-child(4) .community-image { 
+            background-image: url('https://eccohomesaz.com/wp-content/uploads/2024/12/JS600Small-37.jpg');
+        }
+        .community-card:nth-child(5) .community-image { 
+            background-image: url('https://capstonehomesaz.com/wp-content/uploads/2024/11/1-Welcome-Home-10-2000x1125.jpg');
+        }
+        .community-card:nth-child(6) .community-image { 
+            background-image: url('https://eccohomesaz.com/wp-content/uploads/2024/11/exterior-2-skyview-prescott-valley-arizona-ecco-homes.jpg');
+        }
+
+        .community-info {
+            padding: 2rem;
+        }
+
+        .community-badge {
+            display: inline-block;
+            background: #C4613A;
+            color: #FAFAF8;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .community-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #2C2C2C;
+        }
+
+        .community-details {
+            margin-bottom: 1.5rem;
+        }
+
+        .community-details p {
+            margin-bottom: 0.5rem;
+            opacity: 0.8;
+            font-size: 0.9rem;
+        }
+
+        .community-price {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #C4613A;
+        }
+
+        /* Quick Move-In Homes */
+        .quick-homes {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .quick-home-card {
+            background: #FFFFFF;
+            border-radius: 12px;
+            padding: 2rem;
+            border: 1px solid #e0d5c5;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+        }
+
+        .quick-home-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+        }
+
+        .availability-badge {
+            display: inline-block;
+            background: #22c55e;
+            color: #ffffff;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .availability-badge.upcoming {
+            background: #f59e0b;
+        }
+
+        .urgency-banner {
+            background: #FDF2E9;
+            border: 2px solid #F97316;
+            border-radius: 8px;
+            padding: 1rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #EA580C;
             font-weight: 600;
         }
 
-        .pricing-table .total {
-            font-weight: 700;
-            background: #fff3f0;
-            color: #C4613A;
-        }
-
-        .package-table {
-            background: #f8f9fa;
-            border-radius: 12px;
-            padding: 30px;
-            margin: 30px auto;
-            max-width: 600px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-        }
-
-        .package-table table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-
-        .package-table td {
-            padding: 12px 20px;
-            border-bottom: 1px solid #eee;
-            font-size: 1rem;
-        }
-
-        .package-table .checkmark {
-            color: #C4613A;
-            font-weight: bold;
-            font-size: 1.2rem;
+        .home-cta-link {
+            display: block;
+            margin-top: 1rem;
+            padding: 0.75rem 1rem;
+            background: #C4613A;
+            color: #FAFAF8;
+            text-decoration: none;
+            border-radius: 6px;
             text-align: center;
-            width: 40px;
+            font-weight: 600;
+            transition: all 0.3s ease;
         }
 
-        .price-highlight {
-            background: linear-gradient(135deg, #C4613A, #E08A5D);
-            color: white;
-            padding: 30px;
-            border-radius: 12px;
-            margin: 30px auto;
-            max-width: 500px;
+        .home-cta-link:hover {
+            background: #D67347;
+            transform: translateY(-1px);
         }
 
-        .price-highlight .normal-rate {
-            text-decoration: line-through;
-            opacity: 0.8;
-            font-size: 1.1rem;
-        }
-
-        .price-highlight .our-rate {
-            font-size: 2rem;
-            font-weight: 700;
-            margin: 10px 0;
-        }
-
-        .website-preview {
-            background: #f0f0f0;
-            border: 2px dashed #ccc;
-            border-radius: 8px;
-            padding: 40px;
-            margin: 30px auto;
-            max-width: 600px;
-            color: #666;
+        .urgency-text {
+            font-size: 0.9rem;
+            color: #EA580C;
             font-style: italic;
+            margin-top: 0.5rem;
         }
 
-        .timeline {
+        /* About Section */
+        .about {
+            background-image: linear-gradient(rgba(250, 250, 248, 0.9), rgba(250, 250, 248, 0.9)), 
+                            url('https://capstonehomesaz.com/wp-content/uploads/2025/08/42-Front-Patio-1.jpg');
+            background-size: cover;
+            background-position: center;
+            border-radius: 20px;
+            padding: 4rem;
+            margin: 4rem 0;
+            text-align: center;
+            border: 1px solid #e0d5c5;
+        }
+
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .about h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #C4613A;
+        }
+
+        .about p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            color: #2C2C2C;
+        }
+
+        .social-link {
+            color: #C4613A;
+            text-decoration: none;
+            font-weight: 600;
+            border-bottom: 2px solid transparent;
+            transition: border-color 0.3s ease;
+        }
+
+        .social-link:hover {
+            border-bottom-color: #C4613A;
+        }
+
+        /* Why Prescott */
+        .prescott-stats {
+            background: linear-gradient(135deg, #C4613A, #D67347);
+            border-radius: 16px;
+            padding: 3rem 2rem;
+            margin: 3rem 0;
+        }
+
+        .stats-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 30px;
-            margin: 40px 0;
-            max-width: 1000px;
+            gap: 2rem;
+        }
+
+        .stat-card {
+            text-align: center;
+            color: #FAFAF8;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            opacity: 0.9;
+            font-weight: 500;
+        }
+
+        /* Contact Form */
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #FFFFFF;
+            padding: 3rem;
+            border-radius: 16px;
+            border: 1px solid #e0d5c5;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: #C4613A;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            background: #FAFAF8;
+            border: 2px solid #e0d5c5;
+            border-radius: 8px;
+            color: #2C2C2C;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #C4613A;
+        }
+
+        .form-group textarea {
+            height: 120px;
+            resize: vertical;
+        }
+
+        .form-submit {
+            width: 100%;
+            padding: 1.25rem;
+            background: #C4613A;
+            color: #FAFAF8;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(196, 97, 58, 0.3);
+        }
+
+        .form-submit:hover {
+            background: #D67347;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(196, 97, 58, 0.4);
+        }
+
+        /* Enhanced Contact Section */
+        .contact-intro {
+            text-align: center;
+            margin-bottom: 3rem;
+            max-width: 600px;
             margin-left: auto;
             margin-right: auto;
         }
 
-        .timeline-item {
-            background: #f8f9fa;
-            padding: 25px;
+        .contact-phone {
+            background: #F5F3EE;
+            border: 2px solid #C4613A;
             border-radius: 12px;
+            padding: 1.5rem;
             text-align: center;
-            border-top: 4px solid #C4613A;
+            margin-bottom: 2rem;
         }
 
-        .timeline-item h4 {
+        .contact-phone h3 {
+            color: #C4613A;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-phone a {
+            color: #C4613A;
+            text-decoration: none;
+            font-size: 1.25rem;
+            font-weight: 700;
+        }
+
+        .contact-phone a:hover {
+            color: #D67347;
+        }
+
+        .trust-signals {
+            background: #F0EBE3;
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            border: 1px solid #e0d5c5;
+        }
+
+        .trust-signals p {
+            margin: 0;
             color: #C4613A;
             font-weight: 600;
-            margin-bottom: 15px;
-            font-size: 1.1rem;
         }
 
-        .slide-indicators {
-            position: fixed;
-            bottom: 30px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            gap: 10px;
-            z-index: 1000;
+        .enhanced-submit {
+            font-size: 1.2rem !important;
+            padding: 1.5rem !important;
+            margin-top: 1rem;
         }
 
-        .dot {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: #ddd;
-            cursor: pointer;
-            transition: all 0.3s ease;
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
-        .dot.active {
-            background: #C4613A;
-            transform: scale(1.2);
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
         }
 
-        .navigation-hint {
-            position: fixed;
-            top: 30px;
-            right: 30px;
-            font-size: 0.9rem;
-            color: #888;
-            background: rgba(255,255,255,0.9);
-            padding: 10px 15px;
-            border-radius: 20px;
-            backdrop-filter: blur(10px);
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
         }
 
+        /* Mobile Styles */
         @media (max-width: 768px) {
-            .slide {
-                padding: 30px 20px;
+            .nav-links {
+                display: none;
             }
-            
-            .slide h1 {
-                font-size: 2.5rem;
+
+            .mobile-menu {
+                display: flex;
             }
-            
-            .slide h2 {
-                font-size: 2rem;
+
+            .nav div:nth-child(3) {
+                display: none; /* Hide desktop phone/CTA on mobile */
             }
-            
-            .pricing-table,
-            .package-table {
-                padding: 20px;
+
+            .header-phone {
+                display: block !important;
+                text-align: center;
+                margin-bottom: 1rem;
             }
-            
-            .pricing-table th,
-            .pricing-table td {
-                padding: 10px;
-                font-size: 0.9rem;
+
+            .mobile-cta-bar.visible {
+                display: flex !important;
             }
-            
-            .date {
-                position: static;
-                margin-top: 40px;
+
+            .section {
+                padding: 4rem 1rem;
             }
-            
-            .timeline {
+
+            .hero-content {
+                padding: 1rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .builders {
                 grid-template-columns: 1fr;
             }
+
+            .builder-content {
+                padding: 1.5rem;
+            }
+
+            .communities {
+                grid-template-columns: 1fr;
+            }
+
+            .about {
+                padding: 2rem;
+                margin: 2rem 0;
+            }
+
+            .testimonials {
+                padding: 2rem 1rem;
+            }
+
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-form {
+                padding: 2rem;
+            }
+
+            .mid-page-cta {
+                padding: 1.5rem;
+                margin: 3rem 1rem;
+            }
+
+            .filters {
+                gap: 0.5rem;
+            }
+
+            .filter-btn {
+                padding: 0.5rem 1rem;
+                font-size: 0.8rem;
+            }
+
+            .prescott-stats {
+                padding: 2rem 1rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.5rem;
+            }
         }
 
-        .strong {
-            font-weight: 600;
-            color: #C4613A;
-        }
+        @media (max-width: 480px) {
+            .header {
+                padding: 1rem;
+            }
 
-        .contact-info {
-            margin-top: 50px;
-            font-size: 1.1rem;
-            color: #666;
+            .communities {
+                grid-template-columns: 1fr;
+            }
+
+            .community-card {
+                margin: 0 0.5rem;
+            }
+
+            .quick-homes {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="slideshow-container">
-        <!-- Slide 1: Cover -->
-        <div class="slide active">
-            <div class="logo">C41 CINEMA</div>
-            <h1>Real Estate Marketing Strategy for Ty</h1>
-            <div class="subtitle">Full-Service Digital Marketing Package</div>
-            <p>A comprehensive marketing solution to establish Ty as Prescott's premier digital-native real estate agent</p>
-            <div class="date">February 2026</div>
-        </div>
-
-        <!-- Slide 2: The Opportunity -->
-        <div class="slide">
-            <h2>The Opportunity</h2>
-            <ul>
-                <li>Prescott is one of the fastest-growing retirement and relocation markets in Arizona</li>
-                <li>Ty has exclusive builder partnerships with Capstone Homes and ĒCCO Homes</li>
-                <li>The agents who win in 2026 are the ones with the strongest digital presence</li>
-                <li>Most Prescott agents are running outdated playbooks - no video, bad websites, no social media</li>
-                <li>There's a massive gap in the market for a digitally-native agent</li>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">Ty Real Estate</div>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#builders">Builders</a></li>
+                <li><a href="#communities">Communities</a></li>
+                <li><a href="#quick-homes">Available Now</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
-        </div>
-
-        <!-- Slide 3: What We've Already Built -->
-        <div class="slide">
-            <h2>What We've Already Built</h2>
-            <div class="website-preview">
-                <h4>Ty's Real Estate Website Preview</h4>
-                <p>Modern, responsive design with community pages, builder data integration, lead capture forms, and SEO optimization</p>
+            <div style="display: flex; align-items: center;">
+                <a href="tel:+18015550123" class="header-phone">(801) 555-0123</a>
+                <a href="#contact" class="header-cta">Get in Touch</a>
             </div>
-            <ul>
-                <li>Ty's site is already live with real builder data</li>
-                <li>Community pages with detailed neighborhood information</li>
-                <li>Advanced lead capture system integrated</li>
-                <li>SEO optimized for Prescott real estate searches</li>
-                <li>This is just the foundation</li>
-            </ul>
-        </div>
-
-        <!-- Slide 4: The Full Strategy -->
-        <div class="slide">
-            <h2>The Full Strategy</h2>
-            <p>Everything C41 Cinema will deliver:</p>
-            <ul>
-                <li><span class="strong">Website:</span> Multi-page site with community pages, lead magnets, Home Finder Quiz</li>
-                <li><span class="strong">Content Creation:</span> 7-14 short-form videos per week across all platforms</li>
-                <li><span class="strong">Social Media Management:</span> Daily posting to Instagram, TikTok, YouTube Shorts, Facebook</li>
-                <li><span class="strong">Email Marketing:</span> Lead capture system, automated sequences, monthly newsletters</li>
-                <li><span class="strong">Design:</span> Tesla wrap, A-frame signs, waving arm inflatable</li>
-                <li><span class="strong">Paid Ads:</span> Facebook and Google campaigns (ad spend separate)</li>
-                <li><span class="strong">SEO & Analytics:</span> Google Business Profile, tracking, optimization</li>
-            </ul>
-        </div>
-
-        <!-- Slide 5: Content Machine -->
-        <div class="slide">
-            <h2>Content Machine</h2>
-            <ul>
-                <li>Ty films on his phone just 5-6 hours per week</li>
-                <li>C41 edits, adds captions, graphics, and hooks, then posts everywhere</li>
-                <li>1-2 posts per day, every single day</li>
-                <li>Same video cross-posted to all platforms for maximum reach</li>
-                <li>Mix of home tours, lifestyle content, market education, and engagement hooks</li>
-                <li>This volume of content is what separates top agents from average ones</li>
-            </ul>
-            <p style="margin-top: 40px; font-style: italic; color: #666;">
-                Consistency beats perfection. Daily presence builds trust and top-of-mind awareness.
-            </p>
-        </div>
-
-        <!-- Slide 6: Lead Generation System -->
-        <div class="slide">
-            <h2>Lead Generation System</h2>
-            <ul>
-                <li>Website captures emails through multiple strategic touchpoints</li>
-                <li>Lead magnets: Prescott Relocation Guide, Area Map, First-Time Buyer's Guide</li>
-                <li>Home Finder Quiz - interactive tool that matches buyers to communities</li>
-                <li>Every piece of content drives traffic back to the website</li>
-                <li>Automated email follow-up sequences nurture leads</li>
-                <li><span class="strong">Goal: 500+ qualified leads in first 3 months</span></li>
-            </ul>
-        </div>
-
-        <!-- Slide 7: What This Would Normally Cost -->
-        <div class="slide">
-            <h2>What This Would Normally Cost</h2>
-            <div class="pricing-table">
-                <table>
-                    <tr>
-                        <th>Service</th>
-                        <th>Industry Rate (Monthly)</th>
-                    </tr>
-                    <tr>
-                        <td>Website design + ongoing maintenance</td>
-                        <td>$1,000-2,000</td>
-                    </tr>
-                    <tr>
-                        <td>Social media management (daily posting, 4 platforms)</td>
-                        <td>$2,500-4,000</td>
-                    </tr>
-                    <tr>
-                        <td>Video production + editing (30-60 clips/month)</td>
-                        <td>$4,000-6,000</td>
-                    </tr>
-                    <tr>
-                        <td>Email marketing + lead generation system</td>
-                        <td>$1,000-2,000</td>
-                    </tr>
-                    <tr>
-                        <td>Graphic design (wrap, signs, marketing materials)</td>
-                        <td>$1,000-1,500</td>
-                    </tr>
-                    <tr>
-                        <td>SEO + Google Business Profile + analytics</td>
-                        <td>$1,000-1,500</td>
-                    </tr>
-                    <tr>
-                        <td>Paid ad management (15-20% of ad spend)</td>
-                        <td>$1,000-1,500</td>
-                    </tr>
-                    <tr>
-                        <td>Strategy, consulting + monthly reporting</td>
-                        <td>$1,500-2,000</td>
-                    </tr>
-                    <tr class="total">
-                        <td><strong>Total (typical agency)</strong></td>
-                        <td><strong>$15,000-20,000/month</strong></td>
-                    </tr>
-                </table>
+            <div class="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
-            <p style="font-style: italic; color: #666;">Most agencies charge $15,000-20,000/month for this level of service, and they don't even do the video editing in-house.</p>
+        </nav>
+    </header>
+
+    <!-- Sticky Mobile CTA Bar -->
+    <div class="mobile-cta-bar" id="mobileCTA">
+        <div class="mobile-cta-buttons">
+            <a href="tel:+18015550123" class="mobile-cta-btn">Call Now</a>
+            <a href="#contact" class="mobile-cta-btn">Schedule Consultation</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <h1>Find Your Dream Home in Prescott</h1>
+            <p>I'll guide you through every step, from choosing your community to getting your keys. Exclusive access to the best builders and neighborhoods in Arizona's most desirable mountain community.</p>
+            <div class="cta-buttons">
+                <a href="#contact" class="btn btn-primary">Schedule a Free Consultation</a>
+                <a href="#communities" class="btn btn-secondary">View Available Homes</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Builder Partners Section -->
+    <section id="builders" class="section fade-in">
+        <div class="section-header">
+            <h2>Exclusive Builder Partnerships</h2>
+            <p>Direct access to Prescott's premier home builders. As an in-house agent, I provide you with insider knowledge and exclusive opportunities.</p>
+        </div>
+        <div class="builders">
+            <div class="builder-card">
+                <div class="builder-image">
+                    <div class="builder-logo">CAPSTONE</div>
+                </div>
+                <div class="builder-content">
+                    <h3>Capstone Homes</h3>
+                    <p>Luxury custom homes with premium finishes and thoughtful design. Known for their attention to detail and quality craftsmanship in Prescott's most sought-after locations.</p>
+                    <a href="https://capstonehomesaz.com" class="builder-link" target="_blank" rel="noopener">Visit Capstone Homes →</a>
+                </div>
+            </div>
+            <div class="builder-card">
+                <div class="builder-image">
+                    <div class="builder-logo">ĒCCO</div>
+                </div>
+                <div class="builder-content">
+                    <h3>ĒCCO Homes</h3>
+                    <p>Modern, energy-efficient homes designed for today's lifestyle. Offering innovative floor plans and sustainable features at exceptional value in growing Prescott Valley communities.</p>
+                    <a href="https://eccohomesaz.com" class="builder-link" target="_blank" rel="noopener">Visit ĒCCO Homes →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mid-page CTA 1 -->
+    <div class="mid-page-cta">
+        <h3>Ready to see these homes in person? Let's schedule a tour.</h3>
+        <a href="#contact" class="btn btn-primary">Schedule a Tour</a>
+    </div>
+
+    <!-- Available Communities Section -->
+    <section id="communities" class="section fade-in">
+        <div class="section-header">
+            <h2>Available Communities</h2>
+            <p>Discover your perfect neighborhood in Prescott and Prescott Valley. Each community offers unique amenities and lifestyle opportunities.</p>
+        </div>
+        
+        <div class="filters">
+            <button class="filter-btn active" data-filter="all">All Communities</button>
+            <button class="filter-btn" data-filter="capstone">Capstone Homes</button>
+            <button class="filter-btn" data-filter="ecco">ĒCCO Homes</button>
         </div>
 
-        <!-- Slide 8: Our Offer -->
-        <div class="slide">
-            <h2>Our Offer</h2>
-            <p>A typical agency charges $15K-20K/month for this scope of work. We're offering founding partner pricing because C41 is building its portfolio and this is a partnership, not just a client relationship. As the agency grows and takes on more clients at full rate, this founding partner pricing stays locked in.</p>
+        <div class="communities">
+            <div class="community-card" data-builder="capstone">
+                <div class="community-image"></div>
+                <div class="community-info">
+                    <span class="community-badge">Capstone Homes</span>
+                    <h3>Granite Dells Estates</h3>
+                    <div class="community-details">
+                        <p><strong>Location:</strong> Gated Community, Prescott</p>
+                        <p><strong>Home Size:</strong> 3-5 bedrooms + study, 2,189-3,760 sqft</p>
+                        <p><strong>Features:</strong> Clubhouse, pool, fitness center, pickleball courts</p>
+                        <p><strong>Setting:</strong> Dramatic rock formations, premium lots</p>
+                    </div>
+                    <div class="community-price">Starting from $949,900</div>
+                </div>
+            </div>
+
+            <div class="community-card" data-builder="capstone">
+                <div class="community-image"></div>
+                <div class="community-info">
+                    <span class="community-badge">Capstone Homes</span>
+                    <h3>Hidden Hills</h3>
+                    <div class="community-details">
+                        <p><strong>Location:</strong> Prescott</p>
+                        <p><strong>Home Size:</strong> 3 bedrooms + study, 2,189-3,251 sqft</p>
+                        <p><strong>Features:</strong> Oversized 0.25-acre lots</p>
+                        <p><strong>Setting:</strong> National Forest views, private setting</p>
+                    </div>
+                    <div class="community-price">Starting from $949,900</div>
+                </div>
+            </div>
+
+            <div class="community-card" data-builder="capstone">
+                <div class="community-image"></div>
+                <div class="community-info">
+                    <span class="community-badge">Capstone Homes</span>
+                    <h3>Jasper 3B</h3>
+                    <div class="community-details">
+                        <p><strong>Location:</strong> Prescott Valley</p>
+                        <p><strong>Home Size:</strong> 3-5 bedrooms + study, 2,189-3,760 sqft</p>
+                        <p><strong>Features:</strong> 81 homesites, J Club amenities</p>
+                        <p><strong>Setting:</strong> Estate-sized 0.25-0.5 acre lots</p>
+                    </div>
+                    <div class="community-price">Starting from $934,900</div>
+                </div>
+            </div>
+
+            <div class="community-card" data-builder="ecco">
+                <div class="community-image"></div>
+                <div class="community-info">
+                    <span class="community-badge">ĒCCO Homes</span>
+                    <h3>Jasper 7</h3>
+                    <div class="community-details">
+                        <p><strong>Location:</strong> Prescott Valley (Jasper community)</p>
+                        <p><strong>Home Size:</strong> 2-4 bedrooms, 1,281-1,958 sqft</p>
+                        <p><strong>Features:</strong> 84 homesites, J Club access</p>
+                        <p><strong>Setting:</strong> Modern energy-efficient designs</p>
+                    </div>
+                    <div class="community-price">Starting from $459,900</div>
+                </div>
+            </div>
+
+            <div class="community-card" data-builder="capstone">
+                <div class="community-image"></div>
+                <div class="community-info">
+                    <span class="community-badge">Capstone Homes</span>
+                    <h3>Jasper 8</h3>
+                    <div class="community-details">
+                        <p><strong>Location:</strong> Prescott Valley, next to Glassford Dells Regional Park</p>
+                        <p><strong>Home Size:</strong> 3-5 bedrooms + study, 2,185-3,281 sqft</p>
+                        <p><strong>Features:</strong> 132 homesites, park access</p>
+                        <p><strong>Setting:</strong> Natural beauty, outdoor recreation</p>
+                    </div>
+                    <div class="community-price">Starting from $794,900</div>
+                </div>
+            </div>
+
+            <div class="community-card" data-builder="ecco">
+                <div class="community-image"></div>
+                <div class="community-info">
+                    <span class="community-badge">ĒCCO Homes</span>
+                    <h3>Skyview</h3>
+                    <div class="community-details">
+                        <p><strong>Location:</strong> Prescott Valley</p>
+                        <p><strong>Home Size:</strong> 2-4 bedrooms, 1,653-2,254 sqft</p>
+                        <p><strong>Features:</strong> Optional RV garages available</p>
+                        <p><strong>Setting:</strong> Modern living, flexible lifestyle</p>
+                    </div>
+                    <div class="community-price">Starting from $508,900</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mid-page CTA 2 -->
+    <div class="mid-page-cta">
+        <h3>Have questions about new construction? I'm here to help.</h3>
+        <a href="#contact" class="btn btn-primary">Contact Ty</a>
+    </div>
+
+    <!-- Quick Move-In Homes Section -->
+    <section id="quick-homes" class="section fade-in">
+        <div class="section-header">
+            <h2>Quick Move-In Homes</h2>
+            <p>Ready to move in now or soon. These homes are either completed or nearing completion for faster occupancy.</p>
+        </div>
+        
+        <div class="urgency-banner">
+            Only 6 quick move-in homes available! These won't last long at these prices.
+        </div>
+        
+        <div class="quick-homes">
+            <div class="quick-home-card">
+                <span class="availability-badge upcoming">Available 02/28/2026</span>
+                <h3>Jasper 8 - Plan 2475</h3>
+                <p><strong>Homesite 759</strong></p>
+                <p>3 bed / 3 bath • 2,475 sqft</p>
+                <div class="community-price">$916,995</div>
+                <div class="urgency-text">Won't last long at this price</div>
+                <a href="#contact" class="home-cta-link" data-community="Jasper 8">Inquire About This Home</a>
+            </div>
+
+            <div class="quick-home-card">
+                <span class="availability-badge upcoming">Available 02/28/2026</span>
+                <h3>Jasper 8 - Plan 3281</h3>
+                <p><strong>Homesite 760</strong></p>
+                <p>5 bed + study / 4.5 bath • 3,281 sqft</p>
+                <div class="community-price">$1,133,800</div>
+                <div class="urgency-text">Premium lot with views</div>
+                <a href="#contact" class="home-cta-link" data-community="Jasper 8">Inquire About This Home</a>
+            </div>
+
+            <div class="quick-home-card">
+                <span class="availability-badge upcoming">Available 02/14/2026</span>
+                <h3>Jasper 8 - Plan 2791</h3>
+                <p><strong>Homesite 744</strong></p>
+                <p>4 bed / 3.5 bath • 2,791 sqft</p>
+                <div class="community-price">$1,077,941</div>
+                <div class="urgency-text">Move in before spring!</div>
+                <a href="#contact" class="home-cta-link" data-community="Jasper 8">Inquire About This Home</a>
+            </div>
+
+            <div class="quick-home-card">
+                <span class="availability-badge">Available Now</span>
+                <h3>Hidden Hills - Plan 2189</h3>
+                <p><strong>Homesite 111</strong></p>
+                <p>3 bed / 2.5 bath • 2,189 sqft</p>
+                <div class="community-price">$996,906</div>
+                <div class="urgency-text">Ready for immediate move-in</div>
+                <a href="#contact" class="home-cta-link" data-community="Hidden Hills">Inquire About This Home</a>
+            </div>
+
+            <div class="quick-home-card">
+                <span class="availability-badge">Available Now</span>
+                <h3>Hidden Hills - Plan 2672</h3>
+                <p><strong>Homesite 120</strong></p>
+                <p>3 bed + study / 3.5 bath • 2,672 sqft</p>
+                <div class="community-price">$1,250,000</div>
+                <div class="urgency-text">Last home in this price range</div>
+                <a href="#contact" class="home-cta-link" data-community="Hidden Hills">Inquire About This Home</a>
+            </div>
+
+            <div class="quick-home-card">
+                <span class="availability-badge">Available Now</span>
+                <h3>Jasper 3B - Plan 2672</h3>
+                <p><strong>Homesite 397</strong></p>
+                <p>3 bed + study / 3.5 bath • 2,672 sqft</p>
+                <div class="community-price">$1,243,501</div>
+                <div class="urgency-text">Priced to sell quickly</div>
+                <a href="#contact" class="home-cta-link" data-community="Jasper 3B">Inquire About This Home</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mid-page CTA 3 -->
+    <div class="mid-page-cta">
+        <h3>Not sure which community is right for you? Let's talk.</h3>
+        <a href="#contact" class="btn btn-primary">Free Consultation</a>
+    </div>
+
+    <!-- About Ty Section -->
+    <section id="about" class="section fade-in">
+        <div class="about">
+            <div class="about-content">
+                <h2>Meet Ty</h2>
+                <p>I'm relocating from Utah to Prescott and bringing insider knowledge of the new construction process with me. As an in-house agent for both Capstone Homes and ĒCCO Homes, I have exclusive access to the best lots, floor plans, and pricing.</p>
+                <p>Whether you're looking for new construction or resale properties, I understand the builder process inside and out. My social media presence and modern approach means you'll get responsive communication and market insights that matter.</p>
+                <p>I specialize in helping people relocate to Prescott from Utah, Phoenix, Los Angeles, and beyond. Let's find your perfect Arizona home together.</p>
+                <p>Follow me on Instagram: <a href="https://instagram.com/ty_the_real_estate_guy" class="social-link" target="_blank" rel="noopener">@ty_the_real_estate_guy</a> (8,138 followers)</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mid-page CTA 4 -->
+    <div class="mid-page-cta">
+        <h3>Ready to see these homes in person? Let's schedule a tour.</h3>
+        <a href="#contact" class="btn btn-primary">Schedule a Tour</a>
+    </div>
+
+    <!-- Social Proof / Testimonials Section -->
+    <!-- NOTE FOR TY: Replace these placeholder testimonials with real client testimonials -->
+    <section class="section fade-in">
+        <div class="testimonials">
+            <div class="section-header">
+                <h2>What My Clients Say</h2>
+                <p>Real experiences from families who found their perfect Prescott home</p>
+            </div>
             
-            <div class="package-table">
-                <table>
-                    <tr>
-                        <td><strong>C41 Cinema Full-Service Package</strong></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>Custom website + ongoing updates</td>
-                        <td class="checkmark">✓</td>
-                    </tr>
-                    <tr>
-                        <td>30-60 edited videos per month</td>
-                        <td class="checkmark">✓</td>
-                    </tr>
-                    <tr>
-                        <td>Daily social media posting (all platforms)</td>
-                        <td class="checkmark">✓</td>
-                    </tr>
-                    <tr>
-                        <td>Email marketing system + monthly newsletter</td>
-                        <td class="checkmark">✓</td>
-                    </tr>
-                    <tr>
-                        <td>Lead magnet creation (guides, quiz tool)</td>
-                        <td class="checkmark">✓</td>
-                    </tr>
-                    <tr>
-                        <td>All graphic design (wrap, signs, materials)</td>
-                        <td class="checkmark">✓</td>
-                    </tr>
-                    <tr>
-                        <td>SEO + Google Business Profile setup</td>
-                        <td class="checkmark">✓</td>
-                    </tr>
-                    <tr>
-                        <td>Paid ad management (ad spend separate)</td>
-                        <td class="checkmark">✓</td>
-                    </tr>
-                    <tr>
-                        <td>Monthly analytics + strategy calls</td>
-                        <td class="checkmark">✓</td>
-                    </tr>
-                </table>
-            </div>
-
-            <div class="price-highlight">
-                <div class="normal-rate">Normal rate: $15,000-20,000/month</div>
-                <div class="our-rate">Founding Partner rate: $10,000/month</div>
-                <p>(6-month minimum commitment)</p>
-                <p style="margin-top: 15px; font-size: 0.9rem;">One-time setup fee: $5,000 (covers website build, quiz tool, lead magnets, all initial design work, Tesla wrap design, signage)</p>
-            </div>
-        </div>
-
-        <!-- Slide 9: The Bonus -->
-        <div class="slide">
-            <h2>The Bonus</h2>
-            <p>In addition to Ty's marketing package, C41 Cinema will also provide:</p>
-            <ul>
-                <li>Assistance deploying a similar marketing system for your brother's business in Flagstaff</li>
-                <li>Ongoing video production for your construction management app</li>
-                <li>Priority pricing locked in for future projects and expansions</li>
-                <li>These are included as part of the partnership, not billed separately</li>
-            </ul>
-            <p style="margin-top: 40px; color: #C4613A; font-weight: 500;">
-                This is about building a lasting business relationship that benefits everyone involved.
-            </p>
-        </div>
-
-        <!-- Slide 10: Timeline -->
-        <div class="slide">
-            <h2>Timeline</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <h4>Weeks 1-2</h4>
-                    <p>Everything built: website expansion, content backlog, designs ready to launch</p>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <div class="testimonial-text">
+                        "Ty made our relocation from Phoenix seamless. His knowledge of the new construction process saved us thousands, and he helped us get the perfect lot in Granite Dells Estates. We couldn't be happier with our new home!"
+                    </div>
+                    <div class="testimonial-author">The Johnson Family</div>
+                    <div class="testimonial-location">Relocated from Phoenix</div>
                 </div>
-                <div class="timeline-item">
-                    <h4>Weeks 3-4</h4>
-                    <p>Launch day when Ty is licensed - everything goes live at once</p>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <div class="testimonial-text">
+                        "Working with Ty was amazing. As an in-house agent, he had access to floor plans and pricing before they went public. We got our dream home in Hidden Hills at an incredible price. Highly recommend!"
+                    </div>
+                    <div class="testimonial-author">Sarah and Mike Chen</div>
+                    <div class="testimonial-location">Relocated from Utah</div>
                 </div>
-                <div class="timeline-item">
-                    <h4>Months 2-3</h4>
-                    <p>Paid ads launch, 500+ leads generated, first closings from digital marketing</p>
-                </div>
-                <div class="timeline-item">
-                    <h4>Months 4-6</h4>
-                    <p>Ty is the most visible agent in Prescott online</p>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <div class="testimonial-text">
+                        "Ty's social media presence shows he really knows the Prescott market. He guided us through every step of the building process and was always available to answer questions. Professional and trustworthy!"
+                    </div>
+                    <div class="testimonial-author">David and Lisa Rodriguez</div>
+                    <div class="testimonial-location">First-time home buyers</div>
                 </div>
             </div>
-        </div>
-
-        <!-- Slide 11: Why This Works -->
-        <div class="slide">
-            <h2>Why This Works</h2>
-            <ul>
-                <li>Ty has the builder relationships and the hustle</li>
-                <li>C41 has the creative and marketing expertise</li>
-                <li>The Prescott market is wide open for a digitally-savvy agent</li>
-                <li>This model can be replicated for other agents and markets (Flagstaff, etc.)</li>
-                <li>Everyone wins: Ty gets leads, C41 builds its portfolio, the investment pays for itself</li>
-            </ul>
-            <p style="margin-top: 40px; font-style: italic; color: #666;">
-                Success breeds success. One proven case study opens the door to scaling this model across Arizona.
-            </p>
-        </div>
-
-        <!-- Slide 12: Let's Get Started -->
-        <div class="slide">
-            <h2>Let's Get Started</h2>
-            <p style="font-size: 1.4rem; margin-bottom: 40px;">Ready to build something great together</p>
             
-            <div class="contact-info">
-                <p><strong>Kyle Abrahams</strong></p>
-                <p>Founder & Creative Director</p>
-                <p>C41 Cinema</p>
-                <br>
-                <p>Let's turn Ty into Prescott's go-to real estate agent</p>
-                <p>and build the foundation for C41's future</p>
+            <div class="testimonial-note">
+                * These are placeholder testimonials. Replace with real client testimonials and photos.
             </div>
         </div>
+    </section>
+
+    <!-- Why Prescott Section -->
+    <section id="prescott" class="section fade-in">
+        <div class="section-header">
+            <h2>Why Prescott?</h2>
+            <p>Discover Arizona's best-kept secret. Prescott offers the perfect blend of small-town charm, outdoor recreation, and growing opportunities.</p>
+        </div>
+        
+        <div class="prescott-stats">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">~$600K</div>
+                    <div class="stat-label">Median Home Price</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">4,300ft</div>
+                    <div class="stat-label">Elevation</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">300+</div>
+                    <div class="stat-label">Sunny Days/Year</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">47,000</div>
+                    <div class="stat-label">Population</div>
+                </div>
+            </div>
+        </div>
+
+        <div style="margin-top: 3rem; text-align: center; max-width: 800px; margin-left: auto; margin-right: auto;">
+            <p>Perfect climate with four mild seasons, endless outdoor recreation, rich Western history, and a growing community of retirees, remote workers, and young professionals. Many are migrating here from Phoenix, Los Angeles, and Chicago for the quality of life and small-town feel.</p>
+        </div>
+    </section>
+
+    <!-- Mid-page CTA 5 -->
+    <div class="mid-page-cta">
+        <h3>Have questions about new construction? I'm here to help.</h3>
+        <a href="#contact" class="btn btn-primary">Contact Ty</a>
     </div>
 
-    <div class="slide-indicators">
-        <span class="dot active" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(3)"></span>
-        <span class="dot" onclick="currentSlide(4)"></span>
-        <span class="dot" onclick="currentSlide(5)"></span>
-        <span class="dot" onclick="currentSlide(6)"></span>
-        <span class="dot" onclick="currentSlide(7)"></span>
-        <span class="dot" onclick="currentSlide(8)"></span>
-        <span class="dot" onclick="currentSlide(9)"></span>
-        <span class="dot" onclick="currentSlide(10)"></span>
-        <span class="dot" onclick="currentSlide(11)"></span>
-        <span class="dot" onclick="currentSlide(12)"></span>
-    </div>
+    <!-- Contact Section -->
+    <section id="contact" class="section fade-in">
+        <div class="section-header">
+            <h2>Let's Find Your Perfect Home</h2>
+            <div class="contact-intro">
+                <p style="font-size: 1.2rem; margin-bottom: 0.5rem;">Ready to start your Prescott journey?</p>
+                <p style="color: #C4613A; font-weight: 600;">I typically respond within 2 hours</p>
+            </div>
+        </div>
+        
+        <div class="contact-phone">
+            <h3>Prefer to talk?</h3>
+            <a href="tel:+18015550123">Call me directly at (801) 555-0123</a>
+        </div>
+        
+        <div class="trust-signals">
+            <p>No pressure, no obligation. Just honest guidance.</p>
+        </div>
+        
+        <form class="contact-form" action="https://formsubmit.co/kabbott622@gmail.com" method="POST">
+            <input type="hidden" name="_next" value="https://ty-realestate.github.io">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_subject" value="New inquiry from Ty Real Estate website">
+            
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone">
+            </div>
+            
+            <div class="form-group">
+                <label for="interest">I'm Interested In</label>
+                <select id="interest" name="interest" required>
+                    <option value="">Select an option</option>
+                    <option value="New Construction">New Construction</option>
+                    <option value="Resale">Resale</option>
+                    <option value="Both">Both</option>
+                    <option value="Just Exploring">Just Exploring</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="community">Preferred Community</label>
+                <select id="community" name="community">
+                    <option value="">Not Sure</option>
+                    <option value="Granite Dells Estates">Granite Dells Estates</option>
+                    <option value="Hidden Hills">Hidden Hills</option>
+                    <option value="Jasper 3B">Jasper 3B</option>
+                    <option value="Jasper 7">Jasper 7</option>
+                    <option value="Jasper 8">Jasper 8</option>
+                    <option value="Skyview">Skyview</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Tell me about your timeline, budget, and what you're looking for..."></textarea>
+            </div>
+            
+            <button type="submit" class="form-submit enhanced-submit">Get Started - Send Message</button>
+        </form>
+    </section>
 
-    <div class="navigation-hint">
-        ← → Arrow keys or click to navigate
-    </div>
+    <!-- Footer -->
+    <footer style="background: #F5F3EE; border-top: 1px solid #e0d5c5; padding: 3rem 2rem; text-align: center;">
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <p style="color: #C4613A; font-weight: 700; font-size: 1.5rem; margin-bottom: 0.5rem;">Your dream home in Prescott is closer than you think.</p>
+            
+            <div style="background: #FFFFFF; border: 2px solid #C4613A; border-radius: 12px; padding: 2rem; margin: 2rem 0; display: inline-block;">
+                <p style="color: #C4613A; font-weight: 700; font-size: 1.25rem; margin-bottom: 1rem;">Ty Real Estate</p>
+                <p style="margin-bottom: 0.5rem;"><strong>Phone:</strong> <a href="tel:+18015550123" style="color: #C4613A; text-decoration: none; font-weight: 600;">(801) 555-0123</a></p>
+                <p style="margin-bottom: 0.5rem;"><strong>Email:</strong> <a href="mailto:ty@placeholder-email.com" style="color: #C4613A; text-decoration: none;">ty@placeholder-email.com</a></p>
+                <p style="margin-bottom: 1rem;"><strong>Instagram:</strong> <a href="https://instagram.com/ty_the_real_estate_guy" target="_blank" rel="noopener" style="color: #C4613A; text-decoration: none;">@ty_the_real_estate_guy</a></p>
+            </div>
+            
+            <p style="color: #2C2C2C; opacity: 0.7; margin-bottom: 0.5rem;">Prescott and Prescott Valley, Arizona</p>
+            <p style="color: #2C2C2C; opacity: 0.7; margin-bottom: 1.5rem;">In-house agent for Capstone Homes and ĒCCO Homes</p>
+            <div style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; margin-bottom: 1.5rem;">
+                <a href="https://capstonehomesaz.com" target="_blank" rel="noopener" style="color: #666; text-decoration: none;">Capstone Homes</a>
+                <a href="https://eccohomesaz.com" target="_blank" rel="noopener" style="color: #666; text-decoration: none;">ĒCCO Homes</a>
+            </div>
+            <p style="color: #2C2C2C; opacity: 0.5; font-size: 0.85rem;">&copy; 2026 Ty Real Estate. All rights reserved.</p>
+        </div>
+    </footer>
 
     <script>
-        let slideIndex = 1;
-        showSlide(slideIndex);
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
 
-        function currentSlide(n) {
-            showSlide(slideIndex = n);
-        }
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
 
-        function nextSlide() {
-            showSlide(slideIndex += 1);
-        }
+        // Observe all fade-in elements
+        document.addEventListener('DOMContentLoaded', function() {
+            const fadeElements = document.querySelectorAll('.fade-in');
+            fadeElements.forEach(el => observer.observe(el));
 
-        function prevSlide() {
-            showSlide(slideIndex -= 1);
-        }
+            // Community filter functionality
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const communityCards = document.querySelectorAll('.community-card');
 
-        function showSlide(n) {
-            let slides = document.getElementsByClassName("slide");
-            let dots = document.getElementsByClassName("dot");
-            
-            if (n > slides.length) { slideIndex = 1; }
-            if (n < 1) { slideIndex = slides.length; }
-            
-            for (let i = 0; i < slides.length; i++) {
-                slides[i].classList.remove("active");
-            }
-            
-            for (let i = 0; i < dots.length; i++) {
-                dots[i].classList.remove("active");
-            }
-            
-            slides[slideIndex - 1].classList.add("active");
-            dots[slideIndex - 1].classList.add("active");
-        }
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Remove active class from all buttons
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    // Add active class to clicked button
+                    btn.classList.add('active');
 
-        // Keyboard navigation
-        document.addEventListener('keydown', function(event) {
-            if (event.key === 'ArrowRight') {
-                nextSlide();
-            } else if (event.key === 'ArrowLeft') {
-                prevSlide();
-            }
-        });
+                    const filter = btn.getAttribute('data-filter');
 
-        // Click navigation
-        document.addEventListener('click', function(event) {
-            // Don't advance on dot clicks or table clicks
-            if (event.target.classList.contains('dot') || 
-                event.target.closest('.pricing-table') || 
-                event.target.closest('.package-table') ||
-                event.target.closest('.slide-indicators')) {
-                return;
-            }
+                    communityCards.forEach(card => {
+                        if (filter === 'all') {
+                            card.style.display = 'block';
+                            // Re-trigger animation
+                            setTimeout(() => {
+                                card.style.opacity = '1';
+                                card.style.transform = 'translateY(0)';
+                            }, 100);
+                        } else {
+                            const cardBuilder = card.getAttribute('data-builder');
+                            if (cardBuilder === filter) {
+                                card.style.display = 'block';
+                                setTimeout(() => {
+                                    card.style.opacity = '1';
+                                    card.style.transform = 'translateY(0)';
+                                }, 100);
+                            } else {
+                                card.style.opacity = '0';
+                                card.style.transform = 'translateY(30px)';
+                                setTimeout(() => {
+                                    card.style.display = 'none';
+                                }, 300);
+                            }
+                        }
+                    });
+                });
+            });
+
+            // Mobile menu toggle (basic functionality)
+            const mobileMenu = document.querySelector('.mobile-menu');
+            const navLinks = document.querySelector('.nav-links');
+
+            mobileMenu.addEventListener('click', () => {
+                navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+            });
+
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        const headerHeight = document.querySelector('.header').offsetHeight;
+                        const targetPosition = target.offsetTop - headerHeight;
+                        
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // Header scroll effect and mobile CTA bar
+            let lastScrollTop = 0;
+            const header = document.querySelector('.header');
+            const mobileCTA = document.getElementById('mobileCTA');
+            const heroSection = document.querySelector('#hero');
             
-            const clickX = event.clientX;
-            const windowWidth = window.innerWidth;
-            
-            if (clickX > windowWidth / 2) {
-                nextSlide();
-            } else {
-                prevSlide();
-            }
+            window.addEventListener('scroll', () => {
+                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                
+                // Header scroll effect
+                if (scrollTop > lastScrollTop && scrollTop > 100) {
+                    // Scrolling down
+                    header.style.transform = 'translateY(-100%)';
+                } else {
+                    // Scrolling up
+                    header.style.transform = 'translateY(0)';
+                }
+                
+                // Mobile CTA bar visibility (only on mobile)
+                if (window.innerWidth <= 768) {
+                    const heroHeight = heroSection.offsetHeight;
+                    if (scrollTop > heroHeight) {
+                        mobileCTA.classList.add('visible');
+                    } else {
+                        mobileCTA.classList.remove('visible');
+                    }
+                }
+                
+                lastScrollTop = scrollTop;
+            });
+
+            // Handle window resize for mobile CTA
+            window.addEventListener('resize', () => {
+                if (window.innerWidth > 768) {
+                    mobileCTA.classList.remove('visible');
+                }
+            });
+
+            // Home inquiry pre-filling
+            document.addEventListener('click', (e) => {
+                if (e.target.classList.contains('home-cta-link')) {
+                    const community = e.target.getAttribute('data-community');
+                    if (community) {
+                        // Pre-fill the community dropdown when user reaches contact form
+                        setTimeout(() => {
+                            const communitySelect = document.getElementById('community');
+                            if (communitySelect) {
+                                communitySelect.value = community;
+                            }
+                        }, 500);
+                    }
+                }
+            });
         });
     </script>
 </body>
