@@ -1,664 +1,826 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Real Estate Marketing Strategy for Ty - C41 Cinema</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            background: #ffffff;
-            color: #333;
-            overflow: hidden;
-            cursor: pointer;
-        }
-
-        .slideshow-container {
-            position: relative;
-            width: 100%;
-            height: 100vh;
-        }
-
-        .slide {
-            display: none;
-            width: 100%;
-            height: 100vh;
-            padding: 60px;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            transition: opacity 0.5s ease-in-out;
-        }
-
-        .slide.active {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .slide h1 {
-            font-size: 3.5rem;
-            font-weight: 700;
-            color: #C4613A;
-            margin-bottom: 20px;
-            line-height: 1.2;
-        }
-
-        .slide h2 {
-            font-size: 2.5rem;
-            font-weight: 600;
-            color: #C4613A;
-            margin-bottom: 40px;
-            line-height: 1.3;
-        }
-
-        .slide h3 {
-            font-size: 1.8rem;
-            font-weight: 500;
-            color: #555;
-            margin-bottom: 30px;
-        }
-
-        .slide p {
-            font-size: 1.2rem;
-            line-height: 1.6;
-            margin-bottom: 20px;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .slide ul {
-            text-align: left;
-            max-width: 600px;
-            margin: 0 auto;
-            font-size: 1.1rem;
-            line-height: 1.8;
-        }
-
-        .slide li {
-            margin-bottom: 15px;
-            position: relative;
-            padding-left: 20px;
-        }
-
-        .slide li::before {
-            content: "•";
-            color: #C4613A;
-            font-weight: bold;
-            position: absolute;
-            left: 0;
-        }
-
-        .logo {
-            font-size: 2rem;
-            font-weight: 700;
-            color: #C4613A;
-            margin-bottom: 10px;
-        }
-
-        .subtitle {
-            font-size: 1.5rem;
-            color: #666;
-            margin-bottom: 40px;
-        }
-
-        .date {
-            font-size: 1.1rem;
-            color: #888;
-            position: absolute;
-            bottom: 60px;
-            right: 60px;
-        }
-
-        .pricing-table {
-            background: #f8f9fa;
-            border-radius: 12px;
-            padding: 30px;
-            margin: 30px auto;
-            max-width: 700px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-        }
-
-        .pricing-table table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-
-        .pricing-table th,
-        .pricing-table td {
-            text-align: left;
-            padding: 15px 20px;
-            border-bottom: 1px solid #eee;
-        }
-
-        .pricing-table th {
-            background: #C4613A;
-            color: white;
-            font-weight: 600;
-        }
-
-        .pricing-table .total {
-            font-weight: 700;
-            background: #fff3f0;
-            color: #C4613A;
-        }
-
-        .package-table {
-            background: #f8f9fa;
-            border-radius: 12px;
-            padding: 30px;
-            margin: 30px auto;
-            max-width: 600px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-        }
-
-        .package-table table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-
-        .package-table td {
-            padding: 12px 20px;
-            border-bottom: 1px solid #eee;
-            font-size: 1rem;
-        }
-
-        .package-table .checkmark {
-            color: #C4613A;
-            font-weight: bold;
-            font-size: 1.2rem;
-            text-align: center;
-            width: 40px;
-        }
-
-        .price-highlight {
-            background: linear-gradient(135deg, #C4613A, #E08A5D);
-            color: white;
-            padding: 30px;
-            border-radius: 12px;
-            margin: 30px auto;
-            max-width: 500px;
-        }
-
-        .price-highlight .normal-rate {
-            text-decoration: line-through;
-            opacity: 0.8;
-            font-size: 1.1rem;
-        }
-
-        .price-highlight .our-rate {
-            font-size: 2rem;
-            font-weight: 700;
-            margin: 10px 0;
-        }
-
-        .website-preview {
-            background: #f0f0f0;
-            border: 2px dashed #ccc;
-            border-radius: 8px;
-            padding: 40px;
-            margin: 30px auto;
-            max-width: 600px;
-            color: #666;
-            font-style: italic;
-        }
-
-        .timeline {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 30px;
-            margin: 40px 0;
-            max-width: 1000px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .timeline-item {
-            background: #f8f9fa;
-            padding: 25px;
-            border-radius: 12px;
-            text-align: center;
-            border-top: 4px solid #C4613A;
-        }
-
-        .timeline-item h4 {
-            color: #C4613A;
-            font-weight: 600;
-            margin-bottom: 15px;
-            font-size: 1.1rem;
-        }
-
-        .slide-indicators {
-            position: fixed;
-            bottom: 30px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            gap: 10px;
-            z-index: 1000;
-        }
-
-        .dot {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: #ddd;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .dot.active {
-            background: #C4613A;
-            transform: scale(1.2);
-        }
-
-        .navigation-hint {
-            position: fixed;
-            top: 30px;
-            right: 30px;
-            font-size: 0.9rem;
-            color: #888;
-            background: rgba(255,255,255,0.9);
-            padding: 10px 15px;
-            border-radius: 20px;
-            backdrop-filter: blur(10px);
-        }
-
-        @media (max-width: 768px) {
-            .slide {
-                padding: 30px 20px;
-            }
-            
-            .slide h1 {
-                font-size: 2.5rem;
-            }
-            
-            .slide h2 {
-                font-size: 2rem;
-            }
-            
-            .pricing-table,
-            .package-table {
-                padding: 20px;
-            }
-            
-            .pricing-table th,
-            .pricing-table td {
-                padding: 10px;
-                font-size: 0.9rem;
-            }
-            
-            .date {
-                position: static;
-                margin-top: 40px;
-            }
-            
-            .timeline {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        .strong {
-            font-weight: 600;
-            color: #C4613A;
-        }
-
-        .contact-info {
-            margin-top: 50px;
-            font-size: 1.1rem;
-            color: #666;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Real Estate Marketing Strategy for Ty — Kyle Abbott</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+  
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  
+  :root {
+    --bg: #0a0a0a;
+    --surface: #141414;
+    --surface2: #1a1a1a;
+    --border: #2a2a2a;
+    --text: #e8e8e8;
+    --text-dim: #888;
+    --accent: #C4613A;
+    --accent-soft: rgba(196, 97, 58, 0.15);
+    --green: #27ae60;
+    --green-soft: rgba(39,174,96,0.15);
+  }
+  
+  html { scroll-behavior: smooth; }
+  
+  body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+  }
+  
+  .slide {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 60px 80px;
+    position: relative;
+    border-bottom: 1px solid var(--border);
+  }
+  
+  @media (max-width: 768px) {
+    .slide { padding: 40px 24px; }
+  }
+  
+  .slide-number {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    font-size: 13px;
+    color: var(--text-dim);
+    font-weight: 500;
+    letter-spacing: 2px;
+  }
+  
+  h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 24px;
+    letter-spacing: -1px;
+  }
+  
+  h2 {
+    font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    letter-spacing: -0.5px;
+  }
+  
+  h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--accent);
+    margin-bottom: 16px;
+  }
+  
+  .subtitle {
+    font-size: clamp(1.1rem, 2vw, 1.4rem);
+    color: var(--text-dim);
+    max-width: 700px;
+    line-height: 1.7;
+    font-weight: 300;
+  }
+  
+  .accent { color: var(--accent); }
+  .green { color: var(--green); }
+  
+  /* Title slide */
+  .title-slide {
+    text-align: center;
+    align-items: center;
+  }
+  .title-slide h1 { font-size: clamp(3rem, 6vw, 5rem); margin-bottom: 16px; }
+  .title-slide .subtitle { text-align: center; margin: 0 auto; }
+  .logo-text {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    margin-bottom: 40px;
+  }
+  .divider {
+    width: 60px;
+    height: 3px;
+    background: var(--accent);
+    margin: 32px auto;
+  }
+  
+  /* Grid layouts */
+  .grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 32px;
+  }
+  @media (max-width: 768px) {
+    .grid-2 { grid-template-columns: 1fr; }
+  }
+  
+  .grid-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 24px;
+    margin-top: 32px;
+  }
+  @media (max-width: 768px) {
+    .grid-3 { grid-template-columns: 1fr; }
+  }
+  
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 32px;
+  }
+  
+  .card h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+  
+  .card p, .card li {
+    color: var(--text-dim);
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+  
+  .card ul { list-style: none; padding: 0; }
+  .card ul li { padding: 4px 0; }
+  .card ul li::before {
+    content: "→ ";
+    color: var(--accent);
+    font-weight: 600;
+  }
+  
+  /* Tables */
+  .data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 24px;
+    font-size: 0.95rem;
+  }
+  .data-table th {
+    text-align: left;
+    padding: 14px 20px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-dim);
+    border-bottom: 1px solid var(--border);
+  }
+  .data-table td {
+    padding: 14px 20px;
+    border-bottom: 1px solid var(--border);
+    color: var(--text-dim);
+  }
+  .data-table tr:last-child td { border-bottom: none; }
+  .data-table .service { color: var(--text); font-weight: 500; }
+  .data-table .cost { color: var(--accent); font-weight: 600; }
+  .data-table .number { color: var(--green); font-weight: 600; }
+  
+  /* Big number */
+  .big-number {
+    font-size: clamp(3rem, 7vw, 6rem);
+    font-weight: 800;
+    letter-spacing: -2px;
+    line-height: 1;
+  }
+  .big-number.red { color: var(--accent); }
+  .big-number.green { color: var(--green); }
+  
+  .stat-label {
+    font-size: 1rem;
+    color: var(--text-dim);
+    margin-top: 8px;
+    font-weight: 400;
+  }
+  
+  /* Stat cards */
+  .stat-row {
+    display: flex;
+    gap: 40px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+  }
+  .stat-block { flex: 1; min-width: 200px; }
+  
+  /* Cost breakdown */
+  .cost-line {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.95rem;
+  }
+  .cost-line:last-child { border-bottom: none; }
+  .cost-line .item { color: var(--text-dim); }
+  .cost-line .price { font-weight: 600; color: var(--accent); }
+  .cost-line.total {
+    border-top: 2px solid var(--accent);
+    border-bottom: none;
+    padding-top: 16px;
+    margin-top: 4px;
+    font-size: 1.1rem;
+  }
+  .cost-line.total .item,
+  .cost-line.total .price { color: var(--text); font-weight: 700; }
+  
+  /* Timeline */
+  .timeline-item {
+    display: flex;
+    gap: 20px;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .timeline-item:last-child { border-bottom: none; }
+  .timeline-week {
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--accent);
+    min-width: 100px;
+    padding-top: 2px;
+  }
+  .timeline-desc { color: var(--text-dim); }
+  .timeline-desc strong { color: var(--text); }
+  
+  .highlight-box {
+    background: var(--green-soft);
+    border: 1px solid rgba(39,174,96,0.3);
+    border-radius: 12px;
+    padding: 28px 32px;
+    margin-top: 32px;
+  }
+  .highlight-box.red {
+    background: var(--accent-soft);
+    border-color: rgba(196, 97, 58, 0.3);
+  }
+  
+  /* Monthly progression table */
+  .progression-table {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 32px;
+    margin-top: 24px;
+  }
+  
+  .progression-table h4 {
+    color: var(--text);
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+  }
+  
+  /* List styles */
+  .content-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 24px;
+  }
+  
+  .content-list li {
+    padding: 8px 0;
+    color: var(--text-dim);
+    font-size: 0.95rem;
+  }
+  
+  .content-list li::before {
+    content: "→ ";
+    color: var(--accent);
+    font-weight: 600;
+  }
+  
+  .content-list .highlight {
+    color: var(--text);
+    font-weight: 500;
+  }
+  
+  /* Checkmark list for package */
+  .package-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 24px;
+  }
+  
+  .package-list li {
+    padding: 8px 0;
+    color: var(--text-dim);
+    font-size: 0.95rem;
+  }
+  
+  .package-list li::before {
+    content: "✓ ";
+    color: var(--green);
+    font-weight: 600;
+  }
+  
+  .contact-close {
+    text-align: center;
+    margin-top: 40px;
+  }
+  
+  .contact-close .name {
+    font-size: 1.3rem;
+    color: var(--text);
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  
+  .contact-close .company {
+    font-size: 1.1rem;
+    color: var(--accent);
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+</style>
 </head>
 <body>
-    <div class="slideshow-container">
-        <!-- Slide 1: Cover -->
-        <div class="slide active">
-            <div class="logo">C41 CINEMA</div>
-            <h1>Real Estate Marketing Strategy for Ty</h1>
-            <div class="subtitle">Full-Service Digital Marketing Package</div>
-            <p>A comprehensive marketing solution to establish Ty as Prescott's premier digital-native real estate agent</p>
-            <div class="date">February 2026</div>
-        </div>
 
-        <!-- Slide 2: The Opportunity -->
-        <div class="slide">
-            <h2>The Opportunity</h2>
-            <ul>
-                <li>Prescott is one of the fastest-growing retirement and relocation markets in Arizona</li>
-                <li>Ty has exclusive builder partnerships with Capstone Homes and ĒCCO Homes</li>
-                <li>The agents who win in 2026 are the ones with the strongest digital presence</li>
-                <li>Most Prescott agents are running outdated playbooks - no video, bad websites, no social media</li>
-                <li>There's a massive gap in the market for a digitally-native agent</li>
-            </ul>
-        </div>
+<!-- SLIDE 1: TITLE -->
+<section class="slide title-slide" id="s1">
+  <div class="logo-text">C41 Cinema</div>
+  <h1>Real Estate Marketing Strategy for Ty</h1>
+  <div class="divider"></div>
+  <p class="subtitle">Full-Service Digital Marketing Package</p>
+  <p class="subtitle" style="margin-top: 16px; font-size: 1rem; color: var(--text-dim);">February 2026</p>
+</section>
 
-        <!-- Slide 3: What We've Already Built -->
-        <div class="slide">
-            <h2>What We've Already Built</h2>
-            <div class="website-preview">
-                <h4>Ty's Real Estate Website Preview</h4>
-                <p>Modern, responsive design with community pages, builder data integration, lead capture forms, and SEO optimization</p>
-            </div>
-            <ul>
-                <li>Ty's site is already live with real builder data</li>
-                <li>Community pages with detailed neighborhood information</li>
-                <li>Advanced lead capture system integrated</li>
-                <li>SEO optimized for Prescott real estate searches</li>
-                <li>This is just the foundation</li>
-            </ul>
-        </div>
-
-        <!-- Slide 4: The Full Strategy -->
-        <div class="slide">
-            <h2>The Full Strategy</h2>
-            <p>Everything C41 Cinema will deliver:</p>
-            <ul>
-                <li><span class="strong">Website:</span> Multi-page site with community pages, lead magnets, Home Finder Quiz</li>
-                <li><span class="strong">Content Creation:</span> 7-14 short-form videos per week across all platforms</li>
-                <li><span class="strong">Social Media Management:</span> Daily posting to Instagram, TikTok, YouTube Shorts, Facebook</li>
-                <li><span class="strong">Email Marketing:</span> Lead capture system, automated sequences, monthly newsletters</li>
-                <li><span class="strong">Design:</span> Tesla wrap, A-frame signs, waving arm inflatable</li>
-                <li><span class="strong">Paid Ads:</span> Facebook and Google campaigns (ad spend separate)</li>
-                <li><span class="strong">SEO & Analytics:</span> Google Business Profile, tracking, optimization</li>
-            </ul>
-        </div>
-
-        <!-- Slide 5: Content Machine -->
-        <div class="slide">
-            <h2>Content Machine</h2>
-            <ul>
-                <li>Ty films on his phone just 5-6 hours per week</li>
-                <li>C41 edits, adds captions, graphics, and hooks, then posts everywhere</li>
-                <li>1-2 posts per day, every single day</li>
-                <li>Same video cross-posted to all platforms for maximum reach</li>
-                <li>Mix of home tours, lifestyle content, market education, and engagement hooks</li>
-                <li>This volume of content is what separates top agents from average ones</li>
-            </ul>
-            <p style="margin-top: 40px; font-style: italic; color: #666;">
-                Consistency beats perfection. Daily presence builds trust and top-of-mind awareness.
-            </p>
-        </div>
-
-        <!-- Slide 6: Lead Generation System -->
-        <div class="slide">
-            <h2>Lead Generation System</h2>
-            <ul>
-                <li>Website captures emails through multiple strategic touchpoints</li>
-                <li>Lead magnets: Prescott Relocation Guide, Area Map, First-Time Buyer's Guide</li>
-                <li>Home Finder Quiz - interactive tool that matches buyers to communities</li>
-                <li>Every piece of content drives traffic back to the website</li>
-                <li>Automated email follow-up sequences nurture leads</li>
-                <li><span class="strong">Goal: 500+ qualified leads in first 3 months</span></li>
-            </ul>
-        </div>
-
-        <!-- Slide 7: What This Would Normally Cost -->
-        <div class="slide">
-            <h2>What This Would Normally Cost</h2>
-            <div class="pricing-table">
-                <table>
-                    <tr>
-                        <th>Service</th>
-                        <th>Industry Rate (Monthly)</th>
-                    </tr>
-                    <tr>
-                        <td>Website design + ongoing maintenance</td>
-                        <td>$1,000-2,000</td>
-                    </tr>
-                    <tr>
-                        <td>Social media management (daily posting, 4 platforms)</td>
-                        <td>$2,500-4,000</td>
-                    </tr>
-                    <tr>
-                        <td>Video production + editing (30-60 clips/month)</td>
-                        <td>$4,000-6,000</td>
-                    </tr>
-                    <tr>
-                        <td>Email marketing + lead generation system</td>
-                        <td>$1,000-2,000</td>
-                    </tr>
-                    <tr>
-                        <td>Graphic design (wrap, signs, marketing materials)</td>
-                        <td>$1,000-1,500</td>
-                    </tr>
-                    <tr>
-                        <td>SEO + Google Business Profile + analytics</td>
-                        <td>$1,000-1,500</td>
-                    </tr>
-                    <tr>
-                        <td>Paid ad management (15-20% of ad spend)</td>
-                        <td>$1,000-1,500</td>
-                    </tr>
-                    <tr>
-                        <td>Strategy, consulting + monthly reporting</td>
-                        <td>$1,500-2,000</td>
-                    </tr>
-                    <tr class="total">
-                        <td><strong>Total (typical agency)</strong></td>
-                        <td><strong>$15,000-20,000/month</strong></td>
-                    </tr>
-                </table>
-            </div>
-            <p style="font-style: italic; color: #666;">Most agencies charge $15,000-20,000/month for this level of service, and they don't even do the video editing in-house.</p>
-        </div>
-
-        <!-- Slide 8: Our Offer -->
-        <div class="slide">
-            <h2>Our Offer</h2>
-            <p>A typical agency charges $15K-20K/month for this scope of work. We're offering founding partner pricing because C41 is building its portfolio and this is a partnership, not just a client relationship. As the agency grows and takes on more clients at full rate, this founding partner pricing stays locked in.</p>
-            
-            <div class="package-table">
-                <table>
-                    <tr>
-                        <td><strong>C41 Cinema Full-Service Package</strong></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>Custom website + ongoing updates</td>
-                        <td class="checkmark">✓</td>
-                    </tr>
-                    <tr>
-                        <td>30-60 edited videos per month</td>
-                        <td class="checkmark">✓</td>
-                    </tr>
-                    <tr>
-                        <td>Daily social media posting (all platforms)</td>
-                        <td class="checkmark">✓</td>
-                    </tr>
-                    <tr>
-                        <td>Email marketing system + monthly newsletter</td>
-                        <td class="checkmark">✓</td>
-                    </tr>
-                    <tr>
-                        <td>Lead magnet creation (guides, quiz tool)</td>
-                        <td class="checkmark">✓</td>
-                    </tr>
-                    <tr>
-                        <td>All graphic design (wrap, signs, materials)</td>
-                        <td class="checkmark">✓</td>
-                    </tr>
-                    <tr>
-                        <td>SEO + Google Business Profile setup</td>
-                        <td class="checkmark">✓</td>
-                    </tr>
-                    <tr>
-                        <td>Paid ad management (ad spend separate)</td>
-                        <td class="checkmark">✓</td>
-                    </tr>
-                    <tr>
-                        <td>Monthly analytics + strategy calls</td>
-                        <td class="checkmark">✓</td>
-                    </tr>
-                </table>
-            </div>
-
-            <div class="price-highlight">
-                <div class="normal-rate">Normal rate: $15,000-20,000/month</div>
-                <div class="our-rate">Founding Partner rate: $10,000/month</div>
-                <p>(6-month minimum commitment)</p>
-                <p style="margin-top: 15px; font-size: 0.9rem;">One-time setup fee: $5,000 (covers website build, quiz tool, lead magnets, all initial design work, Tesla wrap design, signage)</p>
-            </div>
-        </div>
-
-        <!-- Slide 9: The Bonus -->
-        <div class="slide">
-            <h2>The Bonus</h2>
-            <p>In addition to Ty's marketing package, C41 Cinema will also provide:</p>
-            <ul>
-                <li>Assistance deploying a similar marketing system for your brother's business in Flagstaff</li>
-                <li>Ongoing video production for your construction management app</li>
-                <li>Priority pricing locked in for future projects and expansions</li>
-                <li>These are included as part of the partnership, not billed separately</li>
-            </ul>
-            <p style="margin-top: 40px; color: #C4613A; font-weight: 500;">
-                This is about building a lasting business relationship that benefits everyone involved.
-            </p>
-        </div>
-
-        <!-- Slide 10: Timeline -->
-        <div class="slide">
-            <h2>Timeline</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <h4>Weeks 1-2</h4>
-                    <p>Everything built: website expansion, content backlog, designs ready to launch</p>
-                </div>
-                <div class="timeline-item">
-                    <h4>Weeks 3-4</h4>
-                    <p>Launch day when Ty is licensed - everything goes live at once</p>
-                </div>
-                <div class="timeline-item">
-                    <h4>Months 2-3</h4>
-                    <p>Paid ads launch, 500+ leads generated, first closings from digital marketing</p>
-                </div>
-                <div class="timeline-item">
-                    <h4>Months 4-6</h4>
-                    <p>Ty is the most visible agent in Prescott online</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Slide 11: Why This Works -->
-        <div class="slide">
-            <h2>Why This Works</h2>
-            <ul>
-                <li>Ty has the builder relationships and the hustle</li>
-                <li>C41 has the creative and marketing expertise</li>
-                <li>The Prescott market is wide open for a digitally-savvy agent</li>
-                <li>This model can be replicated for other agents and markets (Flagstaff, etc.)</li>
-                <li>Everyone wins: Ty gets leads, C41 builds its portfolio, the investment pays for itself</li>
-            </ul>
-            <p style="margin-top: 40px; font-style: italic; color: #666;">
-                Success breeds success. One proven case study opens the door to scaling this model across Arizona.
-            </p>
-        </div>
-
-        <!-- Slide 12: Let's Get Started -->
-        <div class="slide">
-            <h2>Let's Get Started</h2>
-            <p style="font-size: 1.4rem; margin-bottom: 40px;">Ready to build something great together</p>
-            
-            <div class="contact-info">
-                <p><strong>Kyle Abrahams</strong></p>
-                <p>Founder & Creative Director</p>
-                <p>C41 Cinema</p>
-                <br>
-                <p>Let's turn Ty into Prescott's go-to real estate agent</p>
-                <p>and build the foundation for C41's future</p>
-            </div>
-        </div>
+<!-- SLIDE 2: THE OPPORTUNITY -->
+<section class="slide" id="s2">
+  <span class="slide-number">02</span>
+  <h3>The Opportunity</h3>
+  <h2>Prescott is wide open for a digital-first agent</h2>
+  <p class="subtitle" style="margin-bottom: 40px;">The agents who win in 2026 are the ones with the strongest digital presence. Most Prescott agents are running outdated playbooks.</p>
+  
+  <div class="grid-2">
+    <div class="card">
+      <h4>🏡 Market Dynamics</h4>
+      <ul>
+        <li>Prescott is booming for retirees and remote workers</li>
+        <li>One of Arizona's fastest-growing markets</li>
+        <li>High buyer intent but limited inventory</li>
+        <li>Most agents still rely on referrals only</li>
+      </ul>
     </div>
-
-    <div class="slide-indicators">
-        <span class="dot active" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(3)"></span>
-        <span class="dot" onclick="currentSlide(4)"></span>
-        <span class="dot" onclick="currentSlide(5)"></span>
-        <span class="dot" onclick="currentSlide(6)"></span>
-        <span class="dot" onclick="currentSlide(7)"></span>
-        <span class="dot" onclick="currentSlide(8)"></span>
-        <span class="dot" onclick="currentSlide(9)"></span>
-        <span class="dot" onclick="currentSlide(10)"></span>
-        <span class="dot" onclick="currentSlide(11)"></span>
-        <span class="dot" onclick="currentSlide(12)"></span>
+    <div class="card">
+      <h4>🎯 Ty's Advantage</h4>
+      <ul>
+        <li>Exclusive builder partnerships (Capstone, ĒCCO)</li>
+        <li>Access to new construction inventory</li>
+        <li>Young, tech-savvy, willing to be on camera</li>
+        <li>Perfect timing to fill the digital gap</li>
+      </ul>
     </div>
+  </div>
+</section>
 
-    <div class="navigation-hint">
-        ← → Arrow keys or click to navigate
+<!-- SLIDE 3: WHAT WE'VE ALREADY BUILT -->
+<section class="slide" id="s3">
+  <span class="slide-number">03</span>
+  <h3>Foundation</h3>
+  <h2>We've already built the foundation</h2>
+  <p class="subtitle" style="margin-bottom: 40px;">Ty's website is live with real builder data from Capstone and ĒCCO. 6 communities, real pricing, lead capture, SEO optimized. This isn't theoretical.</p>
+  
+  <div class="card" style="max-width: 800px;">
+    <h4>✅ What's Already Live</h4>
+    <ul class="content-list">
+      <li><span class="highlight">Modern website</span> with community pages and neighborhood data</li>
+      <li><span class="highlight">Builder integration</span> with live pricing and availability</li>
+      <li><span class="highlight">Lead capture system</span> with multiple strategic touchpoints</li>
+      <li><span class="highlight">SEO optimization</span> for Prescott real estate searches</li>
+      <li><span class="highlight">Mobile responsive</span> design that actually converts</li>
+    </ul>
+  </div>
+  
+  <div class="highlight-box" style="max-width: 700px;">
+    <p style="font-size: 1.05rem; color: var(--text);">This is the foundation. Now we're going to build the content machine on top of it.</p>
+  </div>
+</section>
+
+<!-- SLIDE 4: THE FULL PACKAGE -->
+<section class="slide" id="s4">
+  <span class="slide-number">04</span>
+  <h3>Full Package</h3>
+  <h2>Everything C41 delivers</h2>
+  
+  <div class="grid-3">
+    <div class="card">
+      <h4>📱 Content & Social</h4>
+      <ul>
+        <li>30-60 edited videos/month</li>
+        <li>Daily posting (all platforms)</li>
+        <li>Instagram, TikTok, YouTube, Facebook</li>
+        <li>Captions, graphics, hooks</li>
+      </ul>
     </div>
+    <div class="card">
+      <h4>🌐 Digital Foundation</h4>
+      <ul>
+        <li>Website maintenance & updates</li>
+        <li>Email marketing system</li>
+        <li>Lead magnets & quiz tools</li>
+        <li>SEO & Google Business Profile</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>🎨 Design & Creative</h4>
+      <ul>
+        <li>Tesla wrap design</li>
+        <li>A-frame signs & materials</li>
+        <li>Branded graphics & templates</li>
+        <li>Print & digital assets</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>💰 Paid Advertising</h4>
+      <ul>
+        <li>Facebook & Instagram campaigns</li>
+        <li>Google Ads management</li>
+        <li>Landing page optimization</li>
+        <li>Ad spend tracking & reporting</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>📊 Analytics & Strategy</h4>
+      <ul>
+        <li>Monthly performance reports</li>
+        <li>Lead tracking & attribution</li>
+        <li>Strategy calls & optimization</li>
+        <li>Market analysis & adjustments</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>📧 Lead Nurturing</h4>
+      <ul>
+        <li>Automated email sequences</li>
+        <li>Monthly newsletters</li>
+        <li>Follow-up systems</li>
+        <li>CRM integration</li>
+      </ul>
+    </div>
+  </div>
+</section>
 
-    <script>
-        let slideIndex = 1;
-        showSlide(slideIndex);
+<!-- SLIDE 5: THE CONTENT MACHINE -->
+<section class="slide" id="s5">
+  <span class="slide-number">05</span>
+  <h3>Content Machine</h3>
+  <h2>Ty films, we produce. 1-2 posts per day.</h2>
+  <p class="subtitle" style="margin-bottom: 40px;">The math: 2 filming sessions per week gives us all the content we need. Same video cross-posted to all platforms for maximum reach.</p>
+  
+  <div class="grid-2">
+    <div class="card">
+      <h4>📹 Content Types</h4>
+      <ul>
+        <li>Home tours (new construction & resale)</li>
+        <li>Lifestyle content (Prescott living)</li>
+        <li>Market education (pricing, trends)</li>
+        <li>Behind-the-scenes agent life</li>
+        <li>Community spotlights</li>
+        <li>Client testimonials</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>⚙️ Production Flow</h4>
+      <ul>
+        <li>Ty films 5-6 hours per week</li>
+        <li>C41 edits, adds captions, graphics</li>
+        <li>Posts distributed across all platforms</li>
+        <li>Engagement hooks and clear CTAs</li>
+        <li>All content drives traffic to website</li>
+        <li>Consistent daily presence builds trust</li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="stat-row">
+    <div class="stat-block">
+      <div class="big-number green">30-60</div>
+      <div class="stat-label">edited videos per month</div>
+    </div>
+    <div class="stat-block">
+      <div class="big-number green">1-2</div>
+      <div class="stat-label">posts per day, every day</div>
+    </div>
+    <div class="stat-block">
+      <div class="big-number green">4</div>
+      <div class="stat-label">platforms, same content</div>
+    </div>
+  </div>
+</section>
 
-        function currentSlide(n) {
-            showSlide(slideIndex = n);
-        }
+<!-- SLIDE 6: LEAD GENERATION (THE REALISTIC NUMBERS) -->
+<section class="slide" id="s6">
+  <span class="slide-number">06</span>
+  <h3>Lead Generation</h3>
+  <h2>Realistic numbers, no hype</h2>
+  <p class="subtitle" style="margin-bottom: 40px;">Here's what the data actually shows for real estate lead generation. I'm not selling you a fantasy.</p>
+  
+  <div class="progression-table">
+    <h4>📈 Monthly Lead Projections</h4>
+    <table class="data-table">
+      <tr>
+        <th>Month Range</th>
+        <th>Paid Leads</th>
+        <th>Organic Leads</th>
+        <th>Total Leads</th>
+        <th>Reality Check</th>
+      </tr>
+      <tr>
+        <td class="service">Month 1-3</td>
+        <td class="number">40-100</td>
+        <td class="number">5-15</td>
+        <td class="number">50-115</td>
+        <td>Building momentum, mostly paid</td>
+      </tr>
+      <tr>
+        <td class="service">Month 3-6</td>
+        <td class="number">80-150</td>
+        <td class="number">15-40</td>
+        <td class="number">95-190</td>
+        <td>Organic content gaining traction</td>
+      </tr>
+      <tr>
+        <td class="service">Month 6-12</td>
+        <td class="number">100-200</td>
+        <td class="number">30-80</td>
+        <td class="number">130-280</td>
+        <td>Flywheel effect kicks in</td>
+      </tr>
+    </table>
+  </div>
+  
+  <div class="grid-2">
+    <div class="card">
+      <h4>💰 Paid Ads Reality</h4>
+      <ul>
+        <li>Facebook CPL in Prescott: $5-25 (smaller market advantage)</li>
+        <li>$1,000/month ad spend = 40-100 leads</li>
+        <li>$2,000/month ad spend = 80-200 leads</li>
+        <li>These are email captures, not qualified buyers</li>
+        <li>Conversion to client: 1-5% with good follow-up</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>🌱 Organic Growth</h4>
+      <ul>
+        <li>Month 1-2: Slow start, building audience</li>
+        <li>Month 3-6: Content gaining momentum</li>
+        <li>Month 6+: SEO and social compounding</li>
+        <li>Organic leads convert 3-5x better</li>
+        <li>People already trust you from content</li>
+      </ul>
+    </div>
+  </div>
+</section>
 
-        function nextSlide() {
-            showSlide(slideIndex += 1);
-        }
+<!-- SLIDE 7: THE MATH THAT MATTERS -->
+<section class="slide" id="s7">
+  <span class="slide-number">07</span>
+  <h3>ROI</h3>
+  <h2>The math that matters</h2>
+  <p class="subtitle" style="margin-bottom: 40px;">One closing pays for 3 months of marketing. Everything after that is profit.</p>
+  
+  <div class="stat-row">
+    <div class="stat-block">
+      <div class="big-number green">$15-18K</div>
+      <div class="stat-label">commission per closing</div>
+    </div>
+    <div class="stat-block">
+      <div class="big-number red">$11.5K</div>
+      <div class="stat-label">monthly marketing cost</div>
+    </div>
+    <div class="stat-block">
+      <div class="big-number green">1</div>
+      <div class="stat-label">closing = 3+ months paid</div>
+    </div>
+  </div>
+  
+  <div class="highlight-box">
+    <p style="font-size: 1.2rem; color: var(--text); margin-bottom: 16px;"><strong>Conservative scenario:</strong></p>
+    <ul class="content-list" style="margin-top: 12px;">
+      <li>100 leads/month with 2% conversion = 2 closings/month</li>
+      <li>2 closings × $16,500 average = $33,000 monthly commission</li>
+      <li>Marketing cost: $10,000 + $1,500 ad spend = $11,500</li>
+      <li><span class="highlight" style="color: var(--green);">Net profit: $21,500/month from digital marketing</span></li>
+    </ul>
+  </div>
+  
+  <div class="grid-2">
+    <div class="card">
+      <h4>📊 Market Data</h4>
+      <ul>
+        <li>Prescott median home price: ~$600K</li>
+        <li>Average agent commission: 2.5-3%</li>
+        <li>Industry lead-to-client conversion: 0.5-1.2%</li>
+        <li>With good follow-up: 3-5%</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>💡 Ad Spend Strategy</h4>
+      <ul>
+        <li>Month 1-2: $1,000/month (testing)</li>
+        <li>Month 3-6: $1,500-2,000/month (scaling)</li>
+        <li>Month 6+: $2,000-3,000/month (proven)</li>
+        <li>Separate from C41's $10K fee</li>
+      </ul>
+    </div>
+  </div>
+</section>
 
-        function prevSlide() {
-            showSlide(slideIndex -= 1);
-        }
+<!-- SLIDE 8: WHAT THIS NORMALLY COSTS -->
+<section class="slide" id="s8">
+  <span class="slide-number">08</span>
+  <h3>Industry Pricing</h3>
+  <h2>What this normally costs</h2>
+  <p class="subtitle" style="margin-bottom: 32px;">Most agencies charge $15,000-20,000/month for this scope of work, and they don't even edit the videos in-house.</p>
+  
+  <div class="card" style="max-width: 800px;">
+    <table class="data-table">
+      <tr>
+        <th>Service</th>
+        <th>Industry Rate (Monthly)</th>
+      </tr>
+      <tr>
+        <td class="service">Website design + ongoing maintenance</td>
+        <td class="cost">$1,500-2,500</td>
+      </tr>
+      <tr>
+        <td class="service">Video production + editing (30-60 clips/month)</td>
+        <td class="cost">$4,000-6,000</td>
+      </tr>
+      <tr>
+        <td class="service">Social media management (daily posting, 4 platforms)</td>
+        <td class="cost">$2,500-4,000</td>
+      </tr>
+      <tr>
+        <td class="service">Email marketing + lead gen system</td>
+        <td class="cost">$1,000-2,000</td>
+      </tr>
+      <tr>
+        <td class="service">Graphic design (wrap, signs, materials)</td>
+        <td class="cost">$1,000-1,500</td>
+      </tr>
+      <tr>
+        <td class="service">SEO + Google Business Profile + analytics</td>
+        <td class="cost">$1,000-1,500</td>
+      </tr>
+      <tr>
+        <td class="service">Paid ad management</td>
+        <td class="cost">$1,000-1,500</td>
+      </tr>
+      <tr>
+        <td class="service">Strategy + consulting + reporting</td>
+        <td class="cost">$1,500-2,000</td>
+      </tr>
+    </table>
+    
+    <div class="cost-line total">
+      <span class="item">Total (typical agency)</span>
+      <span class="price">$15,000-20,000/month</span>
+    </div>
+  </div>
+</section>
 
-        function showSlide(n) {
-            let slides = document.getElementsByClassName("slide");
-            let dots = document.getElementsByClassName("dot");
-            
-            if (n > slides.length) { slideIndex = 1; }
-            if (n < 1) { slideIndex = slides.length; }
-            
-            for (let i = 0; i < slides.length; i++) {
-                slides[i].classList.remove("active");
-            }
-            
-            for (let i = 0; i < dots.length; i++) {
-                dots[i].classList.remove("active");
-            }
-            
-            slides[slideIndex - 1].classList.add("active");
-            dots[slideIndex - 1].classList.add("active");
-        }
+<!-- SLIDE 9: OUR OFFER -->
+<section class="slide" id="s9">
+  <span class="slide-number">09</span>
+  <h3>Our Offer</h3>
+  <h2>Founding partner pricing</h2>
+  <p class="subtitle" style="margin-bottom: 32px;">This is what we'd charge a normal client. Because this is a partnership and we're building C41's portfolio, we're locking in founding partner pricing.</p>
+  
+  <div class="grid-2">
+    <div>
+      <div class="card">
+        <h4>💰 Investment</h4>
+        <div class="cost-line">
+          <span class="item">Founding Partner rate</span>
+          <span class="price">$10,000/month</span>
+        </div>
+        <div class="cost-line">
+          <span class="item">One-time setup</span>
+          <span class="price">$5,000</span>
+        </div>
+        <div class="cost-line">
+          <span class="item">6-month commitment</span>
+          <span class="price">Required</span>
+        </div>
+      </div>
+      
+      <div class="highlight-box red" style="margin-top: 24px;">
+        <p style="font-size: 1.05rem; color: var(--text);">As we take on more clients at full rate ($15K-20K), this founding partner price stays locked in. Forever.</p>
+      </div>
+    </div>
+    
+    <div>
+      <div class="card">
+        <h4>✅ Everything Included</h4>
+        <ul class="package-list">
+          <li>Website maintenance & updates</li>
+          <li>30-60 edited videos per month</li>
+          <li>Daily social media posting</li>
+          <li>Email marketing system</li>
+          <li>All graphic design work</li>
+          <li>Tesla wrap design</li>
+          <li>A-frame signs & materials</li>
+          <li>SEO & Google Business Profile</li>
+          <li>Paid ad management</li>
+          <li>Monthly analytics & strategy</li>
+          <li>Lead capture & quiz tools</li>
+          <li>Automated email sequences</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
 
-        // Keyboard navigation
-        document.addEventListener('keydown', function(event) {
-            if (event.key === 'ArrowRight') {
-                nextSlide();
-            } else if (event.key === 'ArrowLeft') {
-                prevSlide();
-            }
-        });
+<!-- SLIDE 10: THE BONUS -->
+<section class="slide" id="s10">
+  <span class="slide-number">10</span>
+  <h3>Partnership Bonus</h3>
+  <h2>This isn't just a client relationship</h2>
+  <p class="subtitle" style="margin-bottom: 32px;">In addition to Ty's package, C41 will also provide these services as part of the partnership.</p>
+  
+  <div class="grid-2">
+    <div class="card">
+      <h4>🏗️ Additional Projects</h4>
+      <ul>
+        <li>Deploy similar system for uncle in Flagstaff</li>
+        <li>Ongoing video production for construction management app</li>
+        <li>Priority pricing for any future projects</li>
+        <li>First call on new opportunities</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>🤝 Long-term Partnership</h4>
+      <ul>
+        <li>Locked-in pricing as C41 scales</li>
+        <li>Strategic input on business growth</li>
+        <li>Cross-referral opportunities</li>
+        <li>Portfolio development together</li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="highlight-box" style="max-width: 700px;">
+    <p style="font-size: 1.2rem; color: var(--text);">This is about building something lasting. When Ty succeeds, C41 succeeds. When C41 grows, Ty benefits from locked-in rates and priority access.</p>
+  </div>
+</section>
 
-        // Click navigation
-        document.addEventListener('click', function(event) {
-            // Don't advance on dot clicks or table clicks
-            if (event.target.classList.contains('dot') || 
-                event.target.closest('.pricing-table') || 
-                event.target.closest('.package-table') ||
-                event.target.closest('.slide-indicators')) {
-                return;
-            }
-            
-            const clickX = event.clientX;
-            const windowWidth = window.innerWidth;
-            
-            if (clickX > windowWidth / 2) {
-                nextSlide();
-            } else {
-                prevSlide();
-            }
-        });
-    </script>
+<!-- SLIDE 11: TIMELINE -->
+<section class="slide" id="s11">
+  <span class="slide-number">11</span>
+  <h3>Timeline</h3>
+  <h2>Aggressive but realistic</h2>
+  
+  <div style="max-width: 700px; margin-top: 40px;">
+    <div class="timeline-item">
+      <div class="timeline-week">Week 1-2</div>
+      <div class="timeline-desc"><strong>Build everything.</strong> Expand website, create content backlog, design wrap and signage, set up all systems.</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-week">Week 3-4</div>
+      <div class="timeline-desc"><strong>Launch day.</strong> When Ty gets licensed, everything goes live at once. Website, social accounts, first content batch.</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-week">Month 2-3</div>
+      <div class="timeline-desc"><strong>Paid ads launch.</strong> First leads flowing in, email sequences running, first closings possible from digital.</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-week">Month 4-6</div>
+      <div class="timeline-desc"><strong>Market dominance.</strong> Ty is the most visible agent in Prescott online. Organic traffic compounding.</div>
+    </div>
+  </div>
+  
+  <div class="highlight-box" style="max-width: 700px; margin-top: 32px;">
+    <p style="font-size: 1.1rem; color: var(--text);">Six months from now, when someone thinks "Prescott real estate," they think Ty. That's the goal.</p>
+  </div>
+</section>
+
+<!-- SLIDE 12: LET'S BUILD THIS -->
+<section class="slide title-slide" id="s12">
+  <span class="slide-number">12</span>
+  <h1>Let's build this</h1>
+  <div class="divider"></div>
+  <p class="subtitle" style="max-width: 600px;">Ready to make Ty the most visible agent in Prescott and build C41's portfolio at the same time.</p>
+  
+  <div class="contact-close">
+    <div class="name">Kyle Abbott</div>
+    <div class="company">C41 Cinema</div>
+  </div>
+</section>
+
 </body>
 </html>
