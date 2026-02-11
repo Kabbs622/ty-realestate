@@ -26,8 +26,8 @@
 
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #0a0a0a;
-            color: #ffffff;
+            background-color: #FAFAF8;
+            color: #2C2C2C;
             line-height: 1.6;
             overflow-x: hidden;
         }
@@ -38,11 +38,12 @@
             top: 0;
             left: 0;
             right: 0;
-            background: rgba(10, 10, 10, 0.95);
+            background: rgba(250, 250, 248, 0.95);
             backdrop-filter: blur(10px);
             z-index: 1000;
             padding: 1rem 2rem;
             transition: all 0.3s ease;
+            border-bottom: 1px solid #e0d5c5;
         }
 
         .nav {
@@ -56,7 +57,7 @@
         .logo {
             font-size: 1.5rem;
             font-weight: 700;
-            color: #D4A853;
+            color: #C4613A;
         }
 
         .nav-links {
@@ -66,14 +67,14 @@
         }
 
         .nav-links a {
-            color: #ffffff;
+            color: #2C2C2C;
             text-decoration: none;
             font-weight: 500;
             transition: color 0.3s ease;
         }
 
         .nav-links a:hover {
-            color: #D4A853;
+            color: #C4613A;
         }
 
         .mobile-menu {
@@ -86,7 +87,7 @@
         .mobile-menu span {
             width: 25px;
             height: 3px;
-            background: #ffffff;
+            background: #2C2C2C;
             transition: all 0.3s ease;
         }
 
@@ -96,7 +97,9 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0a0a0a 100%);
+            background-image: url('https://capstonehomesaz.com/wp-content/uploads/2025/03/32-Pool-3.jpg');
+            background-size: cover;
+            background-position: center;
             position: relative;
             overflow: hidden;
         }
@@ -108,7 +111,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: radial-gradient(circle at center, rgba(212, 168, 83, 0.1) 0%, transparent 70%);
+            background: rgba(44, 44, 44, 0.4);
         }
 
         .hero-content {
@@ -123,17 +126,16 @@
             font-size: clamp(3rem, 8vw, 6rem);
             font-weight: 700;
             margin-bottom: 2rem;
-            background: linear-gradient(135deg, #ffffff 0%, #D4A853 100%);
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            color: #FAFAF8;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
             animation: fadeInUp 1s ease;
         }
 
         .hero p {
             font-size: 1.25rem;
             margin-bottom: 3rem;
-            opacity: 0.9;
+            color: #FAFAF8;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
             animation: fadeInUp 1s ease 0.3s both;
         }
 
@@ -154,27 +156,28 @@
             transition: all 0.3s ease;
             cursor: pointer;
             border: 2px solid transparent;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
 
         .btn-primary {
-            background: #D4A853;
-            color: #0a0a0a;
+            background: #C4613A;
+            color: #FAFAF8;
         }
 
         .btn-primary:hover {
-            background: #E5B965;
+            background: #D67347;
             transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(196, 97, 58, 0.3);
         }
 
         .btn-secondary {
-            background: transparent;
-            color: #ffffff;
-            border: 2px solid #D4A853;
+            background: rgba(250, 250, 248, 0.9);
+            color: #2C2C2C;
+            border: 2px solid #FAFAF8;
         }
 
         .btn-secondary:hover {
-            background: #D4A853;
-            color: #0a0a0a;
+            background: #FAFAF8;
             transform: translateY(-2px);
         }
 
@@ -194,14 +197,15 @@
             font-size: clamp(2.5rem, 5vw, 4rem);
             font-weight: 700;
             margin-bottom: 1rem;
-            color: #D4A853;
+            color: #C4613A;
         }
 
         .section-header p {
             font-size: 1.1rem;
-            opacity: 0.9;
+            opacity: 0.8;
             max-width: 600px;
             margin: 0 auto;
+            color: #2C2C2C;
         }
 
         /* Builder Partners */
@@ -213,47 +217,64 @@
         }
 
         .builder-card {
-            background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+            background: #FFFFFF;
             border-radius: 16px;
-            padding: 3rem;
-            text-align: center;
-            border: 1px solid #333;
+            overflow: hidden;
+            border: 1px solid #e0d5c5;
             transition: all 0.3s ease;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
         }
 
         .builder-card:hover {
             transform: translateY(-5px);
-            border-color: #D4A853;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+        }
+
+        .builder-image {
+            height: 250px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .builder-card:first-child .builder-image {
+            background-image: url('https://capstonehomesaz.com/wp-content/uploads/2024/10/GDE-Kitchen.jpg');
+        }
+
+        .builder-card:last-child .builder-image {
+            background-image: url('https://eccohomesaz.com/wp-content/uploads/2024/12/great-room-1-plan-2254-skyview-prescott-valley-arizona-ecco-homes.jpg');
         }
 
         .builder-logo {
-            height: 60px;
-            width: 100%;
-            background: linear-gradient(45deg, #D4A853, #E5B965);
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            background: rgba(250, 250, 248, 0.95);
+            color: #C4613A;
+            padding: 0.5rem 1rem;
             border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
+            font-size: 1rem;
             font-weight: 700;
-            color: #0a0a0a;
-            margin-bottom: 2rem;
+        }
+
+        .builder-content {
+            padding: 2rem;
         }
 
         .builder-card h3 {
             font-size: 1.8rem;
             margin-bottom: 1rem;
-            color: #D4A853;
+            color: #C4613A;
         }
 
         .builder-card p {
             margin-bottom: 1.5rem;
-            opacity: 0.9;
+            opacity: 0.8;
         }
 
         .builder-link {
             display: inline-block;
-            color: #D4A853;
+            color: #C4613A;
             text-decoration: none;
             font-weight: 600;
             border-bottom: 2px solid transparent;
@@ -261,7 +282,7 @@
         }
 
         .builder-link:hover {
-            border-bottom-color: #D4A853;
+            border-bottom-color: #C4613A;
         }
 
         /* Community Filters */
@@ -275,21 +296,23 @@
 
         .filter-btn {
             padding: 0.75rem 1.5rem;
-            background: #1a1a1a;
-            color: #ffffff;
-            border: 1px solid #333;
+            background: #FFFFFF;
+            color: #2C2C2C;
+            border: 1px solid #e0d5c5;
             border-radius: 8px;
             cursor: pointer;
             transition: all 0.3s ease;
             font-size: 0.9rem;
             font-weight: 500;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
 
         .filter-btn:hover,
         .filter-btn.active {
-            background: #D4A853;
-            color: #0a0a0a;
-            border-color: #D4A853;
+            background: #C4613A;
+            color: #FAFAF8;
+            border-color: #C4613A;
+            transform: translateY(-2px);
         }
 
         /* Communities Grid */
@@ -300,36 +323,44 @@
         }
 
         .community-card {
-            background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+            background: #FFFFFF;
             border-radius: 16px;
             overflow: hidden;
-            border: 1px solid #333;
+            border: 1px solid #e0d5c5;
             transition: all 0.3s ease;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
         }
 
         .community-card:hover {
             transform: translateY(-5px);
-            border-color: #D4A853;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.15);
         }
 
         .community-image {
-            height: 200px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.2rem;
-            font-weight: 600;
-            color: #0a0a0a;
-            background: linear-gradient(135deg, #D4A853 0%, #8B6914 100%);
+            height: 220px;
+            background-size: cover;
+            background-position: center;
             position: relative;
         }
 
-        .community-card:nth-child(1) .community-image { background: linear-gradient(135deg, #8B6914 0%, #D4A853 50%, #6B4F10 100%); }
-        .community-card:nth-child(2) .community-image { background: linear-gradient(135deg, #2d5016 0%, #4a7c28 50%, #1a3a0a 100%); color: #fff; }
-        .community-card:nth-child(3) .community-image { background: linear-gradient(135deg, #1a3a5c 0%, #2a5a8c 50%, #0d2440 100%); color: #fff; }
-        .community-card:nth-child(4) .community-image { background: linear-gradient(135deg, #D4A853 0%, #E8C97A 50%, #B8922E 100%); }
-        .community-card:nth-child(5) .community-image { background: linear-gradient(135deg, #3d1a0a 0%, #7a3418 50%, #2a0f05 100%); color: #fff; }
-        .community-card:nth-child(6) .community-image { background: linear-gradient(135deg, #4a2a6b 0%, #6b3fa0 50%, #2d1445 100%); color: #fff; }
+        .community-card:nth-child(1) .community-image { 
+            background-image: url('https://capstonehomesaz.com/wp-content/uploads/2024/10/GDE-Model.jpg');
+        }
+        .community-card:nth-child(2) .community-image { 
+            background-image: url('https://capstonehomesaz.com/wp-content/uploads/2024/10/elevation-1-hidden-hills-prescott-arizona-capstone-homes.jpg');
+        }
+        .community-card:nth-child(3) .community-image { 
+            background-image: url('https://capstonehomesaz.com/wp-content/uploads/2024/10/model-2-jasper-3b-prescott-arizona-capstone-homes.jpg');
+        }
+        .community-card:nth-child(4) .community-image { 
+            background-image: url('https://eccohomesaz.com/wp-content/uploads/2024/12/JS600Small-37.jpg');
+        }
+        .community-card:nth-child(5) .community-image { 
+            background-image: url('https://capstonehomesaz.com/wp-content/uploads/2024/11/1-Welcome-Home-10-2000x1125.jpg');
+        }
+        .community-card:nth-child(6) .community-image { 
+            background-image: url('https://eccohomesaz.com/wp-content/uploads/2024/11/exterior-2-skyview-prescott-valley-arizona-ecco-homes.jpg');
+        }
 
         .community-info {
             padding: 2rem;
@@ -337,8 +368,8 @@
 
         .community-badge {
             display: inline-block;
-            background: #D4A853;
-            color: #0a0a0a;
+            background: #C4613A;
+            color: #FAFAF8;
             padding: 0.25rem 0.75rem;
             border-radius: 20px;
             font-size: 0.8rem;
@@ -349,7 +380,7 @@
         .community-card h3 {
             font-size: 1.5rem;
             margin-bottom: 1rem;
-            color: #ffffff;
+            color: #2C2C2C;
         }
 
         .community-details {
@@ -358,14 +389,14 @@
 
         .community-details p {
             margin-bottom: 0.5rem;
-            opacity: 0.9;
+            opacity: 0.8;
             font-size: 0.9rem;
         }
 
         .community-price {
             font-size: 1.25rem;
             font-weight: 700;
-            color: #D4A853;
+            color: #C4613A;
         }
 
         /* Quick Move-In Homes */
@@ -376,16 +407,17 @@
         }
 
         .quick-home-card {
-            background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+            background: #FFFFFF;
             border-radius: 12px;
             padding: 2rem;
-            border: 1px solid #333;
+            border: 1px solid #e0d5c5;
             transition: all 0.3s ease;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
         }
 
         .quick-home-card:hover {
             transform: translateY(-3px);
-            border-color: #D4A853;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
         }
 
         .availability-badge {
@@ -405,11 +437,15 @@
 
         /* About Section */
         .about {
-            background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
+            background-image: linear-gradient(rgba(250, 250, 248, 0.9), rgba(250, 250, 248, 0.9)), 
+                            url('https://capstonehomesaz.com/wp-content/uploads/2025/08/42-Front-Patio-1.jpg');
+            background-size: cover;
+            background-position: center;
             border-radius: 20px;
             padding: 4rem;
             margin: 4rem 0;
             text-align: center;
+            border: 1px solid #e0d5c5;
         }
 
         .about-content {
@@ -420,17 +456,18 @@
         .about h2 {
             font-size: 2.5rem;
             margin-bottom: 2rem;
-            color: #D4A853;
+            color: #C4613A;
         }
 
         .about p {
             font-size: 1.1rem;
             margin-bottom: 2rem;
             opacity: 0.9;
+            color: #2C2C2C;
         }
 
         .social-link {
-            color: #D4A853;
+            color: #C4613A;
             text-decoration: none;
             font-weight: 600;
             border-bottom: 2px solid transparent;
@@ -438,44 +475,48 @@
         }
 
         .social-link:hover {
-            border-bottom-color: #D4A853;
+            border-bottom-color: #C4613A;
         }
 
         /* Why Prescott */
         .prescott-stats {
+            background: linear-gradient(135deg, #C4613A, #D67347);
+            border-radius: 16px;
+            padding: 3rem 2rem;
+            margin: 3rem 0;
+        }
+
+        .stats-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 2rem;
-            margin-top: 3rem;
         }
 
         .stat-card {
             text-align: center;
-            padding: 2rem;
-            background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
-            border-radius: 12px;
-            border: 1px solid #333;
+            color: #FAFAF8;
         }
 
         .stat-number {
             font-size: 2.5rem;
             font-weight: 700;
-            color: #D4A853;
             margin-bottom: 0.5rem;
         }
 
         .stat-label {
             opacity: 0.9;
+            font-weight: 500;
         }
 
         /* Contact Form */
         .contact-form {
             max-width: 600px;
             margin: 0 auto;
-            background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+            background: #FFFFFF;
             padding: 3rem;
             border-radius: 16px;
-            border: 1px solid #333;
+            border: 1px solid #e0d5c5;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
         }
 
         .form-group {
@@ -486,7 +527,7 @@
             display: block;
             margin-bottom: 0.5rem;
             font-weight: 600;
-            color: #D4A853;
+            color: #C4613A;
         }
 
         .form-group input,
@@ -494,10 +535,10 @@
         .form-group textarea {
             width: 100%;
             padding: 1rem;
-            background: #0a0a0a;
-            border: 2px solid #333;
+            background: #FAFAF8;
+            border: 2px solid #e0d5c5;
             border-radius: 8px;
-            color: #ffffff;
+            color: #2C2C2C;
             font-family: inherit;
             font-size: 1rem;
             transition: border-color 0.3s ease;
@@ -507,7 +548,7 @@
         .form-group select:focus,
         .form-group textarea:focus {
             outline: none;
-            border-color: #D4A853;
+            border-color: #C4613A;
         }
 
         .form-group textarea {
@@ -518,19 +559,21 @@
         .form-submit {
             width: 100%;
             padding: 1.25rem;
-            background: #D4A853;
-            color: #0a0a0a;
+            background: #C4613A;
+            color: #FAFAF8;
             border: none;
             border-radius: 8px;
             font-size: 1.1rem;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(196, 97, 58, 0.3);
         }
 
         .form-submit:hover {
-            background: #E5B965;
+            background: #D67347;
             transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(196, 97, 58, 0.4);
         }
 
         /* Animations */
@@ -583,8 +626,8 @@
                 grid-template-columns: 1fr;
             }
 
-            .builder-card {
-                padding: 2rem;
+            .builder-content {
+                padding: 1.5rem;
             }
 
             .communities {
@@ -608,6 +651,15 @@
                 padding: 0.5rem 1rem;
                 font-size: 0.8rem;
             }
+
+            .prescott-stats {
+                padding: 2rem 1rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.5rem;
+            }
         }
 
         @media (max-width: 480px) {
@@ -627,7 +679,7 @@
                 grid-template-columns: 1fr;
             }
 
-            .prescott-stats {
+            .stats-grid {
                 grid-template-columns: 1fr;
             }
         }
@@ -674,16 +726,24 @@
         </div>
         <div class="builders">
             <div class="builder-card">
-                <div class="builder-logo">CAPSTONE</div>
-                <h3>Capstone Homes</h3>
-                <p>Luxury custom homes with premium finishes and thoughtful design. Known for their attention to detail and quality craftsmanship in Prescott's most sought-after locations.</p>
-                <a href="https://capstonehomesaz.com" class="builder-link" target="_blank" rel="noopener">Visit Capstone Homes →</a>
+                <div class="builder-image">
+                    <div class="builder-logo">CAPSTONE</div>
+                </div>
+                <div class="builder-content">
+                    <h3>Capstone Homes</h3>
+                    <p>Luxury custom homes with premium finishes and thoughtful design. Known for their attention to detail and quality craftsmanship in Prescott's most sought-after locations.</p>
+                    <a href="https://capstonehomesaz.com" class="builder-link" target="_blank" rel="noopener">Visit Capstone Homes →</a>
+                </div>
             </div>
             <div class="builder-card">
-                <div class="builder-logo">ĒCCO</div>
-                <h3>ĒCCO Homes</h3>
-                <p>Modern, energy-efficient homes designed for today's lifestyle. Offering innovative floor plans and sustainable features at exceptional value in growing Prescott Valley communities.</p>
-                <a href="https://eccohomesaz.com" class="builder-link" target="_blank" rel="noopener">Visit ĒCCO Homes →</a>
+                <div class="builder-image">
+                    <div class="builder-logo">ĒCCO</div>
+                </div>
+                <div class="builder-content">
+                    <h3>ĒCCO Homes</h3>
+                    <p>Modern, energy-efficient homes designed for today's lifestyle. Offering innovative floor plans and sustainable features at exceptional value in growing Prescott Valley communities.</p>
+                    <a href="https://eccohomesaz.com" class="builder-link" target="_blank" rel="noopener">Visit ĒCCO Homes →</a>
+                </div>
             </div>
         </div>
     </section>
@@ -703,10 +763,7 @@
 
         <div class="communities">
             <div class="community-card" data-builder="capstone">
-                <div class="community-image">
-                    <!-- TODO: Add Granite Dells Estates photo here -->
-                    Granite Dells Estates
-                </div>
+                <div class="community-image"></div>
                 <div class="community-info">
                     <span class="community-badge">Capstone Homes</span>
                     <h3>Granite Dells Estates</h3>
@@ -721,10 +778,7 @@
             </div>
 
             <div class="community-card" data-builder="capstone">
-                <div class="community-image">
-                    <!-- TODO: Add Hidden Hills photo here -->
-                    Hidden Hills
-                </div>
+                <div class="community-image"></div>
                 <div class="community-info">
                     <span class="community-badge">Capstone Homes</span>
                     <h3>Hidden Hills</h3>
@@ -739,10 +793,7 @@
             </div>
 
             <div class="community-card" data-builder="capstone">
-                <div class="community-image">
-                    <!-- TODO: Add Jasper 3B photo here -->
-                    Jasper 3B
-                </div>
+                <div class="community-image"></div>
                 <div class="community-info">
                     <span class="community-badge">Capstone Homes</span>
                     <h3>Jasper 3B</h3>
@@ -757,10 +808,7 @@
             </div>
 
             <div class="community-card" data-builder="ecco">
-                <div class="community-image">
-                    <!-- TODO: Add Jasper 7 photo here -->
-                    Jasper 7
-                </div>
+                <div class="community-image"></div>
                 <div class="community-info">
                     <span class="community-badge">ĒCCO Homes</span>
                     <h3>Jasper 7</h3>
@@ -775,10 +823,7 @@
             </div>
 
             <div class="community-card" data-builder="capstone">
-                <div class="community-image">
-                    <!-- TODO: Add Jasper 8 photo here -->
-                    Jasper 8
-                </div>
+                <div class="community-image"></div>
                 <div class="community-info">
                     <span class="community-badge">Capstone Homes</span>
                     <h3>Jasper 8</h3>
@@ -793,10 +838,7 @@
             </div>
 
             <div class="community-card" data-builder="ecco">
-                <div class="community-image">
-                    <!-- TODO: Add Skyview photo here -->
-                    Skyview
-                </div>
+                <div class="community-image"></div>
                 <div class="community-info">
                     <span class="community-badge">ĒCCO Homes</span>
                     <h3>Skyview</h3>
@@ -891,21 +933,23 @@
         </div>
         
         <div class="prescott-stats">
-            <div class="stat-card">
-                <div class="stat-number">~$600K</div>
-                <div class="stat-label">Median Home Price</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-number">4,300ft</div>
-                <div class="stat-label">Elevation</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-number">300+</div>
-                <div class="stat-label">Sunny Days/Year</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-number">47,000</div>
-                <div class="stat-label">Population</div>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">~$600K</div>
+                    <div class="stat-label">Median Home Price</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">4,300ft</div>
+                    <div class="stat-label">Elevation</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">300+</div>
+                    <div class="stat-label">Sunny Days/Year</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">47,000</div>
+                    <div class="stat-label">Population</div>
+                </div>
             </div>
         </div>
 
@@ -975,17 +1019,17 @@
     </section>
 
     <!-- Footer -->
-    <footer style="background: #111; border-top: 1px solid #222; padding: 3rem 2rem; text-align: center;">
+    <footer style="background: #F5F3EE; border-top: 1px solid #e0d5c5; padding: 3rem 2rem; text-align: center;">
         <div style="max-width: 1200px; margin: 0 auto;">
-            <p style="color: #D4A853; font-weight: 700; font-size: 1.25rem; margin-bottom: 1rem;">Ty Real Estate</p>
-            <p style="opacity: 0.6; margin-bottom: 0.5rem;">Prescott and Prescott Valley, Arizona</p>
-            <p style="opacity: 0.6; margin-bottom: 1.5rem;">In-house agent for Capstone Homes and ĒCCO Homes</p>
+            <p style="color: #C4613A; font-weight: 700; font-size: 1.25rem; margin-bottom: 1rem;">Ty Real Estate</p>
+            <p style="color: #2C2C2C; opacity: 0.7; margin-bottom: 0.5rem;">Prescott and Prescott Valley, Arizona</p>
+            <p style="color: #2C2C2C; opacity: 0.7; margin-bottom: 1.5rem;">In-house agent for Capstone Homes and ĒCCO Homes</p>
             <div style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; margin-bottom: 1.5rem;">
-                <a href="https://instagram.com/ty_the_real_estate_guy" target="_blank" rel="noopener" style="color: #D4A853; text-decoration: none;">Instagram</a>
-                <a href="https://capstonehomesaz.com" target="_blank" rel="noopener" style="color: #999; text-decoration: none;">Capstone Homes</a>
-                <a href="https://eccohomesaz.com" target="_blank" rel="noopener" style="color: #999; text-decoration: none;">ĒCCO Homes</a>
+                <a href="https://instagram.com/ty_the_real_estate_guy" target="_blank" rel="noopener" style="color: #C4613A; text-decoration: none;">Instagram</a>
+                <a href="https://capstonehomesaz.com" target="_blank" rel="noopener" style="color: #666; text-decoration: none;">Capstone Homes</a>
+                <a href="https://eccohomesaz.com" target="_blank" rel="noopener" style="color: #666; text-decoration: none;">ĒCCO Homes</a>
             </div>
-            <p style="opacity: 0.4; font-size: 0.85rem;">&copy; 2026 Ty Real Estate. All rights reserved.</p>
+            <p style="color: #2C2C2C; opacity: 0.5; font-size: 0.85rem;">&copy; 2026 Ty Real Estate. All rights reserved.</p>
         </div>
     </footer>
 
