@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kabbs622.github.io/ty-realestate/sitemap.xml
