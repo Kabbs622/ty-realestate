@@ -344,6 +344,62 @@
     letter-spacing: 2px;
     text-transform: uppercase;
   }
+
+  /* ===== MOBILE OPTIMIZATIONS ===== */
+  @media (max-width: 768px) {
+    .slide { padding: 40px 20px; min-height: auto; }
+    .slide-number { top: 20px; right: 20px; font-size: 11px; }
+    
+    h2 { font-size: 1.5rem; }
+    h3 { font-size: 0.9rem; letter-spacing: 2px; }
+    .subtitle { font-size: 1rem; }
+    
+    .stat-row { flex-direction: column; gap: 24px; }
+    .stat-block { text-align: center; }
+    .big-number { font-size: 3rem; }
+    .stat-label { font-size: 0.9rem; }
+    
+    .card { padding: 20px; }
+    .card h4 { font-size: 0.95rem; }
+    .card p, .card li { font-size: 0.9rem; }
+    
+    .highlight-box { padding: 20px; }
+    
+    .cost-line { font-size: 0.85rem; gap: 8px; }
+    .cost-line .item { flex: 1; }
+    .cost-line .price { text-align: right; white-space: nowrap; }
+    
+    .data-table th, .data-table td { padding: 10px 12px; font-size: 0.85rem; }
+    .data-table .service { font-size: 0.85rem; }
+    
+    .content-list li { font-size: 0.9rem; }
+    .package-list li { font-size: 0.9rem; }
+    
+    .timeline-item { flex-direction: column; gap: 8px; }
+    .timeline-week { min-width: auto; }
+    
+    /* Visual timeline - stack on mobile */
+    .grid-2 img { height: 200px !important; }
+    
+    .title-slide h1 { font-size: 2rem; }
+    .logo-text { font-size: 12px; letter-spacing: 4px; }
+  }
+
+  @media (max-width: 768px) {
+    .timeline-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 24px 0 !important; }
+    .timeline-line { display: none !important; }
+  }
+
+  @media (max-width: 480px) {
+    .timeline-grid { grid-template-columns: 1fr !important; }
+
+    .slide { padding: 32px 16px; }
+    h2 { font-size: 1.3rem; }
+    .big-number { font-size: 2.5rem; }
+    .data-table th, .data-table td { padding: 8px; font-size: 0.8rem; }
+    .grid-2 { gap: 20px; }
+    .card { padding: 16px; }
+  }
 </style>
 </head>
 <body>
@@ -891,9 +947,9 @@
   <!-- Visual horizontal timeline -->
   <div style="max-width: 800px; margin-top: 48px; position: relative;">
     <!-- The line -->
-    <div style="position: absolute; top: 24px; left: 0; right: 0; height: 3px; background: linear-gradient(to right, var(--accent), var(--green)); border-radius: 2px;"></div>
+    <div class="timeline-line" style="position: absolute; top: 24px; left: 0; right: 0; height: 3px; background: linear-gradient(to right, var(--accent), var(--green)); border-radius: 2px;"></div>
     
-    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; position: relative;">
+    <div class="timeline-grid" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; position: relative;">
       <!-- Phase 1 -->
       <div style="text-align: center; padding: 0 8px;">
         <div style="width: 16px; height: 16px; background: var(--accent); border-radius: 50%; margin: 17px auto 20px; position: relative; z-index: 1; box-shadow: 0 0 12px rgba(196,97,58,0.5);"></div>
