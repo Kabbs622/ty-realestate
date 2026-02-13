@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Real Estate Marketing Strategy for Ty — C41 Cinema</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+  
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  
+  :root {
+    --bg: #0a0a0a;
+    --surface: #141414;
+    --surface2: #1a1a1a;
+    --border: #2a2a2a;
+    --text: #e8e8e8;
+    --text-dim: #888;
+    --accent: #C4613A;
+    --accent-soft: rgba(196, 97, 58, 0.15);
+    --green: #27ae60;
+    --green-soft: rgba(39,174,96,0.15);
+  }
+  
+  html { scroll-behavior: smooth; }
+  
+  body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+  }
+  
+  .slide {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 60px 80px;
+    position: relative;
+    border-bottom: 1px solid var(--border);
+  }
+  
+  @media (max-width: 768px) {
+    .slide { padding: 40px 24px; }
+  }
+  
+  .slide-number {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    font-size: 13px;
+    color: var(--text-dim);
+    font-weight: 500;
+    letter-spacing: 2px;
+  }
+  
+  h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 24px;
+    letter-spacing: -1px;
+  }
+  
+  h2 {
+    font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    letter-spacing: -0.5px;
+  }
+  
+  h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--accent);
+    margin-bottom: 16px;
+  }
+  
+  .subtitle {
+    font-size: clamp(1.1rem, 2vw, 1.4rem);
+    color: var(--text-dim);
+    max-width: 700px;
+    line-height: 1.7;
+    font-weight: 300;
+  }
+  
+  .accent { color: var(--accent); }
+  .green { color: var(--green); }
+  
+  /* Title slide */
+  .title-slide {
+    text-align: center;
+    align-items: center;
+  }
+  .title-slide h1 { font-size: clamp(3rem, 6vw, 5rem); margin-bottom: 16px; }
+  .title-slide .subtitle { text-align: center; margin: 0 auto; }
+  .logo-text {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    margin-bottom: 40px;
+  }
+  .divider {
+    width: 60px;
+    height: 3px;
+    background: var(--accent);
+    margin: 32px auto;
+  }
+  
+  /* Grid layouts */
+  .grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 32px;
+  }
+  @media (max-width: 768px) {
+    .grid-2 { grid-template-columns: 1fr; }
+  }
+  
+  .grid-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 24px;
+    margin-top: 32px;
+  }
+  @media (max-width: 768px) {
+    .grid-3 { grid-template-columns: 1fr; }
+  }
+  
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 32px;
+  }
+  
+  .card h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+  
+  .card p, .card li {
+    color: var(--text-dim);
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+  
+  .card ul { list-style: none; padding: 0; }
+  .card ul li { padding: 4px 0; }
+  .card ul li::before {
+    content: "→ ";
+    color: var(--accent);
+    font-weight: 600;
+  }
+  
+  /* Tables */
+  .data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 24px;
+    font-size: 0.95rem;
+  }
+  .data-table th {
+    text-align: left;
+    padding: 14px 20px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-dim);
+    border-bottom: 1px solid var(--border);
+  }
+  .data-table td {
+    padding: 14px 20px;
+    border-bottom: 1px solid var(--border);
+    color: var(--text-dim);
+  }
+  .data-table tr:last-child td { border-bottom: none; }
+  .data-table .service { color: var(--text); font-weight: 500; }
+  .data-table .cost { color: var(--accent); font-weight: 600; }
+  .data-table .number { color: var(--green); font-weight: 600; }
+  
+  /* Big number */
+  .big-number {
+    font-size: clamp(3rem, 7vw, 6rem);
+    font-weight: 800;
+    letter-spacing: -2px;
+    line-height: 1;
+  }
+  .big-number.red { color: var(--accent); }
+  .big-number.green { color: var(--green); }
+  
+  .stat-label {
+    font-size: 1rem;
+    color: var(--text-dim);
+    margin-top: 8px;
+    font-weight: 400;
+  }
+  
+  /* Stat cards */
+  .stat-row {
+    display: flex;
+    gap: 40px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+  }
+  .stat-block { flex: 1; min-width: 200px; }
+  
+  /* Cost breakdown */
+  .cost-line {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.95rem;
+  }
+  .cost-line:last-child { border-bottom: none; }
+  .cost-line .item { color: var(--text-dim); }
+  .cost-line .price { font-weight: 600; color: var(--accent); }
+  .cost-line.total {
+    border-top: 2px solid var(--accent);
+    border-bottom: none;
+    padding-top: 16px;
+    margin-top: 4px;
+    font-size: 1.1rem;
+  }
+  .cost-line.total .item,
+  .cost-line.total .price { color: var(--text); font-weight: 700; }
+  
+  /* Timeline */
+  .timeline-item {
+    display: flex;
+    gap: 20px;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .timeline-item:last-child { border-bottom: none; }
+  .timeline-week {
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--accent);
+    min-width: 100px;
+    padding-top: 2px;
+  }
+  .timeline-desc { color: var(--text-dim); }
+  .timeline-desc strong { color: var(--text); }
+  
+  .highlight-box {
+    background: var(--green-soft);
+    border: 1px solid rgba(39,174,96,0.3);
+    border-radius: 12px;
+    padding: 28px 32px;
+    margin-top: 32px;
+  }
+  .highlight-box.red {
+    background: var(--accent-soft);
+    border-color: rgba(196, 97, 58, 0.3);
+  }
+  
+  /* Monthly progression table */
+  .progression-table {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 32px;
+    margin-top: 24px;
+  }
+  
+  .progression-table h4 {
+    color: var(--text);
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+  }
+  
+  /* List styles */
+  .content-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 24px;
+  }
+  
+  .content-list li {
+    padding: 8px 0;
+    color: var(--text-dim);
+    font-size: 0.95rem;
+  }
+  
+  .content-list li::before {
+    content: "→ ";
+    color: var(--accent);
+    font-weight: 600;
+  }
+  
+  .content-list .highlight {
+    color: var(--text);
+    font-weight: 500;
+  }
+  
+  /* Checkmark list for package */
+  .package-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 24px;
+  }
+  
+  .package-list li {
+    padding: 8px 0;
+    color: var(--text-dim);
+    font-size: 0.95rem;
+  }
+  
+  .package-list li::before {
+    content: "✓ ";
+    color: var(--green);
+    font-weight: 600;
+  }
+  
+  .contact-close {
+    text-align: center;
+    margin-top: 40px;
+  }
+  
+  .contact-close .name {
+    font-size: 1.3rem;
+    color: var(--text);
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  
+  .contact-close .company {
+    font-size: 1.1rem;
+    color: var(--accent);
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  /* ===== MOBILE OPTIMIZATIONS ===== */
+  @media (max-width: 768px) {
+    .slide { padding: 40px 20px; min-height: auto; }
+    .slide-number { top: 20px; right: 20px; font-size: 11px; }
+    
+    h2 { font-size: 1.5rem; }
+    h3 { font-size: 0.9rem; letter-spacing: 2px; }
+    .subtitle { font-size: 1rem; }
+    
+    .stat-row { flex-direction: column; gap: 24px; }
+    .stat-block { text-align: center; }
+    .big-number { font-size: 3rem; }
+    .stat-label { font-size: 0.9rem; }
+    
+    .card { padding: 20px; }
+    .card h4 { font-size: 0.95rem; }
+    .card p, .card li { font-size: 0.9rem; }
+    
+    .highlight-box { padding: 20px; }
+    
+    .cost-line { font-size: 0.85rem; gap: 8px; }
+    .cost-line .item { flex: 1; }
+    .cost-line .price { text-align: right; white-space: nowrap; }
+    
+    .data-table th, .data-table td { padding: 10px 12px; font-size: 0.85rem; }
+    .data-table .service { font-size: 0.85rem; }
+    
+    .content-list li { font-size: 0.9rem; }
+    .package-list li { font-size: 0.9rem; }
+    
+    .timeline-item { flex-direction: column; gap: 8px; }
+    .timeline-week { min-width: auto; }
+    
+    /* Visual timeline - stack on mobile */
+    .grid-2 img { height: 200px !important; }
+    
+    .title-slide h1 { font-size: 2rem; }
+    .logo-text { font-size: 12px; letter-spacing: 4px; }
+  }
+
+  @media (max-width: 768px) {
+    .timeline-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 24px 0 !important; }
+    .timeline-line { display: none !important; }
+  }
+
+  @media (max-width: 480px) {
+    .timeline-grid { grid-template-columns: 1fr !important; }
+
+    .slide { padding: 32px 16px; }
+    h2 { font-size: 1.3rem; }
+    .big-number { font-size: 2.5rem; }
+    .data-table th, .data-table td { padding: 8px; font-size: 0.8rem; }
+    .grid-2 { gap: 20px; }
+    .card { padding: 16px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- SLIDE 1: TITLE -->
+<section class="slide title-slide" id="s1">
+  <div class="logo-text">C41 Cinema</div>
+  <h1>Real Estate Marketing Strategy for Ty</h1>
+  <div class="divider"></div>
+  <p class="subtitle">Full-Service Digital Marketing Package</p>
+  <p class="subtitle" style="margin-top: 16px; font-size: 1rem; color: var(--text-dim);">February 2026</p>
+</section>
+
+<!-- SLIDE 2: THE OPPORTUNITY -->
+<section class="slide" id="s2">
+  <span class="slide-number">01</span>
+  <h3>The Opportunity</h3>
+  <h2>Prescott is wide open for a digital-first agent</h2>
+  <p class="subtitle" style="margin-bottom: 40px;">The agents who win in 2026 are the ones with the strongest digital presence. Most Prescott agents are running outdated playbooks.</p>
+  
+  <div class="grid-2">
+    <div class="card">
+      <h4>🏡 Market Dynamics</h4>
+      <ul>
+        <li>Prescott is booming for retirees and remote workers</li>
+        <li>One of Arizona's fastest-growing markets</li>
+        <li>High buyer intent but limited inventory</li>
+        <li>Most agents still rely on referrals only</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>🎯 Ty's Advantage</h4>
+      <ul>
+        <li>Exclusive builder partnerships (Capstone, ĒCCO)</li>
+        <li>Access to new construction inventory</li>
+        <li>Young, tech-savvy, willing to be on camera</li>
+        <li>Perfect timing to fill the digital gap</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- SLIDE 3: THE COMPETITION -->
+<section class="slide" id="s2b">
+  <span class="slide-number">02</span>
+  <h3>The Competition</h3>
+  <h2>Here's what Prescott agents are doing online right now</h2>
+  <p class="subtitle" style="margin-bottom: 40px;">We looked at the top-producing agents in Prescott. This is what we're up against.</p>
+  
+  <div class="grid-2" style="margin-bottom: 32px;">
+    <div class="card">
+      <h4>🏠 What most Prescott agents have</h4>
+      <ul>
+        <li>Template brokerage website (KW, Realty One, etc.)</li>
+        <li>Facebook page with sporadic listing posts</li>
+        <li>No video content at all</li>
+        <li>No TikTok, no Reels, no YouTube</li>
+        <li>No email marketing or lead funnels</li>
+        <li>Zero paid advertising</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>📱 What Ty will have</h4>
+      <ul>
+        <li>Custom website with Home Finder app</li>
+        <li>Daily content across every platform</li>
+        <li>30-60 edited videos per month</li>
+        <li>Paid ads on Facebook, Google, TikTok, YouTube</li>
+        <li>Automated email sequences capturing leads 24/7</li>
+        <li>SEO, retargeting, and analytics</li>
+      </ul>
+    </div>
+  </div>
+
+  <p style="font-size: 1.1rem; color: var(--text); margin-bottom: 24px; margin-top: 8px;"><strong>Here's what the top Prescott agents' websites actually look like:</strong></p>
+  
+  <div class="grid-2" style="margin-bottom: 24px;">
+    <div style="text-align: center;">
+      <div style="border: 1px solid var(--border); border-radius: 8px; overflow: hidden; margin-bottom: 12px;">
+        <img src="images/competitor-travis-bard.jpg" alt="Travis Bard - Top Prescott agent website" style="width: 100%; height: 280px; object-fit: cover; object-position: top; display: block;">
+      </div>
+      <p style="font-size: 0.85rem; color: var(--text-dim);"><strong>Travis Bard</strong> — #1 agent, 88 sales in 3 years. Default Keller Williams template. No custom branding.</p>
+    </div>
+    <div style="text-align: center;">
+      <div style="border: 1px solid var(--border); border-radius: 8px; overflow: hidden; margin-bottom: 12px;">
+        <img src="images/competitor-kathleen-rafters.jpg" alt="Kathleen Rafters - Prescott agent website" style="width: 100%; height: 280px; object-fit: cover; object-position: top; display: block;">
+      </div>
+      <p style="font-size: 0.85rem; color: var(--text-dim);"><strong>Kathleen Rafters</strong> — 45 sales in 3 years, $518K avg. Broken images, generic blog posts, no video.</p>
+    </div>
+  </div>
+
+  <div class="highlight-box" style="border-color: var(--dim);">
+    <p style="font-size: 1.05rem; color: var(--muted);">These are the agents dominating the market right now. Template websites, no video content, no social media strategy, no paid ads. A real digital presence in this market isn't competing with anyone. It's filling a vacuum.</p>
+  </div>
+</section>
+
+<!-- SLIDE 4: WHAT WE'VE ALREADY BUILT -->
+<section class="slide" id="s3">
+  <span class="slide-number">03</span>
+  <h3>Foundation</h3>
+  <h2>We've already started building</h2>
+  <p class="subtitle" style="margin-bottom: 40px;">Ty's website is in progress with real builder data from Capstone and ĒCCO. Here's where it is and where it's going.</p>
+  
+  <div class="grid-2">
+    <div class="card">
+      <h4>✅ In Progress</h4>
+      <ul class="content-list">
+        <li><span class="highlight">Website live</span> with community data and lead capture</li>
+        <li><span class="highlight">6 communities</span> with real pricing from both builders</li>
+        <li><span class="highlight">SEO foundation</span> in place</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>🔨 Still Building</h4>
+      <ul class="content-list">
+        <li><span class="highlight">Individual community pages</span> with floor plans and photos</li>
+        <li><span class="highlight">Home Finder Quiz</span> (interactive tool that matches buyers to communities)</li>
+        <li><span class="highlight">Lead magnet pages</span> (relocation guide, area map, buyer's guide)</li>
+        <li><span class="highlight">Seller page</span> for people who need to sell before buying new construction</li>
+        <li><span class="highlight">About Prescott</span> relocation guide page</li>
+        <li><span class="highlight">Multiple domains</span> (prescottnewhomes.com, etc.) routing to targeted landing pages</li>
+        <li><span class="highlight">Email automation</span> sequences and CRM integration</li>
+        <li><span class="highlight">Retargeting pixels</span> for Facebook and Google ads</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- SLIDE 4: THE FULL PACKAGE -->
+<section class="slide" id="s4">
+  <span class="slide-number">04</span>
+  <h3>Full Package</h3>
+  <h2>Everything C41 delivers</h2>
+  
+  <div class="grid-3">
+    <div class="card">
+      <h4>📱 Content & Social</h4>
+      <ul>
+        <li>30-60 edited videos/month</li>
+        <li>Daily posting (all platforms)</li>
+        <li>Instagram, TikTok, YouTube, Facebook</li>
+        <li>Captions, graphics, hooks</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>🌐 Digital Foundation</h4>
+      <ul>
+        <li>Website maintenance & updates</li>
+        <li>Email marketing system</li>
+        <li>Lead magnets & quiz tools</li>
+        <li>SEO & Google Business Profile</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>🎨 Design & Creative</h4>
+      <ul>
+        <li>Tesla wrap design</li>
+        <li>A-frame signs & materials</li>
+        <li>Branded graphics & templates</li>
+        <li>Print & digital assets</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>💰 Paid Advertising</h4>
+      <ul>
+        <li>Facebook & Instagram campaigns</li>
+        <li>Google Ads management</li>
+        <li>Landing page optimization</li>
+        <li>Ad spend tracking & reporting</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>📊 Research & Strategy</h4>
+      <ul>
+        <li>Prescott market research and trend tracking</li>
+        <li>Competitor analysis (what other agents are doing)</li>
+        <li>Content trend spotting (what's working on social)</li>
+        <li>Monthly performance reports and strategy adjustments</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>📧 Lead Nurturing</h4>
+      <ul>
+        <li>Automated email sequences</li>
+        <li>Monthly newsletters</li>
+        <li>Follow-up systems</li>
+        <li>CRM integration</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- SLIDE 5: THE CONTENT MACHINE -->
+<section class="slide" id="s5">
+  <span class="slide-number">05</span>
+  <h3>Content Machine</h3>
+  <h2>Ty films, we produce. 5 days a week.</h2>
+  <p class="subtitle" style="margin-bottom: 40px;">Ty's already comfortable on camera. He just needs to film quick clips throughout his day and send them over. We handle everything else.</p>
+  
+  <div class="grid-2">
+    <div class="card">
+      <h4>📹 Content Types</h4>
+      <ul>
+        <li>Home tours (new construction & resale)</li>
+        <li>Prescott lifestyle (restaurants, hikes, events)</li>
+        <li>Market education and pricing breakdowns</li>
+        <li>"Guess the price" and engagement hooks</li>
+        <li>Community spotlights</li>
+        <li>Client testimonials</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>⚙️ Production Flow</h4>
+      <ul>
+        <li>Ty films quick clips on his phone throughout the week (2-3 hours total)</li>
+        <li>C41 edits with captions, graphics, hooks, and trending audio</li>
+        <li>Same video cross-posted to all platforms simultaneously</li>
+        <li>C41 handles all posting, captions, hashtags, and scheduling</li>
+        <li>C41 tracks market trends, competitor content, and what's working</li>
+        <li>Monthly content strategy based on analytics and engagement data</li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="stat-row">
+    <div class="stat-block">
+      <div class="big-number green">20-25</div>
+      <div class="stat-label">edited videos per month</div>
+    </div>
+    <div class="stat-block">
+      <div class="big-number green">5</div>
+      <div class="stat-label">posts per week, Mon-Fri</div>
+    </div>
+    <div class="stat-block">
+      <div class="big-number green">4</div>
+      <div class="stat-label">platforms, same content</div>
+    </div>
+  </div>
+</section>
+
+<!-- SLIDE 6: LEAD GENERATION (THE REALISTIC NUMBERS) -->
+<section class="slide" id="s6">
+  <span class="slide-number">06</span>
+  <h3>Lead Generation</h3>
+  <h2>What the data says</h2>
+  <p class="subtitle" style="margin-bottom: 40px;">Here's what the industry research actually shows for real estate lead generation at this level of marketing investment.</p>
+  
+  <div class="progression-table">
+    <h4>📈 Monthly Lead Projections</h4>
+    <table class="data-table">
+      <tr>
+        <th>Month Range</th>
+        <th>Paid Leads</th>
+        <th>Organic Leads</th>
+        <th>Total Leads</th>
+        <th>Reality Check</th>
+      </tr>
+      <tr>
+        <td class="service">Month 1-3</td>
+        <td class="number">40-100</td>
+        <td class="number">5-15</td>
+        <td class="number">50-115</td>
+        <td>Building momentum, mostly paid</td>
+      </tr>
+      <tr>
+        <td class="service">Month 3-6</td>
+        <td class="number">80-150</td>
+        <td class="number">15-40</td>
+        <td class="number">95-190</td>
+        <td>Organic content gaining traction</td>
+      </tr>
+      <tr>
+        <td class="service">Month 6-12</td>
+        <td class="number">100-200</td>
+        <td class="number">30-80</td>
+        <td class="number">130-280</td>
+        <td>Flywheel effect kicks in</td>
+      </tr>
+    </table>
+  </div>
+  
+  <div class="grid-2">
+    <div class="card">
+      <h4>💰 Paid Ads Reality</h4>
+      <ul>
+        <li>Facebook CPL in Prescott: $5-25 (smaller market advantage)</li>
+        <li>$1,000/month ad spend = 40-100 leads</li>
+        <li>$2,000/month ad spend = 80-200 leads</li>
+        <li>These are email captures, not qualified buyers</li>
+        <li>Conversion to client: 1-5% with good follow-up</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>🌱 Organic Growth</h4>
+      <ul>
+        <li>Month 1-2: Slow start, building audience</li>
+        <li>Month 3-6: Content gaining momentum</li>
+        <li>Month 6+: SEO and social compounding</li>
+        <li>Organic leads convert 3-5x better</li>
+        <li>People already trust you from content</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- SLIDE 7: THE MATH THAT MATTERS -->
+<section class="slide" id="s7">
+  <span class="slide-number">07</span>
+  <h3>ROI</h3>
+  <h2>The math that matters</h2>
+  <p class="subtitle" style="margin-bottom: 40px;">One closing pays for months of marketing. Here's the breakdown.</p>
+  
+  <div class="stat-row">
+    <div class="stat-block">
+      <div class="big-number green">$8,500</div>
+      <div class="stat-label">base commission per closing (flat rate, new construction)</div>
+    </div>
+    <div class="stat-block">
+      <div class="big-number red">$4.5K</div>
+      <div class="stat-label">monthly cost ($3K fee + ~$1.5K ads)</div>
+    </div>
+  </div>
+  
+  <div class="highlight-box">
+    <p style="font-size: 1.2rem; color: var(--text); margin-bottom: 16px;"><strong>The real math (base tier):</strong></p>
+    <ul class="content-list" style="margin-top: 12px;">
+      <li>1 closing = $8,500 vs $4,500 cost = <span class="highlight" style="color: var(--green);">$4,000 net profit and nearly 2 months of marketing paid for</span></li>
+      <li>2 closings = $17,000 vs $4,500 cost = <span class="highlight" style="color: var(--green);">$12,500 net profit</span></li>
+      <li>3 closings = $25,500 vs $4,500 cost = <span class="highlight" style="color: var(--green);">$21,000 net profit</span></li>
+    </ul>
+    <p style="font-size: 0.95rem; color: var(--muted); margin-top: 16px;">This is the base commission tier. Resale homes and higher-end builds pay $15-18K+ per closing, so ROI could be even bigger depending on the mix.</p>
+  </div>
+  
+  <div class="highlight-box red" style="margin-top: 16px;">
+    <p style="font-size: 1.05rem; color: var(--text);"><strong>How realistic is 2 closings/month?</strong> At 100 leads/month with a 2% conversion rate, that's exactly 2 closings. Industry average conversion is 0.5-1.2%, but agents with proper follow-up systems hit 3-5%. That's what the email sequences and CRM are for.</p>
+  </div>
+  
+  <div class="grid-2">
+    <div class="card">
+      <h4>📊 Market Data</h4>
+      <ul>
+        <li>Prescott median home price: ~$600K</li>
+        <li>Base new construction commission: $8,500 flat</li>
+        <li>Resale/luxury commission: $15-18K+</li>
+        <li>Industry lead-to-client conversion: 0.5-1.2%</li>
+        <li>With good follow-up: 3-5%</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>💡 Ad Spend Strategy</h4>
+      <ul>
+        <li>Month 1-2: $1,000/month (testing)</li>
+        <li>Month 3-6: $1,500-2,000/month (scaling)</li>
+        <li>Month 6+: $2,000-3,000/month (proven)</li>
+        <li>Separate from C41's $3K fee</li>
+      </ul>
+      <h4 style="margin-top: 20px;">📣 Platforms We're Running</h4>
+      <ul>
+        <li><strong>Facebook/Instagram Ads</strong> — primary lead gen, best CPL for real estate, targeting retirees and relocators by age/interest/location</li>
+        <li><strong>Google Search Ads</strong> — capture high-intent buyers searching "new homes Prescott AZ", "Prescott new construction"</li>
+        <li><strong>TikTok/Reels/Shorts</strong> — organic-first with paid boost on top performers, younger buyers + viral reach</li>
+        <li><strong>YouTube Ads</strong> — pre-roll on Prescott relocation and retirement content</li>
+        <li><strong>Retargeting</strong> — pixel-based follow-up across all platforms for site visitors who didn't convert</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="highlight-box" style="margin-top: 32px; border-color: var(--dim);">
+    <p style="font-size: 1.1rem; color: var(--text); margin-bottom: 16px;"><strong>Where these numbers come from</strong></p>
+    <p style="font-size: 0.95rem; color: var(--muted); margin-bottom: 12px;">These aren't guesses. This is what agents and marketers are actually reporting:</p>
+    <ul class="content-list" style="margin-top: 8px;">
+      <li><strong>$5-7/lead in smaller markets</strong> reported by agents running Facebook ads with $350/month spend <span style="color: var(--dim);">(r/digital_marketing)</span></li>
+      <li><strong>Under $2/lead</strong> using native Facebook lead forms in some markets <span style="color: var(--dim);">(r/FacebookAds, Nov 2024)</span></li>
+      <li><strong>$10-30/lead</strong> is the industry benchmark for smaller markets; major metros like NYC/SF run $200-350/lead <span style="color: var(--dim);">(Ampifire, 2025 industry report)</span></li>
+      <li><strong>$30-40/lead</strong> in popular, competitive areas <span style="color: var(--dim);">(r/realtors, agent-reported)</span></li>
+      <li><strong>0.5-1.2% conversion rate</strong> is the NAR national average; agents with CRM follow-up systems consistently hit 3-5% <span style="color: var(--dim);">(National Association of Realtors via RealGeeks)</span></li>
+    </ul>
+    <p style="font-size: 0.95rem; color: var(--muted); margin-top: 16px;">Prescott is a smaller market with less ad competition than Phoenix or LA. At $10-15/lead and $1,500/month ad spend, that's <strong>100-150 leads/month</strong>. Even at the conservative 2% conversion rate, that's 2-3 closings.</p>
+  </div>
+
+  <div class="highlight-box red" style="margin-top: 24px;">
+    <p style="font-size: 1.1rem; color: var(--text); margin-bottom: 12px;"><strong>⚠️ One thing to know: CRM integration</strong></p>
+    <p style="font-size: 0.95rem; color: var(--muted); margin-bottom: 12px;">Capstone and ĒCCO already use Lasso CRM and other internal systems for lead tracking and follow-up. Our lead generation strategy works best when it plugs directly into those systems so nothing falls through the cracks.</p>
+    <p style="font-size: 0.95rem; color: var(--muted); margin-bottom: 12px;">We'll work with their existing tools first and build integrations to make everything flow together. But if their systems have limitations that prevent us from getting optimal results, we have alternatives we can recommend (Follow Up Boss, HubSpot, or custom solutions) that are built specifically for this kind of marketing.</p>
+    <p style="font-size: 0.95rem; color: var(--muted);">Either way, no leads get lost. We'll figure out the best path once we see what their systems can do.</p>
+  </div>
+</section>
+
+<!-- SLIDE 8: WHAT THIS NORMALLY COSTS -->
+<section class="slide" id="s8">
+  <span class="slide-number">08</span>
+  <h3>Industry Pricing</h3>
+  <h2>What agencies charge for this</h2>
+  <p class="subtitle" style="margin-bottom: 32px;">Here's what you'd be looking at if you hired a typical marketing agency for this scope. And most of them don't even do the video editing in-house.</p>
+  
+  <div class="card" style="max-width: 800px;">
+    <table class="data-table">
+      <tr>
+        <th>Service</th>
+        <th>Industry Rate (Monthly)</th>
+      </tr>
+      <tr>
+        <td class="service">Website design + ongoing maintenance</td>
+        <td class="cost">$1,500-2,500</td>
+      </tr>
+      <tr>
+        <td class="service">Video production + editing (20-25 clips/month)</td>
+        <td class="cost">$3,000-5,000</td>
+      </tr>
+      <tr>
+        <td class="service">Social media management (5x/week, 4 platforms)</td>
+        <td class="cost">$2,500-4,000</td>
+      </tr>
+      <tr>
+        <td class="service">Email marketing + lead gen system</td>
+        <td class="cost">$1,000-2,000</td>
+      </tr>
+      <tr>
+        <td class="service">Custom web app (Home Finder Quiz)</td>
+        <td class="cost">$2,000-4,000</td>
+      </tr>
+      <tr>
+        <td class="service">Graphic design (wrap, signs, materials)</td>
+        <td class="cost">$1,000-1,500</td>
+      </tr>
+      <tr>
+        <td class="service">SEO + Google Business Profile + analytics</td>
+        <td class="cost">$1,000-1,500</td>
+      </tr>
+      <tr>
+        <td class="service">Paid ad management (Facebook, Google, TikTok, YouTube + retargeting)</td>
+        <td class="cost">$2,000-3,500</td>
+      </tr>
+      <tr>
+        <td class="service">Market research + strategy + reporting</td>
+        <td class="cost">$1,500-2,000</td>
+      </tr>
+    </table>
+    
+    <div class="cost-line total">
+      <span class="item">Total (typical agency)</span>
+      <span class="price">$15,500-26,000/month</span>
+    </div>
+  </div>
+</section>
+
+<!-- SLIDE 9: OUR OFFER -->
+<section class="slide" id="s9">
+  <span class="slide-number">09</span>
+  <h3>What We're Charging</h3>
+  <h2>$3,000/month. Everything included.</h2>
+  <p class="subtitle" style="margin-bottom: 32px;">We're building our agency portfolio and want to do it with people we believe in. You get a full marketing team at a fraction of what it normally costs, and we get a case study that proves the system works.</p>
+  
+  <div class="grid-2">
+    <div>
+      <div class="card">
+        <h4>💰 How It Works</h4>
+        <div class="cost-line">
+          <span class="item">Monthly retainer</span>
+          <span class="price">$3,000/month</span>
+        </div>
+        <div class="cost-line">
+          <span class="item">First payment (covers setup + month 1)</span>
+          <span class="price">$3,000</span>
+        </div>
+        <div class="cost-line">
+          <span class="item">Ad spend (paid directly by Ty)</span>
+          <span class="price">$1,000-2,000/month</span>
+        </div>
+        <div class="cost-line">
+          <span class="item">Domains (3-5 URLs, covered by C41)</span>
+          <span class="price">~$50-75/year</span>
+        </div>
+      </div>
+      
+      <div class="highlight-box" style="margin-top: 24px;">
+        <p style="font-size: 1.05rem; color: var(--text);">No separate setup fee. First $3K covers all the build-out work and month 1. This also covers all software subscriptions we use to run your marketing. <strong>Note:</strong> the $3K covers all the design work (wrap, signs, etc.) but printing, vinyl wrap installation, inflatable tube guy, and any other physical production costs are separate.</p>
+      </div>
+    </div>
+    
+    <div>
+      <div class="card">
+        <h4>✅ Everything Included</h4>
+        <ul class="package-list">
+          <li>Full website build + ongoing updates</li>
+          <li>Home Finder app (custom-built quiz tool for matching buyers to communities)</li>
+          <li>20-25 edited videos per month</li>
+          <li>Social media posting 5 days/week (all platforms)</li>
+          <li>Email marketing system + automated sequences</li>
+          <li>All graphic design (Tesla wrap, A-frame signs, materials)</li>
+          <li>SEO + Google Business Profile</li>
+          <li>Paid ad management</li>
+          <li>Market research + competitor tracking</li>
+          <li>Monthly analytics + strategy</li>
+          <li>Lead magnets (relocation guide, area map, buyer's guide)</li>
+          <li>All AI and software subscriptions</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="highlight-box" style="margin-top: 32px; max-width: 800px; border-color: var(--dim);">
+    <p style="font-size: 1.1rem; color: var(--text); margin-bottom: 12px;"><strong>Why it's not $12-17K</strong></p>
+    <p style="font-size: 1.05rem; color: var(--muted); line-height: 1.8;">We're building our client roster and we'd rather work with the right people at a lower rate than chase big contracts. You get a full team for $3K that would normally cost $12-17K, and we get a case study and a long-term client. Both sides win.</p>
+  </div>
+</section>
+
+<!-- SLIDE 10: TIMELINE -->
+<section class="slide" id="s11">
+  <span class="slide-number">10</span>
+  <h3>Timeline</h3>
+  <h2>Aggressive but realistic</h2>
+  
+  <!-- Visual horizontal timeline -->
+  <div style="max-width: 800px; margin-top: 48px; position: relative;">
+    <!-- The line -->
+    <div class="timeline-line" style="position: absolute; top: 24px; left: 0; right: 0; height: 3px; background: linear-gradient(to right, var(--accent), var(--green)); border-radius: 2px;"></div>
+    
+    <div class="timeline-grid" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; position: relative;">
+      <!-- Phase 1 -->
+      <div style="text-align: center; padding: 0 8px;">
+        <div style="width: 16px; height: 16px; background: var(--accent); border-radius: 50%; margin: 17px auto 20px; position: relative; z-index: 1; box-shadow: 0 0 12px rgba(196,97,58,0.5);"></div>
+        <div style="font-size: 0.85rem; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px;">Now - Mar 1</div>
+        <div style="font-size: 1rem; font-weight: 600; color: var(--text); margin-bottom: 6px;">Build Everything</div>
+        <div style="font-size: 0.85rem; color: var(--text-dim); line-height: 1.5;">Website, app, lead magnets, wrap design, signage, email systems, content backlog</div>
+      </div>
+      <!-- Phase 2 -->
+      <div style="text-align: center; padding: 0 8px;">
+        <div style="width: 16px; height: 16px; background: #c97a3a; border-radius: 50%; margin: 17px auto 20px; position: relative; z-index: 1; box-shadow: 0 0 12px rgba(201,122,58,0.4);"></div>
+        <div style="font-size: 0.85rem; font-weight: 700; color: #c97a3a; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px;">Launch Day</div>
+        <div style="font-size: 1rem; font-weight: 600; color: var(--text); margin-bottom: 6px;">Go Live</div>
+        <div style="font-size: 0.85rem; color: var(--text-dim); line-height: 1.5;">Everything flips on at once. Website, socials, content, wrap installed, signs out</div>
+      </div>
+      <!-- Phase 3 -->
+      <div style="text-align: center; padding: 0 8px;">
+        <div style="width: 16px; height: 16px; background: #5a9e5a; border-radius: 50%; margin: 17px auto 20px; position: relative; z-index: 1; box-shadow: 0 0 12px rgba(90,158,90,0.4);"></div>
+        <div style="font-size: 0.85rem; font-weight: 700; color: #5a9e5a; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px;">Month 2-3</div>
+        <div style="font-size: 1rem; font-weight: 600; color: var(--text); margin-bottom: 6px;">Paid Ads Launch</div>
+        <div style="font-size: 0.85rem; color: var(--text-dim); line-height: 1.5;">First leads flowing, email sequences running, first closings possible</div>
+      </div>
+      <!-- Phase 4 -->
+      <div style="text-align: center; padding: 0 8px;">
+        <div style="width: 16px; height: 16px; background: var(--green); border-radius: 50%; margin: 17px auto 20px; position: relative; z-index: 1; box-shadow: 0 0 12px rgba(39,174,96,0.5);"></div>
+        <div style="font-size: 0.85rem; font-weight: 700; color: var(--green); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px;">Month 4-6</div>
+        <div style="font-size: 1rem; font-weight: 600; color: var(--text); margin-bottom: 6px;">Market Dominance</div>
+        <div style="font-size: 0.85rem; color: var(--text-dim); line-height: 1.5;">Most visible agent in Prescott online. Organic traffic compounding</div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="highlight-box" style="max-width: 800px; margin-top: 48px;">
+    <p style="font-size: 1.1rem; color: var(--text);">Six months from now, when someone thinks "Prescott real estate," they think Ty. That's the goal.</p>
+  </div>
+</section>
+
+<!-- SLIDE 13: ACCOUNTABILITY -->
+<section class="slide" id="s12b">
+  <span class="slide-number">11</span>
+  <h3>Accountability</h3>
+  <h2>What if it doesn't work?</h2>
+  <p class="subtitle" style="margin-bottom: 40px;">Fair question. Here's how we stay honest about it.</p>
+  
+  <div class="grid-2">
+    <div class="card">
+      <h4>📊 Monthly Check-ins</h4>
+      <ul>
+        <li>Full analytics report every month (leads, cost per lead, conversions, content performance)</li>
+        <li>What's working, what's not, what we're changing</li>
+        <li>No hiding behind vanity metrics like followers or impressions</li>
+        <li>The only numbers that matter: leads generated and closings</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>🔄 Built-in Flexibility</h4>
+      <ul>
+        <li>6-month initial commitment</li>
+        <li>If leads aren't flowing by month 3, we adjust the strategy together</li>
+        <li>Ad spend scales with results (start small, increase what works)</li>
+        <li>After 6 months, month-to-month based on performance</li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="highlight-box" style="margin-top: 24px; border-color: var(--dim);">
+    <p style="font-size: 1.05rem; color: var(--muted);">This isn't a "pay me and hope for the best" situation. You'll see exactly where the money is going and what it's producing every single month. If something isn't working, we pivot. The data tells us what to do.</p>
+  </div>
+</section>
+
+<!-- LET'S BUILD THIS -->
+<section class="slide title-slide" id="s13">
+  <span class="slide-number">12</span>
+  <h1>Let's build this</h1>
+  <div class="divider"></div>
+  <p class="subtitle" style="max-width: 600px;">Ready to make you the most visible agent in Prescott.</p>
+  
+  <div class="contact-close">
+    <div class="name">Kyle Abbott</div>
+    <div class="company">C41 Cinema</div>
+  </div>
+</section>
+
+</body>
+</html>
