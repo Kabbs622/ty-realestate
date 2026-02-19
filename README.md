@@ -2,7 +2,7 @@
 
 **Live Site:** https://kabbs622.github.io/ty-realestate/
 
-A modern, dark-themed real estate website for Ty, showcasing new construction and resale homes in Prescott, Arizona.
+A modern, comprehensive real estate website for Ty, showcasing new construction and resale homes in Prescott, Arizona.
 
 ---
 
@@ -12,9 +12,34 @@ A modern, dark-themed real estate website for Ty, showcasing new construction an
 |------|--------------|
 | Local dev server | `python -m http.server 8000` |
 | Main entry point | `index.html` |
+| Styles | `styles.css` |
+| JavaScript | `scripts.js` |
 | Contact form | FormSubmit.co (currently: kabbott622@gmail.com) |
 | Deploy | Push to `main` → GitHub Pages auto-deploys |
 | Strategy docs | `strategy.md`, `ty-realestate-research.md` |
+
+---
+
+## Website Structure
+
+### Core Pages
+
+| Page | File | Purpose |
+|------|------|---------|
+| **Home** | `index.html` | Main landing page with communities, quick move-in homes, about section |
+| **About Ty** | `about.html` | Ty's story, builder partnerships, why work with me |
+| **Sell Your Home** | `sell.html` | Seller services, process explanation, home valuation form |
+| **Privacy Policy** | `privacy.html` | GDPR/privacy compliance for lead generation |
+| **Thank You** | `thanks.html` | Form submission confirmation page |
+| **404** | `404.html` | Custom error page |
+
+### Lead Magnet Pages (Landing Pages)
+
+| Page | File | Purpose |
+|------|------|---------|
+| **Relocation Guide** | `relocation-guide.html` | Free PDF download for people moving to Prescott |
+| **Buyer's Guide** | `buyers-guide.html` | New construction guide download |
+| **Home Valuation** | `home-value.html` | Standalone home value request page |
 
 ---
 
@@ -24,7 +49,7 @@ Ty is a real estate agent specializing in:
 - **New construction homes** through Capstone Homes and ĒCCO Homes partnerships
 - **Resale properties** in the Prescott area
 - **Relocation assistance** for buyers moving from Utah, Phoenix, LA, and beyond
-- **Social media marketing** and modern real estate approach
+- **Social media marketing** (@ty_the_real_estate_guy with 8,138+ followers)
 
 ---
 
@@ -42,12 +67,12 @@ python -m http.server 8000
 ## Website Features
 
 - **Responsive Design**: Mobile-first approach with smooth animations
-- **Dark Theme**: Modern cinematic aesthetic with warm gold accents (#D4A853)
-- **Community Showcase**: Detailed information about 6 active communities
-- **Filterable Communities**: Sort by builder (Capstone/ĒCCO/All)
-- **Quick Move-In Homes**: Ready-to-move homes with real availability data
-- **Contact Form**: Integrated with FormSubmit.co for lead capture
-- **SEO Optimized**: Meta tags for Prescott AZ real estate searches
+- **Multi-page Structure**: Organized content across dedicated pages
+- **Lead Magnets**: 3 downloadable guides to capture emails
+- **SEO Optimized**: Meta tags, structured data, sitemap.xml
+- **Fast Loading**: External CSS/JS files for caching
+- **Lead Capture**: Multiple forms (contact, valuation, guide downloads)
+- **Privacy Compliant**: Privacy policy page for GDPR compliance
 
 ---
 
@@ -73,36 +98,39 @@ python -m http.server 8000
 
 ```
 ty-realestate/
-├── index.html              # Main website (single file, inline CSS/JS)
-├── pitch-deck.html         # Investor/partner pitch deck
-├── pitch-deck-ty.html      # Ty-specific pitch deck
-├── strategy.md             # Marketing strategy document
-├── ty-realestate-research.md  # Market research
+├── index.html              # Homepage
+├── about.html              # About Ty page
+├── sell.html               # Sell your home page
+├── relocation-guide.html   # Lead magnet: Relocation guide
+├── buyers-guide.html       # Lead magnet: Buyer's guide
+├── home-value.html         # Lead magnet: Home valuation
+├── thanks.html             # Form thank you page
+├── 404.html                # Custom 404 page
+├── privacy.html            # Privacy policy
+├── styles.css              # External stylesheet
+├── scripts.js              # External JavaScript
+├── sitemap.xml             # SEO sitemap
+├── robots.txt              # SEO robots file
 ├── README.md               # This file
 ├── .gitignore              # Git ignore rules
-├── robots.txt              # SEO robots file
-├── sitemap.xml             # SEO sitemap
+├── strategy.md             # Marketing strategy document
+├── ty-realestate-research.md  # Market research
 ├── C41-Marketing-Proposal-Ty.pdf  # PDF proposal
 └── images/                 # Community photos, headshots
     ├── ty-headshot.jpg
-    ├── granite-dells/
-    ├── hidden-hills/
-    ├── jasper-3b/
-    ├── jasper-7/
-    ├── jasper-8/
-    └── skyview/
+    └── [community folders]
 ```
 
 ---
 
 ## Technical Details
 
-- **Architecture**: Single-file HTML with inline CSS/JS
+- **Architecture**: Multi-page HTML with external CSS/JS
+- **Styling**: Pure CSS with CSS Grid and Flexbox
 - **Dependencies**: Google Fonts (Inter) only
-- **Hosting**: Static site ready for GitHub Pages
-- **Form Handling**: FormSubmit.co
+- **Form Handling**: FormSubmit.co (free tier)
 - **Animations**: Intersection Observer for scroll animations
-- **Layout**: CSS Grid and Flexbox for responsive layouts
+- **Responsive**: Mobile-first design with breakpoints at 768px and 480px
 
 ---
 
@@ -111,11 +139,11 @@ ty-realestate/
 ### Colors
 | Name | Value | Usage |
 |------|-------|-------|
-| Background | #0a0a0a | Main background |
-| Secondary | #1a1a1a, #2a2a2a | Cards, sections |
-| Accent | #D4A853 | Warm gold - CTAs, highlights |
-| Text | #ffffff | Primary text |
-| Borders | #333333 | Dividers, outlines |
+| Primary Accent | #C4613A | CTAs, headings, links |
+| Background | #FAFAF8 | Page background |
+| Secondary BG | #F5F3EE | Section backgrounds |
+| Text | #2C2C2C | Body text |
+| Borders | #e0d5c5 | Dividers, card borders |
 
 ### Typography
 - **Font**: Inter (Google Fonts)
@@ -140,26 +168,24 @@ ty-realestate/
 ## 📝 TODO Before Launch
 
 ### Critical
-- [ ] **Replace placeholder email** in contact form (line with FormSubmit.co)
+- [ ] **Replace placeholder email** in all forms
   - Currently: `kabbott622@gmail.com`
   - Should be: Ty's actual email
-
-- [ ] **Add photos** - Replace CSS gradient placeholders with community photos:
-  - [ ] Granite Dells Estates
-  - [ ] Hidden Hills
-  - [ ] Jasper 3B
-  - [ ] Jasper 7
-  - [ ] Jasper 8
-  - [ ] Skyview
+- [ ] **Replace placeholder phone** 
+  - Currently: `(801) 555-0123`
+  - Should be: Ty's actual phone number
+- [ ] **Add Ty's headshot** to about.html
+- [ ] **Replace placeholder testimonials** in sell.html
+- [ ] **Create PDF lead magnets** (currently forms just capture emails)
 
 ### Important
-- [ ] **Update social links** - Verify Instagram handle and add other platforms
+- [ ] **Add photos** - Replace CSS gradient placeholders with community photos
 - [ ] **Domain setup** - Point custom domain to hosting provider
 - [ ] **Analytics** - Add Google Analytics or Plausible tracking
 - [ ] **SEO** - Submit sitemap to Google Search Console
 
 ### Nice to Have
-- [ ] **Testimonials** - Add client reviews
+- [ ] **Testimonials** - Add real client reviews
 - [ ] **Blog** - Add content marketing section
 - [ ] **Mortgage calculator** - Embed calculator widget
 - [ ] **Live chat** - Add chat widget for leads
@@ -168,32 +194,46 @@ ty-realestate/
 
 ## 🔧 Important Notes for AI Agents
 
-1. **Single file architecture** - All CSS and JS is inline in index.html
-2. **No build step** - Direct file editing, push to deploy
-3. **FormSubmit.co dependency** - Free form handling, just change email
-4. **Photos are critical** - Currently using gradient placeholders
-5. **Research docs included** - strategy.md has full marketing plan
+1. **Multi-page architecture** - Each page has its own HTML file
+2. **External CSS/JS** - Styles and scripts in separate files for caching
+3. **No build step** - Direct file editing, push to deploy
+4. **FormSubmit.co dependency** - Free form handling, just change email
+5. **Photos are critical** - Currently using images from builder websites
+6. **Lead magnets** - Landing pages ready, need PDFs created
+7. **Privacy compliance** - Privacy policy page included for GDPR
 
 ---
 
-## 📊 Marketing Assets
+## Lead Capture Points
 
-Included in repo:
+1. **Main contact form** (index.html#contact) - General inquiries
+2. **Home valuation form** (sell.html#valuation) - Seller leads
+3. **Relocation guide** (relocation-guide.html) - Relocation leads
+4. **Buyer's guide** (buyers-guide.html) - New construction leads
+5. **Standalone valuation** (home-value.html) - Direct seller leads
+
+---
+
+## Marketing Assets Included
+
 - **strategy.md** - Comprehensive marketing strategy
 - **ty-realestate-research.md** - Market research and competition analysis
 - **C41-Marketing-Proposal-Ty.pdf** - PDF proposal deck
 - **pitch-deck.html** - HTML version of pitch deck
+- **pitch-deck-ty.html** - Ty-specific pitch deck
 
 ---
 
 ## ❓ Questions for Kyle/Ty
 
-1. What's Ty's actual email address for the contact form?
-2. Do we have high-quality photos of each community?
-3. Should we set up a custom domain? (recommended: typrescott.com or similar)
-4. Are the prices/square footage current? (check with Ty)
-5. Any other communities to add?
-6. Should we integrate with an IDX feed for MLS listings?
+1. What's Ty's actual email address for the contact forms?
+2. What's Ty's actual phone number?
+3. Do we have high-quality photos of Ty for the about page?
+4. Do we have real client testimonials to replace placeholders?
+5. Should we create actual PDFs for the lead magnets (relocation guide, buyer's guide)?
+6. Should we set up a custom domain? (recommended: typrescott.com or similar)
+7. Are the prices/square footage current? (check with Ty)
+8. Any other communities to add?
 
 ---
 
