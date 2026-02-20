@@ -3,703 +3,269 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ty Real Estate | New Construction & Resale Homes in Prescott, AZ</title>
-    <meta name="description" content="Find your dream home in Prescott, AZ with Ty. Exclusive access to Capstone Homes and ĒCCO Homes new construction communities. Expert relocation assistance from Utah to Arizona.">
-    <meta name="keywords" content="Prescott AZ real estate, new construction homes, Capstone Homes, ĒCCO Homes, Arizona real estate agent, Prescott Valley homes, Jasper community, Granite Dells Estates, homes for sale Prescott, Prescott Valley new homes, retirement homes Arizona">
+    <title>Ty Real Estate | New Construction Homes in Prescott, AZ for Active Adults</title>
+    <meta name="description" content="Find your dream home in Prescott, AZ. In-house agent for Capstone Homes & ĒCCO Homes. Specializing in new construction for retirees and active adults 50-70.">
     <link rel="canonical" href="https://kabbs622.github.io/ty-realestate/">
     
-    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://kabbs622.github.io/ty-realestate/">
-    <meta property="og:title" content="Ty Real Estate | New Construction & Resale Homes in Prescott, AZ">
-    <meta property="og:description" content="Your trusted partner for new construction and resale homes in Prescott, Arizona. Exclusive access to Capstone Homes and ĒCCO Homes communities.">
+    <meta property="og:title" content="Ty Real Estate | New Construction Homes Prescott, AZ">
+    <meta property="og:description" content="In-house agent for Capstone & ĒCCO Homes. Specializing in new construction for active adults.">
     <meta property="og:image" content="https://capstonehomesaz.com/wp-content/uploads/2025/03/32-Pool-3.jpg">
-    <meta property="og:locale" content="en_US">
     
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Ty Real Estate | Prescott, AZ Homes">
-    <meta name="twitter:description" content="New construction and resale homes in Prescott, Arizona. Exclusive Capstone Homes and ĒCCO Homes partnerships.">
-    <meta name="twitter:image" content="https://capstonehomesaz.com/wp-content/uploads/2025/03/32-Pool-3.jpg">
-    
-    <!-- Additional SEO -->
-    <meta name="robots" content="index, follow">
-    <meta name="author" content="Ty Real Estate">
-    <meta name="geo.region" content="US-AZ">
-    <meta name="geo.placename" content="Prescott">
-    
-    <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏠</text></svg>">
-    
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "RealEstateAgent",
-        "name": "Ty Real Estate",
-        "description": "Real estate agent specializing in new construction and resale homes in Prescott and Prescott Valley, Arizona. In-house agent for Capstone Homes and ĒCCO Homes.",
-        "url": "https://kabbs622.github.io/ty-realestate/",
-        "areaServed": [
-            {
-                "@type": "City",
-                "name": "Prescott",
-                "containedInPlace": { "@type": "State", "name": "Arizona" }
-            },
-            {
-                "@type": "City",
-                "name": "Prescott Valley",
-                "containedInPlace": { "@type": "State", "name": "Arizona" }
-            }
-        ],
-        "sameAs": [
-            "https://instagram.com/ty_the_real_estate_guy"
-        ],
-        "knowsAbout": ["New Construction Homes", "Capstone Homes", "ĒCCO Homes", "Prescott Real Estate", "Arizona Relocation"]
-    }
-    </script>
-    
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Styles -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- Header -->
     <header class="header">
         <nav class="nav">
-            <div class="logo">Ty Real Estate</div>
+            <a href="index.html" class="logo">Ty Real Estate</a>
             <ul class="nav-links">
-                <li><a href="#hero">Home</a></li>
-                <li><a href="#builders">Builders</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="retire-in-prescott.html">Retire in Prescott</a></li>
                 <li><a href="#communities">Communities</a></li>
-                <li><a href="#quick-homes">Available Now</a></li>
-                <li><a href="#about">About</a></li>
+                <li><a href="sell.html">Sell Your Home</a></li>
+                <li><a href="about.html">About</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <div style="display: flex; align-items: center;">
                 <a href="tel:+18015550123" class="header-phone">(801) 555-0123</a>
                 <a href="#contact" class="header-cta">Get in Touch</a>
             </div>
-            <div class="mobile-menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+            <div class="mobile-menu" onclick="toggleMobileMenu()"><span></span><span></span><span></span></div>
         </nav>
     </header>
 
-    <!-- Sticky Mobile CTA Bar -->
-    <div class="mobile-cta-bar" id="mobileCTA">
-        <div class="mobile-cta-buttons">
-            <a href="tel:+18015550123" class="mobile-cta-btn">Call Now</a>
-            <a href="#contact" class="mobile-cta-btn">Schedule Consultation</a>
-        </div>
-    </div>
-
-    <!-- Hero Section -->
-    <section id="hero" class="hero">
+    <!-- Hero -->
+    <section class="hero">
         <div class="hero-content">
-            <h1>Find Your Dream Home in Prescott</h1>
-            <p>I'll guide you through every step, from choosing your community to getting your keys. Exclusive access to the best builders and neighborhoods in Arizona's most desirable mountain community.</p>
+            <span style="background: #C4613A; color: white; padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.9rem; font-weight: 600; display: inline-block; margin-bottom: 1rem;">In-House Agent for Capstone & ĒCCO Homes</span>
+            <h1>Find Your Perfect Home<br>in Prescott, Arizona</h1>
+            <p style="font-size: 1.3rem; max-width: 700px; margin: 0 auto 2rem;">New construction homes from the $400s to $1.2M+. Specializing in helping active adults 50-70 discover the perfect community for their next chapter.</p>
             <div class="cta-buttons">
-                <a href="#contact" class="btn btn-primary">Schedule a Free Consultation</a>
-                <a href="#communities" class="btn btn-secondary">View Available Homes</a>
+                <a href="retire-in-prescott.html" class="btn btn-primary">Retire in Prescott</a>
+                <a href="#communities" class="btn btn-secondary">View Communities</a>
+                <a href="home-value.html" class="btn btn-secondary">Get Home Valuation</a>
             </div>
         </div>
     </section>
 
-    <!-- Builder Partners Section -->
-    <section id="builders" class="section fade-in">
-        <div class="section-header">
-            <h2>Exclusive Builder Partnerships</h2>
-            <p>Direct access to Prescott's premier home builders. As an in-house agent, I provide you with insider knowledge and exclusive opportunities.</p>
-        </div>
-        <div class="builders">
-            <div class="builder-card">
-                <div class="builder-image">
-                    <div class="builder-logo">CAPSTONE</div>
-                </div>
-                <div class="builder-content">
-                    <h3>Capstone Homes</h3>
-                    <p>Luxury custom homes with premium finishes and thoughtful design. Known for their attention to detail and quality craftsmanship in Prescott's most sought-after locations.</p>
-                    <a href="https://capstonehomesaz.com" class="builder-link" target="_blank" rel="noopener">Visit Capstone Homes →</a>
-                </div>
+    <!-- Three Main CTAs -->
+    <section class="section" style="padding: 4rem 2rem;">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; max-width: 1200px; margin: 0 auto;">
+            <div style="background: linear-gradient(135deg, #C4613A, #D67347); border-radius: 16px; padding: 2.5rem; color: white; text-align: center;">
+                <div style="font-size: 3rem; margin-bottom: 1rem;">🏔️</div>
+                <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">Retire in Prescott</h3>
+                <p style="margin-bottom: 1.5rem; opacity: 0.9;">Perfect for active adults 50-70. Mild climate, healthcare, and communities designed for your lifestyle.</p>
+                <a href="retire-in-prescott.html" class="btn btn-secondary" style="background: white; color: #C4613A;">Learn More</a>
             </div>
-            <div class="builder-card">
-                <div class="builder-image">
-                    <div class="builder-logo">ĒCCO</div>
-                </div>
-                <div class="builder-content">
-                    <h3>ĒCCO Homes</h3>
-                    <p>Modern, energy-efficient homes designed for today's lifestyle. Offering innovative floor plans and sustainable features at exceptional value in growing Prescott Valley communities.</p>
-                    <a href="https://eccohomesaz.com" class="builder-link" target="_blank" rel="noopener">Visit ĒCCO Homes →</a>
-                </div>
+            <div style="background: #F5F3EE; border: 2px solid #C4613A; border-radius: 16px; padding: 2.5rem; text-align: center;">
+                <div style="font-size: 3rem; margin-bottom: 1rem;">🏘️</div>
+                <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: #C4613A;">Browse Communities</h3>
+                <p style="margin-bottom: 1.5rem; color: #666;">6 exclusive communities from Capstone Homes and ĒCCO Homes. Something for every budget.</p>
+                <a href="#communities" class="btn btn-primary">View All</a>
+            </div>
+            <div style="background: #F5F3EE; border: 2px solid #e0d5c5; border-radius: 16px; padding: 2.5rem; text-align: center;">
+                <div style="font-size: 3rem; margin-bottom: 1rem;">💰</div>
+                <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: #C4613A;">Sell Your Home</h3>
+                <p style="margin-bottom: 1.5rem; color: #666;">Get top dollar for your Prescott home. Free valuation and expert marketing to qualified buyers.</p>
+                <a href="sell.html" class="btn btn-primary">Get Valuation</a>
             </div>
         </div>
     </section>
 
-    <!-- Mid-page CTA 1 -->
-    <div class="mid-page-cta">
-        <h3>Ready to see these homes in person? Let's schedule a tour.</h3>
-        <a href="#contact" class="btn btn-primary">Schedule a Tour</a>
-    </div>
+    <!-- Meet Ty -->
+    <section class="section fade-in" style="background: #F5F3EE;">
+        <div style="max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+            <div>
+                <h2 style="color: #C4613A; font-size: 2.5rem; margin-bottom: 1rem;">Meet Ty</h2>
+                <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">I'm relocating from Utah to Prescott to help families and active adults discover the magic of Arizona's mountain communities.</p>
+                <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">As an <strong>in-house agent</strong> for both Capstone Homes and ĒCCO Homes, I have exclusive access to the best lots, floor plans, and pricing that other agents simply can't match.</p>
+                <p style="font-size: 1.1rem; margin-bottom: 2rem;">With 8,100+ Instagram followers, I bring a modern approach to real estate—responsive communication, market insights, and a genuine passion for helping you find home.</p>
+                <a href="about.html" class="btn btn-primary">More About Ty</a>
+            </div>
+            <div style="text-align: center;">
+                <div style="width: 300px; height: 300px; background: linear-gradient(135deg, #C4613A, #D67347); border-radius: 50%; margin: 0 auto; display: flex; align-items: center; justify-content: center; color: white; font-size: 6rem;">👤</div>
+                <p style="margin-top: 1rem; color: #666;"><!-- TODO: Replace with Ty's actual headshot --></p>
+            </div>
+        </div>
+    </section>
 
-    <!-- Available Communities Section -->
+    <!-- Communities Section -->
     <section id="communities" class="section fade-in">
         <div class="section-header">
             <h2>Available Communities</h2>
-            <p>Discover your perfect neighborhood in Prescott and Prescott Valley. Each community offers unique amenities and lifestyle opportunities.</p>
+            <p>New construction homes from $459,900 to $1.2M+</p>
         </div>
-        
-        <div class="filters">
-            <button class="filter-btn active" data-filter="all">All Communities</button>
-            <button class="filter-btn" data-filter="capstone">Capstone Homes</button>
-            <button class="filter-btn" data-filter="ecco">ĒCCO Homes</button>
-        </div>
-
         <div class="communities">
-            <div class="community-card" data-builder="capstone">
-                <div class="community-image"></div>
+            <div class="community-card">
+                <div class="community-image" style="background-image: url('https://capstonehomesaz.com/wp-content/uploads/2024/10/GDE-Model.jpg');"></div>
                 <div class="community-info">
-                    <span class="community-badge">Capstone Homes</span>
+                    <span class="community-badge">Capstone</span>
                     <h3>Granite Dells Estates</h3>
                     <div class="community-details">
-                        <p><strong>Location:</strong> Gated Community, Prescott</p>
-                        <p><strong>Home Size:</strong> 3-5 bedrooms + study, 2,189-3,760 sqft</p>
-                        <p><strong>Features:</strong> Clubhouse, pool, fitness center, pickleball courts</p>
-                        <p><strong>Setting:</strong> Dramatic rock formations, premium lots</p>
+                        <p>3-5 Beds + Study | 2,189-3,760 sqft</p>
+                        <p>Gated | Clubhouse & Pool</p>
                     </div>
-                    <div class="community-price">Starting from $949,900</div>
+                    <div class="community-price">From $949,900</div>
+                    <a href="communities/granite-dells-estates.html" class="builder-link">View Details →</a>
                 </div>
             </div>
-
-            <div class="community-card" data-builder="capstone">
-                <div class="community-image"></div>
+            <div class="community-card">
+                <div class="community-image" style="background-image: url('https://capstonehomesaz.com/wp-content/uploads/2024/10/elevation-1-hidden-hills-prescott-arizona-capstone-homes.jpg');"></div>
                 <div class="community-info">
-                    <span class="community-badge">Capstone Homes</span>
+                    <span class="community-badge">Capstone</span>
                     <h3>Hidden Hills</h3>
                     <div class="community-details">
-                        <p><strong>Location:</strong> Prescott</p>
-                        <p><strong>Home Size:</strong> 3 bedrooms + study, 2,189-3,251 sqft</p>
-                        <p><strong>Features:</strong> Oversized 0.25-acre lots</p>
-                        <p><strong>Setting:</strong> National Forest views, private setting</p>
+                        <p>3 Beds + Study | 2,189-3,251 sqft</p>
+                        <p>Forest Views | 0.25 Acre Lots</p>
                     </div>
-                    <div class="community-price">Starting from $949,900</div>
+                    <div class="community-price">From $949,900</div>
+                    <a href="communities/hidden-hills.html" class="builder-link">View Details →</a>
                 </div>
             </div>
-
-            <div class="community-card" data-builder="capstone">
-                <div class="community-image"></div>
+            <div class="community-card">
+                <div class="community-image" style="background-image: url('https://capstonehomesaz.com/wp-content/uploads/2024/10/model-2-jasper-3b-prescott-arizona-capstone-homes.jpg');"></div>
                 <div class="community-info">
-                    <span class="community-badge">Capstone Homes</span>
+                    <span class="community-badge">Capstone</span>
                     <h3>Jasper 3B</h3>
                     <div class="community-details">
-                        <p><strong>Location:</strong> Prescott Valley</p>
-                        <p><strong>Home Size:</strong> 3-5 bedrooms + study, 2,189-3,760 sqft</p>
-                        <p><strong>Features:</strong> 81 homesites, J Club amenities</p>
-                        <p><strong>Setting:</strong> Estate-sized 0.25-0.5 acre lots</p>
+                        <p>3-5 Beds + Study | 2,189-3,760 sqft</p>
+                        <p>Estate Lots 0.25-0.5 Acre | J Club</p>
                     </div>
-                    <div class="community-price">Starting from $934,900</div>
+                    <div class="community-price">From $934,900</div>
+                    <a href="communities/jasper-3b.html" class="builder-link">View Details →</a>
                 </div>
             </div>
-
-            <div class="community-card" data-builder="ecco">
-                <div class="community-image"></div>
+            <div class="community-card">
+                <div class="community-image" style="background-image: url('https://capstonehomesaz.com/wp-content/uploads/2024/11/1-Welcome-Home-10-2000x1125.jpg');"></div>
                 <div class="community-info">
-                    <span class="community-badge">ĒCCO Homes</span>
-                    <h3>Jasper 7</h3>
-                    <div class="community-details">
-                        <p><strong>Location:</strong> Prescott Valley (Jasper community)</p>
-                        <p><strong>Home Size:</strong> 2-4 bedrooms, 1,281-1,958 sqft</p>
-                        <p><strong>Features:</strong> 84 homesites, J Club access</p>
-                        <p><strong>Setting:</strong> Modern energy-efficient designs</p>
-                    </div>
-                    <div class="community-price">Starting from $459,900</div>
-                </div>
-            </div>
-
-            <div class="community-card" data-builder="capstone">
-                <div class="community-image"></div>
-                <div class="community-info">
-                    <span class="community-badge">Capstone Homes</span>
+                    <span class="community-badge">Capstone</span>
                     <h3>Jasper 8</h3>
                     <div class="community-details">
-                        <p><strong>Location:</strong> Prescott Valley, next to Glassford Dells Regional Park</p>
-                        <p><strong>Home Size:</strong> 3-5 bedrooms + study, 2,185-3,281 sqft</p>
-                        <p><strong>Features:</strong> 132 homesites, park access</p>
-                        <p><strong>Setting:</strong> Natural beauty, outdoor recreation</p>
+                        <p>3-5 Beds + Study | 2,185-3,281 sqft</p>
+                        <p>Park Access | J Club</p>
                     </div>
-                    <div class="community-price">Starting from $794,900</div>
+                    <div class="community-price">From $794,900</div>
+                    <a href="communities/jasper-8.html" class="builder-link">View Details →</a>
                 </div>
             </div>
-
-            <div class="community-card" data-builder="ecco">
-                <div class="community-image"></div>
+            <div class="community-card">
+                <div class="community-image" style="background-image: url('https://eccohomesaz.com/wp-content/uploads/2024/12/JS600Small-37.jpg');"></div>
                 <div class="community-info">
-                    <span class="community-badge">ĒCCO Homes</span>
+                    <span class="community-badge">ĒCCO</span>
+                    <h3>Jasper 7</h3>
+                    <div class="community-details">
+                        <p>2-4 Beds | 1,281-1,958 sqft</p>
+                        <p>Modern Design | J Club Access</p>
+                    </div>
+                    <div class="community-price">From $459,900</div>
+                    <a href="communities/jasper-7.html" class="builder-link">View Details →</a>
+                </div>
+            </div>
+            <div class="community-card">
+                <div class="community-image" style="background-image: url('https://eccohomesaz.com/wp-content/uploads/2024/11/exterior-2-skyview-prescott-valley-arizona-ecco-homes.jpg');"></div>
+                <div class="community-info">
+                    <span class="community-badge">ĒCCO</span>
                     <h3>Skyview</h3>
                     <div class="community-details">
-                        <p><strong>Location:</strong> Prescott Valley</p>
-                        <p><strong>Home Size:</strong> 2-4 bedrooms, 1,653-2,254 sqft</p>
-                        <p><strong>Features:</strong> Optional RV garages available</p>
-                        <p><strong>Setting:</strong> Modern living, flexible lifestyle</p>
+                        <p>2-4 Beds | 1,653-2,254 sqft</p>
+                        <p>RV Garage Options | J Club</p>
                     </div>
-                    <div class="community-price">Starting from $508,900</div>
+                    <div class="community-price">From $508,900</div>
+                    <a href="communities/skyview.html" class="builder-link">View Details →</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Mid-page CTA 2 -->
-    <div class="mid-page-cta">
-        <h3>Have questions about new construction? I'm here to help.</h3>
-        <a href="#contact" class="btn btn-primary">Contact Ty</a>
-    </div>
-
-    <!-- Quick Move-In Homes Section -->
-    <section id="quick-homes" class="section fade-in">
+    <!-- Why Work With Ty -->
+    <section class="section" style="background: linear-gradient(135deg, #C4613A, #D67347); color: white;">
         <div class="section-header">
-            <h2>Quick Move-In Homes</h2>
-            <p>Ready to move in now or soon. These homes are either completed or nearing completion for faster occupancy.</p>
+            <h2 style="color: white;">Why Work With Ty</h2>
+            <p style="color: rgba(255,255,255,0.9);">In-house agent with exclusive access</p>
         </div>
-        
-        <div class="urgency-banner">
-            Only 6 quick move-in homes available! These won't last long at these prices.
-        </div>
-        
-        <div class="quick-homes">
-            <div class="quick-home-card">
-                <span class="availability-badge upcoming">Available 02/28/2026</span>
-                <h3>Jasper 8 - Plan 2475</h3>
-                <p><strong>Homesite 759</strong></p>
-                <p>3 bed / 3 bath • 2,475 sqft</p>
-                <div class="community-price">$916,995</div>
-                <div class="urgency-text">Won't last long at this price</div>
-                <a href="#contact" class="home-cta-link" data-community="Jasper 8">Inquire About This Home</a>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; max-width: 1000px; margin: 0 auto;">
+            <div style="text-align: center;">
+                <div style="font-size: 3rem; margin-bottom: 1rem;">🏗️</div>
+                <h3>Builder Insider</h3>
+                <p style="opacity: 0.9;">First access to new releases and best lots</p>
             </div>
-
-            <div class="quick-home-card">
-                <span class="availability-badge upcoming">Available 02/28/2026</span>
-                <h3>Jasper 8 - Plan 3281</h3>
-                <p><strong>Homesite 760</strong></p>
-                <p>5 bed + study / 4.5 bath • 3,281 sqft</p>
-                <div class="community-price">$1,133,800</div>
-                <div class="urgency-text">Premium lot with views</div>
-                <a href="#contact" class="home-cta-link" data-community="Jasper 8">Inquire About This Home</a>
+            <div style="text-align: center;">
+                <div style="font-size: 3rem; margin-bottom: 1rem;">💰</div>
+                <h3>No Buyer Fees</h3>
+                <p style="opacity: 0.9;">Builder pays my commission</p>
             </div>
-
-            <div class="quick-home-card">
-                <span class="availability-badge upcoming">Available 02/14/2026</span>
-                <h3>Jasper 8 - Plan 2791</h3>
-                <p><strong>Homesite 744</strong></p>
-                <p>4 bed / 3.5 bath • 2,791 sqft</p>
-                <div class="community-price">$1,077,941</div>
-                <div class="urgency-text">Move in before spring!</div>
-                <a href="#contact" class="home-cta-link" data-community="Jasper 8">Inquire About This Home</a>
+            <div style="text-align: center;">
+                <div style="font-size: 3rem; margin-bottom: 1rem;">📱</div>
+                <h3>Responsive</h3>
+                <p style="opacity: 0.9;">Quick replies, modern communication</p>
             </div>
-
-            <div class="quick-home-card">
-                <span class="availability-badge">Available Now</span>
-                <h3>Hidden Hills - Plan 2189</h3>
-                <p><strong>Homesite 111</strong></p>
-                <p>3 bed / 2.5 bath • 2,189 sqft</p>
-                <div class="community-price">$996,906</div>
-                <div class="urgency-text">Ready for immediate move-in</div>
-                <a href="#contact" class="home-cta-link" data-community="Hidden Hills">Inquire About This Home</a>
-            </div>
-
-            <div class="quick-home-card">
-                <span class="availability-badge">Available Now</span>
-                <h3>Hidden Hills - Plan 2672</h3>
-                <p><strong>Homesite 120</strong></p>
-                <p>3 bed + study / 3.5 bath • 2,672 sqft</p>
-                <div class="community-price">$1,250,000</div>
-                <div class="urgency-text">Last home in this price range</div>
-                <a href="#contact" class="home-cta-link" data-community="Hidden Hills">Inquire About This Home</a>
-            </div>
-
-            <div class="quick-home-card">
-                <span class="availability-badge">Available Now</span>
-                <h3>Jasper 3B - Plan 2672</h3>
-                <p><strong>Homesite 397</strong></p>
-                <p>3 bed + study / 3.5 bath • 2,672 sqft</p>
-                <div class="community-price">$1,243,501</div>
-                <div class="urgency-text">Priced to sell quickly</div>
-                <a href="#contact" class="home-cta-link" data-community="Jasper 3B">Inquire About This Home</a>
+            <div style="text-align: center;">
+                <div style="font-size: 3rem; margin-bottom: 1rem;">🚚</div>
+                <h3>Relocation Expert</h3>
+                <p style="opacity: 0.9;">Made the move from Utah myself</p>
             </div>
         </div>
     </section>
-
-    <!-- Mid-page CTA 3 -->
-    <div class="mid-page-cta">
-        <h3>Not sure which community is right for you? Let's talk.</h3>
-        <a href="#contact" class="btn btn-primary">Free Consultation</a>
-    </div>
-
-    <!-- About Ty Section -->
-    <section id="about" class="section fade-in">
-        <div class="about">
-            <div class="about-content">
-                <h2>Meet Ty</h2>
-                <p>I'm relocating from Utah to Prescott and bringing insider knowledge of the new construction process with me. As an in-house agent for both Capstone Homes and ĒCCO Homes, I have exclusive access to the best lots, floor plans, and pricing.</p>
-                <p>Whether you're looking for new construction or resale properties, I understand the builder process inside and out. My social media presence and modern approach means you'll get responsive communication and market insights that matter.</p>
-                <p>I specialize in helping people relocate to Prescott from Utah, Phoenix, Los Angeles, and beyond. Let's find your perfect Arizona home together.</p>
-                <p>Follow me on Instagram: <a href="https://instagram.com/ty_the_real_estate_guy" class="social-link" target="_blank" rel="noopener">@ty_the_real_estate_guy</a> (8,138 followers)</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Mid-page CTA 4 -->
-    <div class="mid-page-cta">
-        <h3>Ready to see these homes in person? Let's schedule a tour.</h3>
-        <a href="#contact" class="btn btn-primary">Schedule a Tour</a>
-    </div>
-
-    <!-- Social Proof / Testimonials Section -->
-    <!-- NOTE FOR TY: Replace these placeholder testimonials with real client testimonials -->
-    <section class="section fade-in">
-        <div class="testimonials">
-            <div class="section-header">
-                <h2>What My Clients Say</h2>
-                <p>Real experiences from families who found their perfect Prescott home</p>
-            </div>
-            
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <div class="testimonial-text">
-                        "Ty made our relocation from Phoenix seamless. His knowledge of the new construction process saved us thousands, and he helped us get the perfect lot in Granite Dells Estates. We couldn't be happier with our new home!"
-                    </div>
-                    <div class="testimonial-author">The Johnson Family</div>
-                    <div class="testimonial-location">Relocated from Phoenix</div>
-                </div>
-                
-                <div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <div class="testimonial-text">
-                        "Working with Ty was amazing. As an in-house agent, he had access to floor plans and pricing before they went public. We got our dream home in Hidden Hills at an incredible price. Highly recommend!"
-                    </div>
-                    <div class="testimonial-author">Sarah and Mike Chen</div>
-                    <div class="testimonial-location">Relocated from Utah</div>
-                </div>
-                
-                <div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <div class="testimonial-text">
-                        "Ty's social media presence shows he really knows the Prescott market. He guided us through every step of the building process and was always available to answer questions. Professional and trustworthy!"
-                    </div>
-                    <div class="testimonial-author">David and Lisa Rodriguez</div>
-                    <div class="testimonial-location">First-time home buyers</div>
-                </div>
-            </div>
-            
-            <div class="testimonial-note">
-                * These are placeholder testimonials. Replace with real client testimonials and photos.
-            </div>
-        </div>
-    </section>
-
-    <!-- Why Prescott Section -->
-    <section id="prescott" class="section fade-in">
-        <div class="section-header">
-            <h2>Why Prescott?</h2>
-            <p>Discover Arizona's best-kept secret. Prescott offers the perfect blend of small-town charm, outdoor recreation, and growing opportunities.</p>
-        </div>
-        
-        <div class="prescott-stats">
-            <div class="stats-grid">
-                <div class="stat-card">
-                    <div class="stat-number">~$600K</div>
-                    <div class="stat-label">Median Home Price</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">4,300ft</div>
-                    <div class="stat-label">Elevation</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">300+</div>
-                    <div class="stat-label">Sunny Days/Year</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">47,000</div>
-                    <div class="stat-label">Population</div>
-                </div>
-            </div>
-        </div>
-
-        <div style="margin-top: 3rem; text-align: center; max-width: 800px; margin-left: auto; margin-right: auto;">
-            <p>Perfect climate with four mild seasons, endless outdoor recreation, rich Western history, and a growing community of retirees, remote workers, and young professionals. Many are migrating here from Phoenix, Los Angeles, and Chicago for the quality of life and small-town feel.</p>
-        </div>
-    </section>
-
-    <!-- Mid-page CTA 5 -->
-    <div class="mid-page-cta">
-        <h3>Have questions about new construction? I'm here to help.</h3>
-        <a href="#contact" class="btn btn-primary">Contact Ty</a>
-    </div>
 
     <!-- Contact Section -->
     <section id="contact" class="section fade-in">
         <div class="section-header">
             <h2>Let's Find Your Perfect Home</h2>
-            <div class="contact-intro">
-                <p style="font-size: 1.2rem; margin-bottom: 0.5rem;">Ready to start your Prescott journey?</p>
-                <p style="color: #C4613A; font-weight: 600;">I typically respond within 2 hours</p>
-            </div>
+            <p>I typically respond within 2 hours</p>
         </div>
-        
-        <div class="contact-phone">
-            <h3>Prefer to talk?</h3>
-            <a href="tel:+18015550123">Call me directly at (801) 555-0123</a>
-        </div>
-        
-        <div class="trust-signals">
-            <p>No pressure, no obligation. Just honest guidance.</p>
-        </div>
-        
         <form class="contact-form" action="https://formsubmit.co/kabbott622@gmail.com" method="POST">
-            <input type="hidden" name="_next" value="https://ty-realestate.github.io">
-            <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_subject" value="New inquiry from Ty Real Estate website">
+            <input type="hidden" name="_next" value="https://kabbs622.github.io/ty-realestate/thanks.html">
+            <input type="hidden" name="_subject" value="Website Inquiry - Ty Real Estate">
             
             <div class="form-group">
-                <label for="name">Full Name</label>
+                <label for="name">Full Name *</label>
                 <input type="text" id="name" name="name" required>
             </div>
-            
             <div class="form-group">
-                <label for="email">Email Address</label>
+                <label for="email">Email *</label>
                 <input type="email" id="email" name="email" required>
             </div>
-            
             <div class="form-group">
-                <label for="phone">Phone Number</label>
+                <label for="phone">Phone</label>
                 <input type="tel" id="phone" name="phone">
             </div>
-            
             <div class="form-group">
                 <label for="interest">I'm Interested In</label>
-                <select id="interest" name="interest" required>
-                    <option value="">Select an option</option>
+                <select id="interest" name="interest">
                     <option value="New Construction">New Construction</option>
                     <option value="Resale">Resale</option>
                     <option value="Both">Both</option>
                     <option value="Just Exploring">Just Exploring</option>
                 </select>
             </div>
-            
-            <div class="form-group">
-                <label for="community">Preferred Community</label>
-                <select id="community" name="community">
-                    <option value="">Not Sure</option>
-                    <option value="Granite Dells Estates">Granite Dells Estates</option>
-                    <option value="Hidden Hills">Hidden Hills</option>
-                    <option value="Jasper 3B">Jasper 3B</option>
-                    <option value="Jasper 7">Jasper 7</option>
-                    <option value="Jasper 8">Jasper 8</option>
-                    <option value="Skyview">Skyview</option>
-                </select>
-            </div>
-            
-            <div class="form-group">
-                <label for="budget">Budget Range</label>
-                <select id="budget" name="budget">
-                    <option value="">Select budget</option>
-                    <option value="$400K-$500K">$400K - $500K</option>
-                    <option value="$500K-$700K">$500K - $700K</option>
-                    <option value="$700K-$900K">$700K - $900K</option>
-                    <option value="$900K-$1.2M">$900K - $1.2M</option>
-                    <option value="$1.2M+">$1.2M+</option>
-                    <option value="Not sure">Not sure yet</option>
-                </select>
-            </div>
-            
-            <div class="form-group">
-                <label for="preapproved">Are You Pre-Approved?</label>
-                <select id="preapproved" name="preapproved">
-                    <option value="">Select</option>
-                    <option value="Yes">Yes, I'm pre-approved</option>
-                    <option value="In process">Working on it now</option>
-                    <option value="Cash buyer">Cash buyer</option>
-                    <option value="Not yet">Not yet</option>
-                </select>
-            </div>
-            
             <div class="form-group">
                 <label for="message">Message</label>
-                <textarea id="message" name="message" placeholder="Tell me about your timeline, what you're looking for, or any questions you have..."></textarea>
+                <textarea id="message" name="message" placeholder="Tell me about what you're looking for..."></textarea>
             </div>
-            
-            <button type="submit" class="form-submit enhanced-submit">Get Started - Send Message</button>
+            <button type="submit" class="form-submit enhanced-submit">Send Message</button>
         </form>
     </section>
 
     <!-- Footer -->
     <footer style="background: #F5F3EE; border-top: 1px solid #e0d5c5; padding: 3rem 2rem; text-align: center;">
         <div style="max-width: 1200px; margin: 0 auto;">
-            <p style="color: #C4613A; font-weight: 700; font-size: 1.5rem; margin-bottom: 0.5rem;">Your dream home in Prescott is closer than you think.</p>
-            
-            <div style="background: #FFFFFF; border: 2px solid #C4613A; border-radius: 12px; padding: 2rem; margin: 2rem 0; display: inline-block;">
-                <p style="color: #C4613A; font-weight: 700; font-size: 1.25rem; margin-bottom: 1rem;">Ty Real Estate</p>
-                <p style="margin-bottom: 0.5rem;"><strong>Phone:</strong> <a href="tel:+18015550123" style="color: #C4613A; text-decoration: none; font-weight: 600;">(801) 555-0123</a></p>
-                <p style="margin-bottom: 0.5rem;"><strong>Email:</strong> <a href="mailto:ty@placeholder-email.com" style="color: #C4613A; text-decoration: none;">ty@placeholder-email.com</a></p>
-                <p style="margin-bottom: 1rem;"><strong>Instagram:</strong> <a href="https://instagram.com/ty_the_real_estate_guy" target="_blank" rel="noopener" style="color: #C4613A; text-decoration: none;">@ty_the_real_estate_guy</a></p>
-            </div>
-            
-            <p style="color: #2C2C2C; opacity: 0.7; margin-bottom: 0.5rem;">Prescott and Prescott Valley, Arizona</p>
-            <p style="color: #2C2C2C; opacity: 0.7; margin-bottom: 1.5rem;">In-house agent for Capstone Homes and ĒCCO Homes</p>
+            <p style="color: #C4613A; font-weight: 700; font-size: 1.5rem; margin-bottom: 1rem;">Your dream home in Prescott is closer than you think.</p>
             <div style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; margin-bottom: 1.5rem;">
-                <a href="https://capstonehomesaz.com" target="_blank" rel="noopener" style="color: #666; text-decoration: none;">Capstone Homes</a>
-                <a href="https://eccohomesaz.com" target="_blank" rel="noopener" style="color: #666; text-decoration: none;">ĒCCO Homes</a>
+                <a href="index.html" style="color: #666;">Home</a>
+                <a href="retire-in-prescott.html" style="color: #666;">Retire in Prescott</a>
+                <a href="index.html#communities" style="color: #666;">Communities</a>
+                <a href="sell.html" style="color: #666;">Sell</a>
+                <a href="about.html" style="color: #666;">About</a>
+                <a href="privacy.html" style="color: #666;">Privacy</a>
             </div>
             <p style="color: #2C2C2C; opacity: 0.5; font-size: 0.85rem;">&copy; 2026 Ty Real Estate. All rights reserved.</p>
         </div>
     </footer>
 
-    <script>
-        // Intersection Observer for fade-in animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, observerOptions);
-
-        // Observe all fade-in elements
-        document.addEventListener('DOMContentLoaded', function() {
-            const fadeElements = document.querySelectorAll('.fade-in');
-            fadeElements.forEach(el => observer.observe(el));
-
-            // Community filter functionality
-            const filterBtns = document.querySelectorAll('.filter-btn');
-            const communityCards = document.querySelectorAll('.community-card');
-
-            filterBtns.forEach(btn => {
-                btn.addEventListener('click', () => {
-                    // Remove active class from all buttons
-                    filterBtns.forEach(b => b.classList.remove('active'));
-                    // Add active class to clicked button
-                    btn.classList.add('active');
-
-                    const filter = btn.getAttribute('data-filter');
-
-                    communityCards.forEach(card => {
-                        if (filter === 'all') {
-                            card.style.display = 'block';
-                            // Re-trigger animation
-                            setTimeout(() => {
-                                card.style.opacity = '1';
-                                card.style.transform = 'translateY(0)';
-                            }, 100);
-                        } else {
-                            const cardBuilder = card.getAttribute('data-builder');
-                            if (cardBuilder === filter) {
-                                card.style.display = 'block';
-                                setTimeout(() => {
-                                    card.style.opacity = '1';
-                                    card.style.transform = 'translateY(0)';
-                                }, 100);
-                            } else {
-                                card.style.opacity = '0';
-                                card.style.transform = 'translateY(30px)';
-                                setTimeout(() => {
-                                    card.style.display = 'none';
-                                }, 300);
-                            }
-                        }
-                    });
-                });
-            });
-
-            // Mobile menu toggle (basic functionality)
-            const mobileMenu = document.querySelector('.mobile-menu');
-            const navLinks = document.querySelector('.nav-links');
-
-            mobileMenu.addEventListener('click', () => {
-                navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
-            });
-
-            // Smooth scrolling for navigation links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    const target = document.querySelector(this.getAttribute('href'));
-                    if (target) {
-                        const headerHeight = document.querySelector('.header').offsetHeight;
-                        const targetPosition = target.offsetTop - headerHeight;
-                        
-                        window.scrollTo({
-                            top: targetPosition,
-                            behavior: 'smooth'
-                        });
-                    }
-                });
-            });
-
-            // Header scroll effect and mobile CTA bar
-            let lastScrollTop = 0;
-            const header = document.querySelector('.header');
-            const mobileCTA = document.getElementById('mobileCTA');
-            const heroSection = document.querySelector('#hero');
-            
-            window.addEventListener('scroll', () => {
-                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-                
-                // Header scroll effect
-                if (scrollTop > lastScrollTop && scrollTop > 100) {
-                    // Scrolling down
-                    header.style.transform = 'translateY(-100%)';
-                } else {
-                    // Scrolling up
-                    header.style.transform = 'translateY(0)';
-                }
-                
-                // Mobile CTA bar visibility (only on mobile)
-                if (window.innerWidth <= 768) {
-                    const heroHeight = heroSection.offsetHeight;
-                    if (scrollTop > heroHeight) {
-                        mobileCTA.classList.add('visible');
-                    } else {
-                        mobileCTA.classList.remove('visible');
-                    }
-                }
-                
-                lastScrollTop = scrollTop;
-            });
-
-            // Handle window resize for mobile CTA
-            window.addEventListener('resize', () => {
-                if (window.innerWidth > 768) {
-                    mobileCTA.classList.remove('visible');
-                }
-            });
-
-            // Home inquiry pre-filling
-            document.addEventListener('click', (e) => {
-                if (e.target.classList.contains('home-cta-link')) {
-                    const community = e.target.getAttribute('data-community');
-                    if (community) {
-                        // Pre-fill the community dropdown when user reaches contact form
-                        setTimeout(() => {
-                            const communitySelect = document.getElementById('community');
-                            if (communitySelect) {
-                                communitySelect.value = community;
-                            }
-                        }, 500);
-                    }
-                }
-            });
-        });
-    </script>
     <script src="scripts.js"></script>
 </body>
 </html>

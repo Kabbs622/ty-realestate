@@ -6,6 +6,11 @@
         <priority>1.0</priority>
     </url>
     <url>
+        <loc>https://kabbs622.github.io/ty-realestate/retire-in-prescott.html</loc>
+        <lastmod>2026-02-19</lastmod>
+        <priority>1.0</priority>
+    </url>
+    <url>
         <loc>https://kabbs622.github.io/ty-realestate/about.html</loc>
         <lastmod>2026-02-19</lastmod>
         <priority>0.8</priority>
@@ -16,23 +21,38 @@
         <priority>0.8</priority>
     </url>
     <url>
+        <loc>https://kabbs622.github.io/ty-realestate/communities/granite-dells-estates.html</loc>
+        <lastmod>2026-02-19</lastmod>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://kabbs622.github.io/ty-realestate/communities/hidden-hills.html</loc>
+        <lastmod>2026-02-19</lastmod>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://kabbs622.github.io/ty-realestate/communities/jasper-3b.html</loc>
+        <lastmod>2026-02-19</lastmod>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://kabbs622.github.io/ty-realestate/communities/jasper-7.html</loc>
+        <lastmod>2026-02-19</lastmod>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://kabbs622.github.io/ty-realestate/communities/jasper-8.html</loc>
+        <lastmod>2026-02-19</lastmod>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://kabbs622.github.io/ty-realestate/communities/skyview.html</loc>
+        <lastmod>2026-02-19</lastmod>
+        <priority>0.9</priority>
+    </url>
+    <url>
         <loc>https://kabbs622.github.io/ty-realestate/privacy.html</loc>
         <lastmod>2026-02-19</lastmod>
         <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>https://kabbs622.github.io/ty-realestate/relocation-guide.html</loc>
-        <lastmod>2026-02-19</lastmod>
-        <priority>0.9</priority>
-    </url>
-    <url>
-        <loc>https://kabbs622.github.io/ty-realestate/buyers-guide.html</loc>
-        <lastmod>2026-02-19</lastmod>
-        <priority>0.9</priority>
-    </url>
-    <url>
-        <loc>https://kabbs622.github.io/ty-realestate/home-value.html</loc>
-        <lastmod>2026-02-19</lastmod>
-        <priority>0.9</priority>
     </url>
 </urlset>
