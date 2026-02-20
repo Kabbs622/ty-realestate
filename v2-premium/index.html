@@ -1,558 +1,789 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ty Real Estate | Luxury New Construction Homes Prescott, AZ</title>
-    <meta name="description" content="Premium new construction homes in Prescott & Prescott Valley. In-house agent for Capstone & ĒCCO Homes with exclusive access and insider pricing.">
+    <title>Ty Real Estate | Prescott Luxury Homes</title>
+    <meta name="description" content="Luxury new construction homes in Prescott, Arizona. Exclusive representation for Capstone Homes and ĒCCO Homes.">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    colors: {
-                        primary: {
-                            light: '#C4613A',
-                            DEFAULT: '#C4613A',
-                            dark: '#D67347'
-                        },
-                        dark: {
-                            bg: '#0a0a0a',
-                            card: '#1a1a1a',
-                            text: '#fafafa'
-                        }
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif']
-                    }
-                }
-            }
-        }
-    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
     
     <style>
-        :root {
-            --bg-primary: #fafaf8;
-            --bg-secondary: #f5f3ee;
-            --text-primary: #1a1a1a;
-            --text-secondary: #666666;
-            --accent: #C4613A;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
         
-        [data-theme="dark"] {
-            --bg-primary: #0a0a0a;
-            --bg-secondary: #1a1a1a;
-            --text-primary: #fafafa;
-            --text-secondary: #a0a0a0;
-            --accent: #E67E5A;
+        :root {
+            --black: #0a0a0a;
+            --white: #ffffff;
+            --cream: #f5f5f0;
+            --gold: #c9a962;
+            --gold-light: #d4b978;
+            --gray: #666666;
+            --light-gray: #e5e5e5;
         }
         
         body {
-            background-color: var(--bg-primary);
-            color: var(--text-primary);
-            transition: background-color 0.3s ease, color 0.3s ease;
+            font-family: 'Inter', sans-serif;
+            background: var(--white);
+            color: var(--black);
+            line-height: 1.6;
+            overflow-x: hidden;
         }
         
-        .glass {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+        h1, h2, h3, h4 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 500;
+            line-height: 1.1;
         }
         
-        [data-theme="dark"] .glass {
-            background: rgba(26, 26, 26, 0.7);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 24px 48px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            mix-blend-mode: difference;
         }
         
-        .gradient-text {
-            background: linear-gradient(135deg, var(--accent), #D67347);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+        nav.scrolled {
+            background: var(--white);
+            mix-blend-mode: normal;
         }
         
-        .animate-float {
-            animation: float 6s ease-in-out infinite;
+        .logo {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--white);
+            text-decoration: none;
+            letter-spacing: 2px;
         }
         
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
+        nav.scrolled .logo {
+            color: var(--black);
         }
         
-        .animate-pulse-slow {
-            animation: pulse 3s ease-in-out infinite;
+        .nav-links {
+            display: flex;
+            gap: 40px;
+            list-style: none;
         }
         
-        .reveal {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s ease;
+        .nav-links a {
+            color: var(--white);
+            text-decoration: none;
+            font-size: 13px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            transition: color 0.3s;
         }
         
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
+        nav.scrolled .nav-links a {
+            color: var(--black);
         }
         
-        .video-placeholder {
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+        .nav-links a:hover {
+            color: var(--gold);
+        }
+        
+        /* Hero */
+        .hero {
+            height: 100vh;
             position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             overflow: hidden;
         }
         
-        .video-placeholder::before {
-            content: '';
+        .hero-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://capstonehomesaz.com/wp-content/uploads/2025/03/32-Pool-3.jpg') center/cover;
+        }
+        
+        .hero-overlay {
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
             bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/><circle cx="50" cy="50" r="30" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/><circle cx="50" cy="50" r="20" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></svg>');
-            background-size: 100px 100px;
-            animation: rotate 60s linear infinite;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.5));
         }
         
-        @keyframes rotate {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            color: var(--white);
+            max-width: 900px;
+            padding: 0 24px;
+        }
+        
+        .hero-tag {
+            font-size: 12px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 32px;
+            color: var(--gold);
+        }
+        
+        .hero h1 {
+            font-size: clamp(48px, 10vw, 96px);
+            font-weight: 400;
+            margin-bottom: 24px;
+            letter-spacing: -1px;
+        }
+        
+        .hero h1 span {
+            font-style: italic;
+            color: var(--gold);
+        }
+        
+        .hero-subtitle {
+            font-size: 18px;
+            font-weight: 300;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto 48px;
+        }
+        
+        .hero-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 16px;
+            padding: 20px 40px;
+            background: transparent;
+            border: 1px solid var(--gold);
+            color: var(--gold);
+            text-decoration: none;
+            font-size: 13px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            transition: all 0.4s;
+        }
+        
+        .hero-cta:hover {
+            background: var(--gold);
+            color: var(--black);
+        }
+        
+        .scroll-indicator {
+            position: absolute;
+            bottom: 48px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: var(--white);
+            font-size: 12px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateX(-50%) translateY(0); }
+            50% { transform: translateX(-50%) translateY(-10px); }
+        }
+        
+        /* Section Styles */
+        section {
+            padding: 120px 48px;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+        
+        .section-header h2 {
+            font-size: clamp(36px, 5vw, 56px);
+            margin-bottom: 16px;
+        }
+        
+        .section-header p {
+            color: var(--gray);
+            font-size: 16px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .gold-line {
+            width: 60px;
+            height: 1px;
+            background: var(--gold);
+            margin: 24px auto;
+        }
+        
+        /* Intro Section */
+        .intro {
+            background: var(--cream);
+        }
+        
+        .intro-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 48px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .intro-item {
+            text-align: center;
+        }
+        
+        .intro-number {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 48px;
+            color: var(--gold);
+            margin-bottom: 16px;
+        }
+        
+        .intro-item h3 {
+            font-size: 20px;
+            margin-bottom: 12px;
+        }
+        
+        .intro-item p {
+            font-size: 14px;
+            color: var(--gray);
+            line-height: 1.7;
+        }
+        
+        /* Communities Section */
+        .communities {
+            background: var(--white);
+        }
+        
+        .communities-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .community-card {
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        
+        .community-card-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            transition: transform 0.8s;
+        }
+        
+        .community-card:hover .community-card-image {
+            transform: scale(1.05);
+        }
+        
+        .community-card-content {
+            padding: 32px 0;
+        }
+        
+        .community-card-tag {
+            font-size: 11px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 12px;
+        }
+        
+        .community-card h3 {
+            font-size: 28px;
+            margin-bottom: 8px;
+        }
+        
+        .community-card-price {
+            font-size: 14px;
+            color: var(--gray);
+            letter-spacing: 1px;
+        }
+        
+        /* Featured Section */
+        .featured {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            min-height: 600px;
+        }
+        
+        .featured-image {
+            background: url('https://capstonehomesaz.com/wp-content/uploads/2024/10/GDE-Kitchen.jpg') center/cover;
+        }
+        
+        .featured-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 80px;
+            background: var(--black);
+            color: var(--white);
+        }
+        
+        .featured-content h2 {
+            font-size: 48px;
+            margin-bottom: 24px;
+        }
+        
+        .featured-content h2 span {
+            color: var(--gold);
+        }
+        
+        .featured-content p {
+            font-size: 16px;
+            opacity: 0.8;
+            margin-bottom: 32px;
+            line-height: 1.8;
+        }
+        
+        .featured-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--gold);
+            text-decoration: none;
+            font-size: 13px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            transition: gap 0.3s;
+        }
+        
+        .featured-btn:hover {
+            gap: 20px;
+        }
+        
+        /* Contact Section */
+        .contact {
+            background: var(--cream);
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .contact-info h2 {
+            font-size: 48px;
+            margin-bottom: 24px;
+        }
+        
+        .contact-info p {
+            font-size: 16px;
+            color: var(--gray);
+            margin-bottom: 48px;
+            line-height: 1.8;
+        }
+        
+        .contact-detail {
+            margin-bottom: 24px;
+        }
+        
+        .contact-detail-label {
+            font-size: 11px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 8px;
+        }
+        
+        .contact-detail-value {
+            font-size: 18px;
+        }
+        
+        .contact-form {
+            background: var(--white);
+            padding: 48px;
+        }
+        
+        .form-group {
+            margin-bottom: 24px;
+        }
+        
+        .form-group label {
+            display: block;
+            font-size: 11px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            color: var(--gray);
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 16px;
+            border: none;
+            border-bottom: 1px solid var(--light-gray);
+            background: transparent;
+            font-family: 'Inter', sans-serif;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--gold);
+        }
+        
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        
+        .submit-btn {
+            width: 100%;
+            padding: 20px;
+            background: var(--black);
+            color: var(--white);
+            border: none;
+            font-size: 13px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        
+        .submit-btn:hover {
+            background: var(--gold);
+            color: var(--black);
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--black);
+            color: var(--white);
+            padding: 80px 48px 40px;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .footer-logo {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 32px;
+            margin-bottom: 24px;
+            color: var(--gold);
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-bottom: 48px;
+        }
+        
+        .footer-links a {
+            color: var(--white);
+            text-decoration: none;
+            font-size: 13px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            opacity: 0.7;
+            transition: opacity 0.3s;
+        }
+        
+        .footer-links a:hover {
+            opacity: 1;
+            color: var(--gold);
+        }
+        
+        .footer-copy {
+            font-size: 13px;
+            opacity: 0.5;
+            letter-spacing: 1px;
+        }
+        
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .intro-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .communities-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .featured {
+                grid-template-columns: 1fr;
+            }
+            
+            .featured-image {
+                height: 400px;
+            }
+            
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            nav {
+                padding: 20px 24px;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            section {
+                padding: 80px 24px;
+            }
+            
+            .intro-grid,
+            .communities-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .featured-content {
+                padding: 48px 24px;
+            }
+            
+            .contact-form {
+                padding: 32px 24px;
+            }
         }
     </style>
 </head>
-<body class="font-sans antialiased">
+<body>
     <!-- Navigation -->
-    <nav class="fixed top-0 left-0 right-0 z-50 glass">
-        <div class="max-w-7xl mx-auto px-6 py-4">
-            <div class="flex items-center justify-between">
-                <a href="#" class="text-2xl font-bold tracking-tight">Ty Real Estate</a>
-                
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="#communities" class="text-sm font-medium hover:text-[var(--accent)] transition-colors">Communities</a>
-                    <a href="#retire" class="text-sm font-medium hover:text-[var(--accent)] transition-colors">Retire in Prescott</a>
-                    <a href="#about" class="text-sm font-medium hover:text-[var(--accent)] transition-colors">About</a>
-                    <a href="#contact" class="text-sm font-medium hover:text-[var(--accent)] transition-colors">Contact</a>
-                </div>
-                
-                <div class="flex items-center space-x-4">
-                    <!-- Dark Mode Toggle -->
-                    <button id="themeToggle" class="w-10 h-10 rounded-full glass flex items-center justify-center hover:scale-110 transition-transform" aria-label="Toggle dark mode">
-                        <span id="themeIcon">🌙</span>
-                    </button>
-                    
-                    <a href="#contact" class="hidden md:inline-flex px-6 py-2.5 bg-[var(--accent)] text-white rounded-full text-sm font-semibold hover:opacity-90 transition-opacity">
-                        Get Started
-                    </a>
-                </div>
-            </div>
-        </div>
+    <nav id="navbar">
+        <a href="#" class="logo">Ty Real Estate</a>
+        <ul class="nav-links">
+            <li><a href="#communities">Communities</a></li>
+            <li><a href="#retire">Retire in Prescott</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-        <!-- Video Placeholder Background -->
-        <div class="absolute inset-0 video-placeholder">
-            <div class="absolute inset-0 bg-black/40"></div>
-        </div>
-        
-        <!-- Animated Background Elements -->
-        <div class="absolute inset-0 overflow-hidden pointer-events-none">
-            <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-[var(--accent)]/20 rounded-full blur-3xl animate-float"></div>
-            <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-orange-500/20 rounded-full blur-3xl animate-float" style="animation-delay: 3s;"></div>
-        </div>
-        
-        <!-- Hero Content -->
-        <div class="relative z-10 max-w-5xl mx-auto px-6 text-center">
-            <div class="inline-block mb-6 px-4 py-2 rounded-full glass text-sm font-medium text-white animate-pulse-slow">
-                In-House Agent for Capstone & ĒCCO Homes
-            </div>
-            
-            <h1 class="text-5xl md:text-7xl lg:text-8xl font-black text-white mb-6 leading-tight tracking-tight">
-                This isn't just a house.
-                <span class="block mt-2">It's your <span class="text-[var(--accent)]">next chapter</span>.</span>
-            </h1>
-            
-            <p class="text-xl md:text-2xl text-white/80 mb-10 max-w-3xl mx-auto font-light">
-                Premium new construction homes in Prescott & Prescott Valley. 
-                First access to the best lots and pricing that other agents can't match.
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-image"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-tag">In-House Agent • Exclusive Access</div>
+            <h1>This isn't just a house.<br>It's your <span>next chapter</span>.</h1>
+            <p class="hero-subtitle">
+                Luxury new construction homes in Prescott & Prescott Valley.<br>
+                Exclusive representation for Capstone Homes & ĒCCO Homes.
             </p>
-            
-            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
-                <a href="#communities" class="w-full sm:w-auto px-8 py-4 bg-[var(--accent)] text-white rounded-full text-lg font-semibold hover:scale-105 transition-transform shadow-lg shadow-[var(--accent)]/30">
-                    Explore Communities
-                </a>
-                <a href="#retire" class="w-full sm:w-auto px-8 py-4 glass text-white rounded-full text-lg font-semibold hover:bg-white/20 transition-colors">
-                    Retire in Prescott
-                </a>
+            <a href="#communities" class="hero-cta">
+                Explore Communities
+                <span>→</span>
+            </a>
+        </div>
+        <div class="scroll-indicator">Scroll</div>
+    </section>
+
+    <!-- Intro Stats -->
+    <section class="intro">
+        <div class="intro-grid">
+            <div class="intro-item">
+                <div class="intro-number">01</div>
+                <h3>First Access</h3>
+                <p>See new releases before they go public. Get the best lots before other agents know they exist.</p>
             </div>
-            
-            <!-- Stats Bar -->
-            <div class="glass rounded-2xl p-6 md:p-8 inline-flex flex-wrap justify-center gap-8 md:gap-16">
-                <div class="text-center">
-                    <div class="text-3xl md:text-4xl font-bold text-white">From $459K</div>
-                    <div class="text-sm text-white/60 mt-1">Starting Price</div>
-                </div>
-                <div class="text-center">
-                    <div class="text-3xl md:text-4xl font-bold text-white">6 Communities</div>
-                    <div class="text-sm text-white/60 mt-1">Exclusive Access</div>
-                </div>
-                <div class="text-center">
-                    <div class="text-3xl md:text-4xl font-bold text-white">J Club</div>
-                    <div class="text-sm text-white/60 mt-1">Resort Amenities</div>
-                </div>
+            <div class="intro-item">
+                <div class="intro-number">02</div>
+                <h3>No Buyer Fees</h3>
+                <p>The builder pays my commission. You get expert representation at zero cost to you.</p>
             </div>
+            <div class="intro-item">
+                <div class="intro-number">03</div>
+                <h3>Builder Insider</h3>
+                <p>I know the process, the people, and how to get things done. Navigate with confidence.</p>
+            </div>
+            <div class="intro-item">
+                <div class="intro-number">04</div>
+                <h3>Always Responsive</h3>
+                <p>Text, call, or DM. I respond fast because timing matters in new construction.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Communities -->
+    <section class="communities" id="communities">
+        <div class="section-header">
+            <h2>Exclusive Communities</h2>
+            <div class="gold-line"></div>
+            <p>Six premier communities from Prescott's finest home builders</p>
         </div>
         
-        <!-- Scroll Indicator -->
-        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-            </svg>
-        </div>
-    </section>
-
-    <!-- Builder Promotions -->
-    <section class="py-4 bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12 text-center">
-                <div class="flex items-center gap-3 text-white">
-                    <span class="text-emerald-400 font-bold">Capstone:</span>
-                    <span>Up to $145,000 savings • Ends March 31, 2026</span>
+        <div class="communities-grid">
+            <div class="community-card">
+                <img src="https://capstonehomesaz.com/wp-content/uploads/2024/10/GDE-Model.jpg" alt="Granite Dells" class="community-card-image">
+                <div class="community-card-content">
+                    <div class="community-card-tag">Capstone Homes</div>
+                    <h3>Granite Dells Estates</h3>
+                    <div class="community-card-price">From $949,900</div>
                 </div>
-                <div class="hidden md:block w-px h-6 bg-white/20"></div>
-                <div class="flex items-center gap-3 text-white">
-                    <span class="text-emerald-400 font-bold">ĒCCO:</span>
-                    <span>Up to $54,433 savings • Ends March 31, 2026</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Why Choose Ty -->
-    <section class="py-24 md:py-32" style="background-color: var(--bg-primary);">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center mb-16 reveal">
-                <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-                    Why Choose <span class="gradient-text">Ty?</span>
-                </h2>
-                <p class="text-xl text-[var(--text-secondary)] max-w-2xl mx-auto">
-                    In-house agent status means insider access you won't find anywhere else
-                </p>
             </div>
             
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="glass rounded-3xl p-8 reveal hover:scale-105 transition-transform" style="transition-delay: 0.1s;">
-                    <div class="text-4xl mb-4">🔑</div>
-                    <h3 class="text-xl font-bold mb-3">First Access</h3>
-                    <p class="text-[var(--text-secondary)]">See new releases before they go public. Get the best lots before other agents know they exist.</p>
+            <div class="community-card">
+                <img src="https://capstonehomesaz.com/wp-content/uploads/2024/10/elevation-1-hidden-hills-prescott-arizona-capstone-homes.jpg" alt="Hidden Hills" class="community-card-image">
+                <div class="community-card-content">
+                    <div class="community-card-tag">Capstone Homes</div>
+                    <h3>Hidden Hills</h3>
+                    <div class="community-card-price">From $949,900</div>
                 </div>
-                
-                <div class="glass rounded-3xl p-8 reveal hover:scale-105 transition-transform" style="transition-delay: 0.2s;">
-                    <div class="text-4xl mb-4">💰</div>
-                    <h3 class="text-xl font-bold mb-3">No Buyer Fees</h3>
-                    <p class="text-[var(--text-secondary)]">The builder pays my commission. You get expert representation at zero cost.</p>
-                </div>
-                
-                <div class="glass rounded-3xl p-8 reveal hover:scale-105 transition-transform" style="transition-delay: 0.3s;">
-                    <div class="text-4xl mb-4">🏗️</div>
-                    <h3 class="text-xl font-bold mb-3">Builder Insider</h3>
-                    <p class="text-[var(--text-secondary)]">I know the process, the people, and how to get things done. Navigate with confidence.</p>
-                </div>
-                
-                <div class="glass rounded-3xl p-8 reveal hover:scale-105 transition-transform" style="transition-delay: 0.4s;">
-                    <div class="text-4xl mb-4">📱</div>
-                    <h3 class="text-xl font-bold mb-3">Always Responsive</h3>
-                    <p class="text-[var(--text-secondary)]">Text, call, or DM. I respond fast because timing matters in new construction.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Communities Section -->
-    <section id="communities" class="py-24 md:py-32" style="background-color: var(--bg-secondary);">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center mb-16 reveal">
-                <div class="inline-block px-4 py-2 rounded-full bg-red-500/10 text-red-500 text-sm font-semibold mb-6">
-                    🏃 Limited Lots Available
-                </div>
-                <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-                    Exclusive <span class="gradient-text">Communities</span>
-                </h2>
-                <p class="text-xl text-[var(--text-secondary)] max-w-2xl mx-auto">
-                    6 premier communities from Capstone Homes & ĒCCO Homes
-                </p>
             </div>
             
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Granite Dells -->
-                <div class="group rounded-3xl overflow-hidden bg-white dark:bg-[var(--dark-card)] shadow-xl hover:shadow-2xl transition-all duration-500 reveal">
-                    <div class="h-64 overflow-hidden">
-                        <img src="https://capstonehomesaz.com/wp-content/uploads/2024/10/GDE-Model.jpg" 
-                             alt="Granite Dells Estates" 
-                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-                    </div>
-                    <div class="p-8">
-                        <span class="inline-block px-3 py-1 rounded-full bg-[var(--accent)]/10 text-[var(--accent)] text-xs font-bold mb-4">Capstone</span>
-                        <h3 class="text-2xl font-bold mb-2">Granite Dells Estates</h3>
-                        <p class="text-[var(--text-secondary)] mb-4">Gated luxury • Clubhouse & Pool</p>
-                        <div class="flex items-center justify-between">
-                            <span class="text-2xl font-bold text-[var(--accent)]">From $949,900</span>
-                            <a href="communities/granite-dells-estates.html" class="text-sm font-semibold hover:underline">Explore →</a>
-                        </div>
-                    </div>
+            <div class="community-card">
+                <img src="https://eccohomesaz.com/wp-content/uploads/2024/12/JS600Small-37.jpg" alt="Jasper 7" class="community-card-image">
+                <div class="community-card-content">
+                    <div class="community-card-tag">ĒCCO Homes</div>
+                    <h3>Jasper 7</h3>
+                    <div class="community-card-price">From $459,900</div>
                 </div>
-                
-                <!-- Hidden Hills -->
-                <div class="group rounded-3xl overflow-hidden bg-white dark:bg-[var(--dark-card)] shadow-xl hover:shadow-2xl transition-all duration-500 reveal" style="transition-delay: 0.1s;">
-                    <div class="h-64 overflow-hidden">
-                        <img src="https://capstonehomesaz.com/wp-content/uploads/2024/10/elevation-1-hidden-hills-prescott-arizona-capstone-homes.jpg" 
-                             alt="Hidden Hills" 
-                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-                    </div>
-                    <div class="p-8">
-                        <span class="inline-block px-3 py-1 rounded-full bg-[var(--accent)]/10 text-[var(--accent)] text-xs font-bold mb-4">Capstone</span>
-                        <h3 class="text-2xl font-bold mb-2">Hidden Hills</h3>
-                        <p class="text-[var(--text-secondary)] mb-4">Forest views • Private setting</p>
-                        <div class="flex items-center justify-between">
-                            <span class="text-2xl font-bold text-[var(--accent)]">From $949,900</span>
-                            <a href="communities/hidden-hills.html" class="text-sm font-semibold hover:underline">Explore →</a>
-                        </div>
-                    </div>
+            </div>
+            
+            <div class="community-card">
+                <img src="https://capstonehomesaz.com/wp-content/uploads/2024/11/1-Welcome-Home-10-2000x1125.jpg" alt="Jasper 8" class="community-card-image">
+                <div class="community-card-content">
+                    <div class="community-card-tag">Capstone Homes</div>
+                    <h3>Jasper 8</h3>
+                    <div class="community-card-price">From $794,900</div>
                 </div>
-                
-                <!-- Jasper 7 -->
-                <div class="group rounded-3xl overflow-hidden bg-white dark:bg-[var(--dark-card)] shadow-xl hover:shadow-2xl transition-all duration-500 reveal" style="transition-delay: 0.2s;">
-                    <div class="h-64 overflow-hidden">
-                        <img src="https://eccohomesaz.com/wp-content/uploads/2024/12/JS600Small-37.jpg" 
-                             alt="Jasper 7" 
-                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-                    </div>
-                    <div class="p-8">
-                        <span class="inline-block px-3 py-1 rounded-full bg-green-600/10 text-green-600 text-xs font-bold mb-4">ĒCCO</span>
-                        <h3 class="text-2xl font-bold mb-2">Jasper 7</h3>
-                        <p class="text-[var(--text-secondary)] mb-4">Modern design • Most affordable</p>
-                        <div class="flex items-center justify-between">
-                            <span class="text-2xl font-bold text-[var(--accent)]">From $459,900</span>
-                            <a href="communities/jasper-7.html" class="text-sm font-semibold hover:underline">Explore →</a>
-                        </div>
-                    </div>
+            </div>
+            
+            <div class="community-card">
+                <img src="https://capstonehomesaz.com/wp-content/uploads/2024/10/model-2-jasper-3b-prescott-arizona-capstone-homes.jpg" alt="Jasper 3B" class="community-card-image">
+                <div class="community-card-content">
+                    <div class="community-card-tag">Capstone Homes</div>
+                    <h3>Jasper 3B</h3>
+                    <div class="community-card-price">From $934,900</div>
                 </div>
-                
-                <!-- Jasper 8 -->
-                <div class="group rounded-3xl overflow-hidden bg-white dark:bg-[var(--dark-card)] shadow-xl hover:shadow-2xl transition-all duration-500 reveal" style="transition-delay: 0.3s;">
-                    <div class="h-64 overflow-hidden">
-                        <img src="https://capstonehomesaz.com/wp-content/uploads/2024/11/1-Welcome-Home-10-2000x1125.jpg" 
-                             alt="Jasper 8" 
-                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-                    </div>
-                    <div class="p-8">
-                        <span class="inline-block px-3 py-1 rounded-full bg-[var(--accent)]/10 text-[var(--accent)] text-xs font-bold mb-4">Capstone</span>
-                        <h3 class="text-2xl font-bold mb-2">Jasper 8</h3>
-                        <p class="text-[var(--text-secondary)] mb-4">Park access • Nature focused</p>
-                        <div class="flex items-center justify-between">
-                            <span class="text-2xl font-bold text-[var(--accent)]">From $794,900</span>
-                            <a href="communities/jasper-8.html" class="text-sm font-semibold hover:underline">Explore →</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Jasper 3B -->
-                <div class="group rounded-3xl overflow-hidden bg-white dark:bg-[var(--dark-card)] shadow-xl hover:shadow-2xl transition-all duration-500 reveal" style="transition-delay: 0.4s;">
-                    <div class="h-64 overflow-hidden">
-                        <img src="https://capstonehomesaz.com/wp-content/uploads/2024/10/model-2-jasper-3b-prescott-arizona-capstone-homes.jpg" 
-                             alt="Jasper 3B" 
-                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-                    </div>
-                    <div class="p-8">
-                        <span class="inline-block px-3 py-1 rounded-full bg-[var(--accent)]/10 text-[var(--accent)] text-xs font-bold mb-4">Capstone</span>
-                        <h3 class="text-2xl font-bold mb-2">Jasper 3B</h3>
-                        <p class="text-[var(--text-secondary)] mb-4">Estate lots • J Club</p>
-                        <div class="flex items-center justify-between">
-                            <span class="text-2xl font-bold text-[var(--accent)]">From $934,900</span>
-                            <a href="communities/jasper-3b.html" class="text-sm font-semibold hover:underline">Explore →</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Skyview -->
-                <div class="group rounded-3xl overflow-hidden bg-white dark:bg-[var(--dark-card)] shadow-xl hover:shadow-2xl transition-all duration-500 reveal" style="transition-delay: 0.5s;">
-                    <div class="h-64 overflow-hidden">
-                        <img src="https://eccohomesaz.com/wp-content/uploads/2024/11/exterior-2-skyview-prescott-valley-arizona-ecco-homes.jpg" 
-                             alt="Skyview" 
-                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-                    </div>
-                    <div class="p-8">
-                        <span class="inline-block px-3 py-1 rounded-full bg-green-600/10 text-green-600 text-xs font-bold mb-4">ĒCCO</span>
-                        <h3 class="text-2xl font-bold mb-2">Skyview</h3>
-                        <p class="text-[var(--text-secondary)] mb-4">RV garage options • Flexible living</p>
-                        <div class="flex items-center justify-between">
-                            <span class="text-2xl font-bold text-[var(--accent)]">From $508,900</span>
-                            <a href="communities/skyview.html" class="text-sm font-semibold hover:underline">Explore →</a>
-                        </div>
-                    </div>
+            </div>
+            
+            <div class="community-card">
+                <img src="https://eccohomesaz.com/wp-content/uploads/2024/11/exterior-2-skyview-prescott-valley-arizona-ecco-homes.jpg" alt="Skyview" class="community-card-image">
+                <div class="community-card-content">
+                    <div class="community-card-tag">ĒCCO Homes</div>
+                    <h3>Skyview</h3>
+                    <div class="community-card-price">From $508,900</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Mortgage Calculator Section -->
-    <section class="py-24 md:py-32" style="background-color: var(--bg-secondary);">
-        <div class="max-w-4xl mx-auto px-6">
-            <div class="text-center mb-12 reveal">
-                <h2 class="text-4xl md:text-5xl font-bold mb-4">
-                    Calculate Your <span class="gradient-text">Payment</span>
-                </h2>
-                <p class="text-xl text-[var(--text-secondary)]">See what your monthly payment could look like</p>
-            </div>
-            <div id="mortgageCalculator" class="reveal"></div>
+    <!-- Featured Section -->
+    <section class="featured" id="retire">
+        <div class="featured-image"></div>
+        <div class="featured-content">
+            <h2>Your Perfect <span>Retirement</span> Awaits</h2>
+            <p>Four mild seasons. World-class healthcare. Active communities designed for adults 50-70. Discover why Prescott is Arizona's best-kept secret for discerning retirees.</p>
+            <a href="#" class="featured-btn">
+                Explore Retirement Living
+                <span>→</span>
+            </a>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-24 md:py-32" style="background-color: var(--bg-primary);">
-        <div class="max-w-4xl mx-auto px-6">
-            <div class="glass rounded-3xl p-8 md:p-16 reveal">
-                <div class="text-center mb-12">
-                    <h2 class="text-4xl md:text-5xl font-bold mb-4">Ready to Find Your Home?</h2>
-                    <p class="text-xl text-[var(--text-secondary)]">I typically respond within 2 hours</p>
+    <!-- Contact -->
+    <section class="contact" id="contact">
+        <div class="contact-grid">
+            <div class="contact-info">
+                <h2>Begin Your Journey</h2>
+                <p>Ready to find your perfect home in Prescott? I typically respond within two hours.</p>
+                
+                <div class="contact-detail">
+                    <div class="contact-detail-label">Phone</div>
+                    <div class="contact-detail-value">(801) 555-0123</div>
                 </div>
                 
-                <form action="https://formsubmit.co/kabbott622@gmail.com" method="POST" class="space-y-6">
-                    <input type="hidden" name="_next" value="https://kabbs622.github.io/ty-realestate/thanks.html">
-                    <input type="hidden" name="_subject" value="Premium V2 Website Inquiry">
-                    
-                    <div class="grid md:grid-cols-2 gap-6">
-                        <div>
-                            <label class="block text-sm font-medium mb-2">Full Name *</label>
-                            <input type="text" name="name" required 
-                                   class="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 focus:ring-2 focus:ring-[var(--accent)] focus:border-transparent outline-none transition-all"
-                                   style="background-color: var(--bg-primary); color: var(--text-primary);">
-                        </div>
-                        <div>
-                            <label class="block text-sm font-medium mb-2">Email *</label>
-                            <input type="email" name="email" required 
-                                   class="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 focus:ring-2 focus:ring-[var(--accent)] focus:border-transparent outline-none transition-all"
-                                   style="background-color: var(--bg-primary); color: var(--text-primary);">
-                        </div>
-                    </div>
-                    
-                    <div>
-                        <label class="block text-sm font-medium mb-2">Phone</label>
-                        <input type="tel" name="phone"
-                               class="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 focus:ring-2 focus:ring-[var(--accent)] focus:border-transparent outline-none transition-all"
-                               style="background-color: var(--bg-primary); color: var(--text-primary);">
-                    </div>
-                    
-                    <div>
-                        <label class="block text-sm font-medium mb-2">I'm Interested In</label>
-                        <select name="interest" 
-                                class="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 focus:ring-2 focus:ring-[var(--accent)] focus:border-transparent outline-none transition-all"
-                                style="background-color: var(--bg-primary); color: var(--text-primary);">
-                            <option>New Construction</option>
-                            <option>Resale</option>
-                            <option>Both</option>
-                            <option>Retirement Community</option>
-                        </select>
-                    </div>
-                    
-                    <div>
-                        <label class="block text-sm font-medium mb-2">Message</label>
-                        <textarea name="message" rows="4" placeholder="Tell me what you're looking for..."
-                                  class="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 focus:ring-2 focus:ring-[var(--accent)] focus:border-transparent outline-none transition-all resize-none"
-                                  style="background-color: var(--bg-primary); color: var(--text-primary);"></textarea>
-                    </div>
-                    
-                    <button type="submit" 
-                            class="w-full py-4 bg-[var(--accent)] text-white rounded-xl font-semibold text-lg hover:opacity-90 transition-opacity">
-                        Send Message
-                    </button>
-                </form>
+                <div class="contact-detail">
+                    <div class="contact-detail-label">Email</div>
+                    <div class="contact-detail-value">ty@placeholder.com</div>
+                </div>
+                
+                <div class="contact-detail">
+                    <div class="contact-detail-label">Follow</div>
+                    <div class="contact-detail-value">@ty_the_real_estate_guy</div>
+                </div>
             </div>
+            
+            <form class="contact-form" action="https://formsubmit.co/kabbott622@gmail.com" method="POST">
+                <input type="hidden" name="_next" value="https://kabbs622.github.io/ty-realestate/thanks.html">
+                <input type="hidden" name="_subject" value="Website Inquiry - Ty Real Estate">
+                
+                <div class="form-group">
+                    <label>Name</label>
+                    <input type="text" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Phone</label>
+                    <input type="tel" name="phone">
+                </div>
+                
+                <div class="form-group">
+                    <label>Message</label>
+                    <textarea name="message" placeholder="Tell me what you're looking for..."></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="py-16" style="background-color: var(--bg-secondary);">
-        <div class="max-w-7xl mx-auto px-6 text-center">
-            <h3 class="text-3xl md:text-4xl font-bold mb-8 gradient-text">
-                Your dream home in Prescott is closer than you think.
-            </h3>
-            
-            <div class="flex flex-wrap justify-center gap-8 mb-12">
-                <a href="index.html" class="text-[var(--text-secondary)] hover:text-[var(--accent)] transition-colors">Home</a>
-                <a href="retire-in-prescott.html" class="text-[var(--text-secondary)] hover:text-[var(--accent)] transition-colors">Retire in Prescott</a>
-                <a href="index.html#communities" class="text-[var(--text-secondary)] hover:text-[var(--accent)] transition-colors">Communities</a>
-                <a href="sell.html" class="text-[var(--text-secondary)] hover:text-[var(--accent)] transition-colors">Sell</a>
-                <a href="about.html" class="text-[var(--text-secondary)] hover:text-[var(--accent)] transition-colors">About</a>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">Ty Real Estate</div>
+            <div class="footer-links">
+                <a href="#communities">Communities</a>
+                <a href="#retire">Retire in Prescott</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
             </div>
-            
-            <p class="text-[var(--text-secondary)] text-sm">
-                &copy; 2026 Ty Real Estate. All rights reserved.<br>
-                In-house agent for Capstone Homes & ĒCCO Homes
-            </p>
+            <div class="footer-copy">
+                &copy; 2026 Ty Real Estate. In-house agent for Capstone Homes & ĒCCO Homes.
+            </div>
         </div>
     </footer>
 
-    <!-- JavaScript -->
-    <script src="scripts.js"></script>
     <script>
-        // Dark Mode Toggle
-        const themeToggle = document.getElementById('themeToggle');
-        const themeIcon = document.getElementById('themeIcon');
-        const html = document.documentElement;
-        
-        // Check for saved theme
-        const savedTheme = localStorage.getItem('theme') || 'light';
-        html.setAttribute('data-theme', savedTheme);
-        themeIcon.textContent = savedTheme === 'light' ? '🌙' : '☀️';
-        if (savedTheme === 'dark') {
-            html.classList.add('dark');
-        }
-        
-        themeToggle.addEventListener('click', () => {
-            const currentTheme = html.getAttribute('data-theme');
-            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-            
-            html.setAttribute('data-theme', newTheme);
-            localStorage.setItem('theme', newTheme);
-            themeIcon.textContent = newTheme === 'light' ? '🌙' : '☀️';
-            
-            if (newTheme === 'dark') {
-                html.classList.add('dark');
+        // Navigation scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                navbar.classList.add('scrolled');
             } else {
-                html.classList.remove('dark');
+                navbar.classList.remove('scrolled');
             }
-        });
-        
-        // Intersection Observer for scroll animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-        
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('active');
-                }
-            });
-        }, observerOptions);
-        
-        document.querySelectorAll('.reveal').forEach(el => {
-            observer.observe(el);
         });
         
         // Smooth scroll for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
+            anchor.addEventListener('click', function(e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
