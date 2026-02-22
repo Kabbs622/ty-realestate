@@ -1,139 +1,363 @@
-        // Intersection Observer for fade-in animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
+// Ty Real Estate - Main JavaScript
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, observerOptions);
+// Mobile Menu Toggle
+document.addEventListener('DOMContentLoaded', function() {
+  const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+  const navLinks = document.querySelector('.nav-links');
+  
+  if (mobileMenuBtn) {
+    mobileMenuBtn.addEventListener('click', function() {
+      navLinks.classList.toggle('active');
+    });
+  }
+  
+  // Close mobile menu when clicking a link
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('active');
+    });
+  });
+});
 
-        // Observe all fade-in elements
-        document.addEventListener('DOMContentLoaded', function() {
-            const fadeElements = document.querySelectorAll('.fade-in');
-            fadeElements.forEach(el => observer.observe(el));
+// Mortgage Calculator
+function initMortgageCalculator() {
+  const homePrice = document.getElementById('homePrice');
+  const downPayment = document.getElementById('downPayment');
+  const interestRate = document.getElementById('interestRate');
+  const loanTerm = document.getElementById('loanTerm');
+  const monthlyPayment = document.getElementById('monthlyPayment');
+  const calcBtn = document.getElementById('calcButton');
+  
+  if (!homePrice || !monthlyPayment) return;
+  
+  function calculateMortgage() {
+    const principal = parseFloat(homePrice.value) - parseFloat(downPayment.value);
+    const rate = parseFloat(interestRate.value) / 100 / 12;
+    const payments = parseFloat(loanTerm.value) * 12;
+    
+    if (principal <= 0 || rate <= 0 || payments <= 0) {
+      monthlyPayment.textContent = '$0';
+      return;
+    }
+    
+    const monthly = (principal * rate * Math.pow(1 + rate, payments)) / 
+                    (Math.pow(1 + rate, payments) - 1);
+    
+    monthlyPayment.textContent = '$' + monthly.toLocaleString('en-US', {
+      maximumFractionDigits: 0
+    });
+  }
+  
+  if (calcBtn) {
+    calcBtn.addEventListener('click', calculateMortgage);
+  }
+  
+  // Auto-calculate on input change
+  [homePrice, downPayment, interestRate, loanTerm].forEach(input => {
+    if (input) {
+      input.addEventListener('change', calculateMortgage);
+      input.addEventListener('input', calculateMortgage);
+    }
+  });
+  
+  // Initial calculation
+  calculateMortgage();
+}
 
-            // Community filter functionality
-            const filterBtns = document.querySelectorAll('.filter-btn');
-            const communityCards = document.querySelectorAll('.community-card');
+// Exit Intent Popup
+function initExitPopup() {
+  const popup = document.getElementById('exitPopup');
+  const closeBtn = document.querySelector('.exit-popup-close');
+  
+  if (!popup) return;
+  
+  let shown = false;
+  
+  function showPopup() {
+    if (!shown && !sessionStorage.getItem('exitPopupShown')) {
+      popup.classList.add('active');
+      shown = true;
+      sessionStorage.setItem('exitPopupShown', 'true');
+    }
+  }
+  
+  // Show when mouse leaves the page (desktop)
+  document.addEventListener('mouseout', function(e) {
+    if (e.clientY < 0 && window.innerWidth > 768) {
+      showPopup();
+    }
+  });
+  
+  // Close button
+  if (closeBtn) {
+    closeBtn.addEventListener('click', function() {
+      popup.classList.remove('active');
+    });
+  }
+  
+  // Close on backdrop click
+  popup.addEventListener('click', function(e) {
+    if (e.target === popup) {
+      popup.classList.remove('active');
+    }
+  });
+  
+  // Show after 30 seconds if not already shown
+  setTimeout(function() {
+    if (!shown) {
+      showPopup();
+    }
+  }, 30000);
+}
 
-            filterBtns.forEach(btn => {
-                btn.addEventListener('click', () => {
-                    // Remove active class from all buttons
-                    filterBtns.forEach(b => b.classList.remove('active'));
-                    // Add active class to clicked button
-                    btn.classList.add('active');
+// Form Validation & Submission
+function initForms() {
+  const forms = document.querySelectorAll('form[data-form]');
+  
+  forms.forEach(form => {
+    form.addEventListener('submit', function(e) {
+      const requiredFields = form.querySelectorAll('[required]');
+      let valid = true;
+      
+      requiredFields.forEach(field => {
+        if (!field.value.trim()) {
+          valid = false;
+          field.style.borderColor = '#e74c3c';
+        } else {
+          field.style.borderColor = '';
+        }
+      });
+      
+      // Email validation
+      const emailField = form.querySelector('input[type="email"]');
+      if (emailField && emailField.value) {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(emailField.value)) {
+          valid = false;
+          emailField.style.borderColor = '#e74c3c';
+        }
+      }
+      
+      if (!valid) {
+        e.preventDefault();
+        alert('Please fill in all required fields correctly.');
+      }
+    });
+    
+    // Clear error on input
+    form.querySelectorAll('input, textarea, select').forEach(field => {
+      field.addEventListener('input', function() {
+        this.style.borderColor = '';
+      });
+    });
+  });
+}
 
-                    const filter = btn.getAttribute('data-filter');
-
-                    communityCards.forEach(card => {
-                        if (filter === 'all') {
-                            card.style.display = 'block';
-                            // Re-trigger animation
-                            setTimeout(() => {
-                                card.style.opacity = '1';
-                                card.style.transform = 'translateY(0)';
-                            }, 100);
-                        } else {
-                            const cardBuilder = card.getAttribute('data-builder');
-                            if (cardBuilder === filter) {
-                                card.style.display = 'block';
-                                setTimeout(() => {
-                                    card.style.opacity = '1';
-                                    card.style.transform = 'translateY(0)';
-                                }, 100);
-                            } else {
-                                card.style.opacity = '0';
-                                card.style.transform = 'translateY(30px)';
-                                setTimeout(() => {
-                                    card.style.display = 'none';
-                                }, 300);
-                            }
-                        }
-                    });
-                });
-            });
-
-            // Mobile menu toggle (basic functionality)
-            const mobileMenu = document.querySelector('.mobile-menu');
-            const navLinks = document.querySelector('.nav-links');
-
-            mobileMenu.addEventListener('click', () => {
-                navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
-            });
-
-            // Smooth scrolling for navigation links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    const target = document.querySelector(this.getAttribute('href'));
-                    if (target) {
-                        const headerHeight = document.querySelector('.header').offsetHeight;
-                        const targetPosition = target.offsetTop - headerHeight;
-                        
-                        window.scrollTo({
-                            top: targetPosition,
-                            behavior: 'smooth'
-                        });
-                    }
-                });
-            });
-
-            // Header scroll effect and mobile CTA bar
-            let lastScrollTop = 0;
-            const header = document.querySelector('.header');
-            const mobileCTA = document.getElementById('mobileCTA');
-            const heroSection = document.querySelector('#hero');
-            
-            window.addEventListener('scroll', () => {
-                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-                
-                // Header scroll effect
-                if (scrollTop > lastScrollTop && scrollTop > 100) {
-                    // Scrolling down
-                    header.style.transform = 'translateY(-100%)';
-                } else {
-                    // Scrolling up
-                    header.style.transform = 'translateY(0)';
-                }
-                
-                // Mobile CTA bar visibility (only on mobile)
-                if (window.innerWidth <= 768) {
-                    const heroHeight = heroSection.offsetHeight;
-                    if (scrollTop > heroHeight) {
-                        mobileCTA.classList.add('visible');
-                    } else {
-                        mobileCTA.classList.remove('visible');
-                    }
-                }
-                
-                lastScrollTop = scrollTop;
-            });
-
-            // Handle window resize for mobile CTA
-            window.addEventListener('resize', () => {
-                if (window.innerWidth > 768) {
-                    mobileCTA.classList.remove('visible');
-                }
-            });
-
-            // Home inquiry pre-filling
-            document.addEventListener('click', (e) => {
-                if (e.target.classList.contains('home-cta-link')) {
-                    const community = e.target.getAttribute('data-community');
-                    if (community) {
-                        // Pre-fill the community dropdown when user reaches contact form
-                        setTimeout(() => {
-                            const communitySelect = document.getElementById('community');
-                            if (communitySelect) {
-                                communitySelect.value = community;
-                            }
-                        }, 500);
-                    }
-                }
-            });
+// Smooth Scroll for anchor links
+function initSmoothScroll() {
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const targetId = this.getAttribute('href');
+      if (targetId === '#') return;
+      
+      const target = document.querySelector(targetId);
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
         });
+      }
+    });
+  });
+}
+
+// Lazy Loading Images
+function initLazyLoading() {
+  const images = document.querySelectorAll('img[data-src]');
+  
+  if ('IntersectionObserver' in window) {
+    const imageObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const img = entry.target;
+          img.src = img.dataset.src;
+          img.removeAttribute('data-src');
+          observer.unobserve(img);
+        }
+      });
+    });
+    
+    images.forEach(img => imageObserver.observe(img));
+  } else {
+    // Fallback for older browsers
+    images.forEach(img => {
+      img.src = img.dataset.src;
+    });
+  }
+}
+
+// Home Valuation Estimator
+function initValuationCalculator() {
+  const address = document.getElementById('propertyAddress');
+  const bedrooms = document.getElementById('bedrooms');
+  const bathrooms = document.getElementById('bathrooms');
+  const sqft = document.getElementById('squareFeet');
+  const condition = document.getElementById('condition');
+  const estimateBtn = document.getElementById('estimateBtn');
+  const estimateResult = document.getElementById('estimateResult');
+  const estimateRange = document.getElementById('estimateRange');
+  
+  if (!estimateBtn || !estimateResult) return;
+  
+  estimateBtn.addEventListener('click', function() {
+    if (!address.value || !bedrooms.value || !bathrooms.value || !sqft.value) {
+      alert('Please fill in all required fields');
+      return;
+    }
+    
+    // Simple estimation formula based on sqft and condition
+    const basePrice = 280; // per sqft in Prescott area
+    const sqftValue = parseInt(sqft.value);
+    let conditionMultiplier = 1;
+    
+    switch(condition.value) {
+      case 'excellent': conditionMultiplier = 1.15; break;
+      case 'good': conditionMultiplier = 1; break;
+      case 'fair': conditionMultiplier = 0.85; break;
+      case 'needs-work': conditionMultiplier = 0.7; break;
+      default: conditionMultiplier = 1;
+    }
+    
+    const estimatedValue = Math.round(sqftValue * basePrice * conditionMultiplier);
+    const lowEstimate = Math.round(estimatedValue * 0.92);
+    const highEstimate = Math.round(estimatedValue * 1.08);
+    
+    estimateResult.textContent = '$' + estimatedValue.toLocaleString();
+    estimateRange.textContent = `Estimated range: $${lowEstimate.toLocaleString()} - $${highEstimate.toLocaleString()}`;
+    
+    estimateResult.parentElement.scrollIntoView({ behavior: 'smooth' });
+  });
+}
+
+// Gallery Lightbox
+function initGallery() {
+  const galleryItems = document.querySelectorAll('.gallery-item');
+  
+  galleryItems.forEach(item => {
+    item.addEventListener('click', function() {
+      const img = this.querySelector('img');
+      if (!img) return;
+      
+      // Create lightbox
+      const lightbox = document.createElement('div');
+      lightbox.className = 'lightbox';
+      lightbox.innerHTML = `
+        <div class="lightbox-content">
+          <button class="lightbox-close">&times;</button>
+          <img src="${img.src}" alt="${img.alt}">
+        </div>
+      `;
+      
+      // Add styles
+      lightbox.style.cssText = `
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.9);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 2000;
+        padding: 20px;
+      `;
+      
+      lightbox.querySelector('.lightbox-content').style.cssText = `
+        position: relative;
+        max-width: 90%;
+        max-height: 90%;
+      `;
+      
+      lightbox.querySelector('img').style.cssText = `
+        max-width: 100%;
+        max-height: 85vh;
+        border-radius: 8px;
+      `;
+      
+      lightbox.querySelector('.lightbox-close').style.cssText = `
+        position: absolute;
+        top: -40px;
+        right: 0;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 36px;
+        cursor: pointer;
+      `;
+      
+      document.body.appendChild(lightbox);
+      document.body.style.overflow = 'hidden';
+      
+      // Close handlers
+      lightbox.querySelector('.lightbox-close').addEventListener('click', closeLightbox);
+      lightbox.addEventListener('click', function(e) {
+        if (e.target === lightbox) closeLightbox();
+      });
+      
+      function closeLightbox() {
+        document.body.removeChild(lightbox);
+        document.body.style.overflow = '';
+      }
+      
+      // Close on escape key
+      document.addEventListener('keydown', function handler(e) {
+        if (e.key === 'Escape') {
+          closeLightbox();
+          document.removeEventListener('keydown', handler);
+        }
+      });
+    });
+  });
+}
+
+// Navbar scroll effect
+function initNavbarScroll() {
+  const header = document.querySelector('header');
+  if (!header) return;
+  
+  let lastScroll = 0;
+  
+  window.addEventListener('scroll', function() {
+    const currentScroll = window.pageYOffset;
+    
+    if (currentScroll > 100) {
+      header.style.boxShadow = '0 4px 20px rgba(0,0,0,0.1)';
+    } else {
+      header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.05)';
+    }
+    
+    lastScroll = currentScroll;
+  });
+}
+
+// Initialize all functions when DOM is ready
+document.addEventListener('DOMContentLoaded', function() {
+  initMortgageCalculator();
+  initExitPopup();
+  initForms();
+  initSmoothScroll();
+  initLazyLoading();
+  initValuationCalculator();
+  initGallery();
+  initNavbarScroll();
+  
+  console.log('Ty Real Estate website initialized');
+});
+
+// Re-initialize after dynamic content loads (if needed)
+window.reinit = function() {
+  initGallery();
+  initForms();
+};
